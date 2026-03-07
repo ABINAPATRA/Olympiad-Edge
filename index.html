@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OlympiadEdge – Olympiad Prep for Class 3, 4 & 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Fredoka+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --blue:#1a6fd4;--blue2:#4fa3f7;--blue-light:#deeeff;
+  --green:#16a34a;--green2:#22c55e;--green-light:#d1fae5;
+  --orange:#f97316;--orange-light:#ffedd5;
+  --yellow:#f59e0b;--yellow2:#fbbf24;--yellow-light:#fef9c3;
+  --pink:#ec4899;--pink-light:#fce7f3;
+  --purple:#8b5cf6;--purple-light:#ede9fe;
+  --ink:#1e1b4b;--slate:#475569;--muted:#94a3b8;
+  --border:#e2e8f0;--bg:#f0f7ff;--white:#fff;
+  --sh:0 6px 28px rgba(26,111,212,0.13);
+  --sh2:0 14px 50px rgba(26,111,212,0.18);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Quicksand',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+::-webkit-scrollbar{width:7px;}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--blue),var(--purple));border-radius:10px;}
+
+.emoji-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.section{position:relative;z-index:1;}
+.ach-strip{position:relative;z-index:2;}
+.finalcta{position:relative;z-index:1;}
+footer{position:relative;z-index:1;}
+.eb{position:absolute;font-size:2rem;opacity:0.06;animation:floatUp linear infinite;}
+@keyframes floatUp{0%{transform:translateY(110vh) rotate(0deg);}100%{transform:translateY(-10vh) rotate(360deg);}}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);
+  border-bottom:3px solid;
+  border-image:linear-gradient(90deg,var(--blue),var(--purple),var(--pink),var(--orange)) 1;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4%;height:68px;box-shadow:0 4px 20px rgba(26,111,212,0.1);
+}
+.nav-logo{font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px;}
+.nav-logo .ls{display:inline-block;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.nav-logo .ne{color:var(--orange);}
+.nav-links{display:flex;gap:1.6rem;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--slate);font-size:0.88rem;font-weight:700;transition:color .2s;}
+.nav-links a:hover{color:var(--blue);}
+.nav-enroll{
+  background:linear-gradient(135deg,var(--orange),var(--pink));color:white;
+  padding:10px 22px;border-radius:50px;font-size:0.88rem;font-weight:800;
+  border:none;cursor:pointer;font-family:'Quicksand',sans-serif;
+  box-shadow:0 4px 18px rgba(236,72,153,0.35);transition:transform .15s;
+  animation:navpulse 2.5s infinite;
+}
+@keyframes navpulse{0%,100%{box-shadow:0 4px 18px rgba(236,72,153,0.35);}50%{box-shadow:0 6px 28px rgba(236,72,153,0.6);}}
+.nav-enroll:hover{transform:translateY(-2px);}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(145deg,#0d1b4b 0%,#1a3a8f 40%,#2563eb 70%,#7c3aed 100%);
+  display:flex;align-items:center;padding:90px 4% 60px;
+  position:relative;overflow:hidden;
+}
+.hblob1{position:absolute;top:-120px;right:-80px;width:480px;height:480px;border-radius:50%;background:rgba(139,92,246,0.18);filter:blur(40px);}
+.hblob2{position:absolute;bottom:-100px;left:-60px;width:380px;height:380px;border-radius:50%;background:rgba(249,115,22,0.15);filter:blur(36px);}
+.hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.09) 1px,transparent 1px);background-size:30px 30px;}
+.hmedal{position:absolute;pointer-events:none;font-size:3rem;}
+.hm1{top:10%;left:3%;opacity:.18;animation:fl1 6s ease-in-out infinite;}
+.hm2{top:18%;right:5%;opacity:.16;font-size:2.5rem;animation:fl2 5s ease-in-out infinite;}
+.hm3{bottom:22%;left:5%;opacity:.14;animation:fl1 7s ease-in-out infinite;}
+.hm4{bottom:15%;right:7%;opacity:.16;font-size:2.5rem;animation:fl2 5.5s ease-in-out infinite;}
+.hm5{top:52%;left:2%;opacity:.1;font-size:2rem;animation:fl1 8s ease-in-out infinite;}
+@keyframes fl1{0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-18px) rotate(5deg);}}
+@keyframes fl2{0%,100%{transform:translateY(0) rotate(5deg);}50%{transform:translateY(-14px) rotate(-5deg);}}
+
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1200px;margin:0 auto;width:100%;}
+
+.urgent{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(239,68,68,0.92);color:white;
+  padding:7px 18px;border-radius:50px;font-size:0.82rem;font-weight:800;
+  border:2px solid rgba(255,255,255,0.3);margin-bottom:1rem;
+  animation:fadeUp .4s ease both;
+}
+.udot{width:8px;height:8px;background:white;border-radius:50%;animation:blink 1s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+
+.hero h1{font-family:'Fredoka One',cursive;font-size:clamp(2.4rem,5vw,3.8rem);color:white;line-height:1.1;margin-bottom:1.2rem;animation:fadeUp .5s .1s ease both;}
+.hero h1 .hl{background:linear-gradient(90deg,var(--yellow2),var(--orange),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.85);line-height:1.7;max-width:480px;margin-bottom:2rem;animation:fadeUp .5s .2s ease both;font-weight:600;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .5s .3s ease both;}
+.btn-main{background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--ink);padding:16px 34px;border-radius:50px;font-size:1rem;font-weight:800;text-decoration:none;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;box-shadow:0 6px 24px rgba(245,158,11,0.5);transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(245,158,11,0.6);}
+.btn-sec{background:rgba(255,255,255,0.15);color:white;padding:16px 28px;border-radius:50px;font-size:0.95rem;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,0.4);font-family:'Quicksand',sans-serif;transition:background .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-sec:hover{background:rgba(255,255,255,0.25);}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:2rem;animation:fadeUp .5s .4s ease both;}
+.hero-pill{background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.22);color:white;padding:6px 16px;border-radius:50px;font-size:0.8rem;font-weight:700;display:flex;align-items:center;gap:6px;}
+
+/* Hero right card */
+.hero-right{animation:fadeUp .5s .25s ease both;position:relative;}
+.hcard{background:white;border-radius:24px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+.hct{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--ink);margin-bottom:.3rem;}
+.hcs{font-size:.8rem;color:var(--muted);margin-bottom:1.4rem;font-weight:600;}
+.ccards{display:flex;flex-direction:column;gap:10px;}
+.cc{border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;transition:transform .2s;}
+.cc:hover{transform:translateX(4px);}
+.cc.c3{background:linear-gradient(135deg,#dbeafe,#bfdbfe);}
+.cc.c4{background:linear-gradient(135deg,#fef3c7,#fde68a);}
+.cc.c5{background:linear-gradient(135deg,#fce7f3,#fbcfe8);}
+.ccl{display:flex;align-items:center;gap:12px;}
+.ccicon{font-size:1.6rem;}
+.ccname{font-family:'Fredoka One',cursive;font-size:1rem;}
+.cc.c3 .ccname{color:#1d4ed8;}.cc.c4 .ccname{color:#b45309;}.cc.c5 .ccname{color:#be185d;}
+.ccsub{font-size:.72rem;font-weight:700;}
+.cc.c3 .ccsub{color:#3b82f6;}.cc.c4 .ccsub{color:#d97706;}.cc.c5 .ccsub{color:#db2777;}
+.ccprice{font-family:'Fredoka One',cursive;font-size:1.05rem;}
+.cc.c3 .ccprice{color:#1d4ed8;}.cc.c4 .ccprice{color:#b45309;}.cc.c5 .ccprice{color:#be185d;}
+.ccseats{font-size:.7rem;font-weight:800;padding:3px 10px;border-radius:50px;color:white;margin-top:3px;text-align:right;}
+.cc.c3 .ccseats{background:#1d4ed8;}.cc.c4 .ccseats{background:#b45309;}.cc.c5 .ccseats{background:#be185d;}
+.fmed1{position:absolute;top:-20px;right:-16px;font-size:2.8rem;animation:fl2 4s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));}
+.fmed2{position:absolute;bottom:-20px;left:-16px;font-size:2.4rem;animation:fl1 5s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));}
+
+/* ACHIEVEMENT STRIP */
+.ach-strip{
+  background:linear-gradient(135deg,var(--yellow),var(--orange),var(--pink));
+  padding:26px 4%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:2rem;position:relative;z-index:1;
+}
+.ai{display:flex;align-items:center;gap:12px;color:white;}
+.ai-icon{font-size:2.2rem;}
+.ai-num{font-family:'Fredoka One',cursive;font-size:2rem;line-height:1;}
+.ai-lbl{font-size:.78rem;font-weight:700;opacity:.9;line-height:1.3;}
+.adiv{width:2px;height:50px;background:rgba(255,255,255,.3);}
+
+/* SECTIONS */
+.section{padding:80px 4%;position:relative;}
+.stag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:50px;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.8rem;}
+.stag.blue{background:var(--blue-light);color:var(--blue);}
+.stag.green{background:var(--green-light);color:var(--green);}
+.stag.orange{background:var(--orange-light);color:var(--orange);}
+.stag.purple{background:var(--purple-light);color:var(--purple);}
+.stag.pink{background:var(--pink-light);color:var(--pink);}
+.stitle{font-family:'Fredoka One',cursive;font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--ink);line-height:1.15;margin-bottom:.7rem;}
+.ssub{font-size:.96rem;color:var(--slate);line-height:1.7;max-width:560px;font-weight:600;}
+
+/* WHY */
+.why-section{background:white;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.4rem;margin-top:3rem;}
+.wcard{border-radius:20px;padding:28px 22px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden;cursor:default;}
+.wcard:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:var(--sh2);}
+.wcard.w1{background:linear-gradient(135deg,#dbeafe,#ede9fe);}
+.wcard.w2{background:linear-gradient(135deg,#d1fae5,#fef9c3);}
+.wcard.w3{background:linear-gradient(135deg,#ffedd5,#fce7f3);}
+.wcard.w4{background:linear-gradient(135deg,#fce7f3,#ede9fe);}
+.wicon{font-size:2.8rem;margin-bottom:.8rem;display:block;}
+.wtitle{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--ink);margin-bottom:.4rem;}
+.wdesc{font-size:.83rem;color:var(--slate);line-height:1.6;font-weight:600;}
+.wbg{position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.07;}
+
+/* SUBJECTS */
+.sub-section{background:linear-gradient(145deg,#0d1b4b,#1e1b4b);overflow:hidden;position:relative;}
+.wsbg{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 28px),repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 1px,transparent 28px);}
+.sub-section .stitle{color:white;}
+.sub-section .ssub{color:rgba(255,255,255,.65);}
+.sub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.6rem;margin-top:3rem;}
+.scard{border-radius:22px;padding:36px 28px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;}
+.scard:hover{transform:translateY(-5px) rotate(.5deg);box-shadow:0 20px 60px rgba(0,0,0,.3);}
+.scard.eng{background:linear-gradient(145deg,#1d4ed8,#3b82f6);}
+.scard.mat{background:linear-gradient(145deg,#b45309,#f59e0b);}
+.scard.sci{background:linear-gradient(145deg,#065f46,#10b981);}
+.sicon{font-size:3rem;margin-bottom:.8rem;display:block;animation:fl1 4s ease-in-out infinite;}
+.sname{font-family:'Fredoka One',cursive;font-size:1.6rem;color:white;margin-bottom:.5rem;}
+.sexams{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.2rem;}
+.sexam{background:rgba(255,255,255,.2);color:white;padding:3px 12px;border-radius:50px;font-size:.72rem;font-weight:800;}
+.slist{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.slist li{display:flex;align-items:flex-start;gap:8px;font-size:.85rem;color:rgba(255,255,255,.92);font-weight:600;}
+.slist li::before{content:'⭐';font-size:.7rem;margin-top:2px;flex-shrink:0;}
+.sbg{position:absolute;bottom:-20px;right:-10px;font-size:9rem;opacity:.07;}
+
+/* INSTRUCTOR */
+.instr-section{background:linear-gradient(135deg,#fdf4ff,#f0f7ff);}
+.instr-wrap{display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:start;}
+.instr-vis{background:linear-gradient(145deg,var(--blue),var(--purple));border-radius:24px;padding:36px;text-align:center;box-shadow:var(--sh2);position:relative;}
+.instr-emoji{font-size:6rem;display:block;margin-bottom:.5rem;animation:fl1 5s ease-in-out infinite;}
+.instr-name{font-family:'Fredoka One',cursive;font-size:1.4rem;color:white;margin-bottom:.3rem;}
+.instr-exp{font-size:.85rem;color:rgba(255,255,255,.8);font-weight:700;}
+.medal-row{display:flex;justify-content:center;gap:6px;margin-top:1rem;font-size:1.8rem;}
+.gbubble{position:absolute;top:-14px;right:-14px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--yellow),var(--orange));display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 4px 18px rgba(245,158,11,.5);border:3px solid white;}
+.gnum{font-family:'Fredoka One',cursive;font-size:1rem;color:white;line-height:1;}
+.glbl{font-size:.45rem;color:white;font-weight:800;text-align:center;line-height:1.3;}
+.bpara{font-size:.93rem;color:var(--slate);line-height:1.8;margin-bottom:1rem;font-weight:600;}
+.bpara strong{color:var(--ink);}
+.orgs{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.2rem;}
+.org{padding:7px 16px;border-radius:50px;font-size:.78rem;font-weight:800;display:flex;align-items:center;gap:6px;}
+.org.sof{background:#dbeafe;color:#1d4ed8;}.org.sz{background:#fce7f3;color:#be185d;}.org.gov{background:#d1fae5;color:#065f46;}.org.mof{background:#fef3c7;color:#b45309;}
+.achgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1.5rem;}
+.ach{border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px;}
+.ach.a1{background:var(--yellow-light);}.ach.a2{background:var(--blue-light);}.ach.a3{background:var(--green-light);}.ach.a4{background:var(--purple-light);}
+.achicon{font-size:1.8rem;flex-shrink:0;}
+.achnum{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--ink);}
+.achlbl{font-size:.72rem;color:var(--slate);font-weight:700;}
+
+/* HOW */
+.how-section{background:white;}
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.5rem;margin-top:3rem;}
+.stepcard{border-radius:20px;padding:28px 20px;text-align:center;border:3px dashed var(--border);transition:transform .25s,border-color .25s,background .25s;}
+.stepcard:hover{transform:translateY(-5px);border-color:var(--blue);background:var(--blue-light);}
+.stepnum{width:54px;height:54px;border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.4rem;color:white;}
+.stepcard:nth-child(1) .stepnum{background:linear-gradient(135deg,var(--blue),var(--purple));}
+.stepcard:nth-child(2) .stepnum{background:linear-gradient(135deg,var(--green),var(--blue2));}
+.stepcard:nth-child(3) .stepnum{background:linear-gradient(135deg,var(--orange),var(--yellow));}
+.stepcard:nth-child(4) .stepnum{background:linear-gradient(135deg,var(--pink),var(--purple));}
+.steptitle{font-family:'Fredoka One',cursive;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;}
+.stepdesc{font-size:.82rem;color:var(--slate);line-height:1.6;font-weight:600;}
+
+.cdbox{background:linear-gradient(145deg,#0d1b4b,#1a3a8f);border-radius:24px;padding:36px;color:white;margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;position:relative;overflow:hidden;}
+.cdbox::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px;}
+.cditem{position:relative;z-index:1;display:flex;align-items:flex-start;gap:14px;}
+.cdicon{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+.cdlbl{font-size:.7rem;font-weight:800;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;}
+.cdval{font-family:'Fredoka One',cursive;font-size:1.05rem;color:white;margin-top:2px;}
+
+/* PRICING */
+.price-section{background:linear-gradient(135deg,#fdf4ff,#f0fff4,#fffbeb);}
+.fee-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.6rem;margin-top:3rem;}
+.fcard{border-radius:24px;padding:36px 28px;border:3px solid transparent;transition:transform .25s,box-shadow .25s;position:relative;background:white;}
+.fcard:hover{transform:translateY(-6px);box-shadow:var(--sh2);}
+.fcard.fc3{border-color:#bfdbfe;}.fcard.fc3:hover{border-color:var(--blue);}
+.fcard.fc4{border-color:#fde68a;}.fcard.fc4:hover{border-color:var(--yellow);}
+.fcard.fc5{border-color:#fbcfe8;}.fcard.fc5:hover{border-color:var(--pink);}
+.femoji{font-size:3rem;margin-bottom:.8rem;display:block;}
+.fcname{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--ink);}
+.fcwho{font-size:.82rem;color:var(--muted);font-weight:700;margin-bottom:1.2rem;}
+.fcprice{font-family:'Fredoka One',cursive;font-size:3rem;line-height:1;margin-bottom:.3rem;}
+.fcard.fc3 .fcprice{color:var(--blue);}
+.fcard.fc4 .fcprice{color:#b45309;}
+.fcard.fc5 .fcprice{color:var(--pink);}
+.fcper{font-size:.88rem;color:var(--muted);font-weight:700;}
+.fcdiv{height:2px;border-radius:2px;margin:1.4rem 0;}
+.fcard.fc3 .fcdiv{background:var(--blue-light);}
+.fcard.fc4 .fcdiv{background:var(--yellow-light);}
+.fcard.fc5 .fcdiv{background:var(--pink-light);}
+.fcseats{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;margin-bottom:1.2rem;font-size:.82rem;font-weight:800;}
+.fcard.fc3 .fcseats{background:var(--blue-light);color:var(--blue);}
+.fcard.fc4 .fcseats{background:var(--yellow-light);color:#b45309;}
+.fcard.fc5 .fcseats{background:var(--pink-light);color:var(--pink);}
+.fcinc{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:1.8rem;}
+.fcinc li{display:flex;align-items:flex-start;gap:9px;font-size:.85rem;color:var(--slate);font-weight:600;}
+.ck{font-size:.9rem;flex-shrink:0;margin-top:1px;}
+.fcard.fc3 .ck{color:var(--blue);}
+.fcard.fc4 .ck{color:#b45309;}
+.fcard.fc5 .ck{color:var(--pink);}
+.fcbtn{width:100%;padding:14px;border-radius:50px;font-size:.95rem;font-weight:800;cursor:pointer;font-family:'Quicksand',sans-serif;border:none;transition:transform .15s;color:white;}
+.fcard.fc3 .fcbtn{background:linear-gradient(135deg,var(--blue),var(--purple));}
+.fcard.fc4 .fcbtn{background:linear-gradient(135deg,#d97706,var(--yellow));color:var(--ink);}
+.fcard.fc5 .fcbtn{background:linear-gradient(135deg,var(--pink),var(--purple));}
+.fcbtn:hover{transform:translateY(-2px);}
+.payrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:2.5rem;padding:20px 24px;background:white;border-radius:16px;border:2px solid var(--border);box-shadow:var(--sh);}
+.paylbl{font-size:.85rem;font-weight:800;color:var(--ink);white-space:nowrap;}
+.paychip{background:var(--bg);border:2px solid var(--border);border-radius:8px;padding:7px 14px;font-size:.78rem;font-weight:700;color:var(--slate);display:flex;align-items:center;gap:5px;}
+.sectag{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;color:var(--green);}
+
+/* VIDEO */
+.vid-section{background:linear-gradient(145deg,#0d1b4b,#1e1b4b);}
+.vid-section .stitle{color:white;}
+.vid-section .ssub{color:rgba(255,255,255,.65);}
+.vidwrap{max-width:800px;margin-top:2.5rem;border-radius:22px;overflow:hidden;border:4px solid rgba(255,255,255,.15);box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:16/9;position:relative;cursor:pointer;background:linear-gradient(135deg,rgba(26,111,212,.3),rgba(139,92,246,.3));}
+.vidwrap:hover .playbtn{transform:translate(-50%,-50%) scale(1.1);}
+.playbtn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 8px 32px rgba(0,0,0,.3);transition:transform .2s;z-index:2;}
+.vidlbl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:30px 24px 18px;color:white;font-size:.9rem;font-weight:800;z-index:2;}
+.vidnote{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:.8rem;font-style:italic;}
+
+/* TESTIMONIALS */
+.test-section{background:white;}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;margin-top:3rem;}
+.tcard{border-radius:20px;padding:26px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden;}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--sh2);}
+.tcard.t1{background:linear-gradient(135deg,#dbeafe,#ede9fe);}
+.tcard.t2{background:linear-gradient(135deg,#d1fae5,#fef9c3);}
+.tcard.t3{background:linear-gradient(135deg,#fce7f3,#ffedd5);}
+.tmedal{font-size:2rem;margin-bottom:.6rem;display:block;}
+.tstars{font-size:1rem;margin-bottom:.8rem;}
+.tquote{font-size:.88rem;color:var(--slate);line-height:1.7;margin-bottom:1.2rem;font-style:italic;font-weight:600;}
+.tauth{display:flex;gap:10px;align-items:center;}
+.tav{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;color:white;flex-shrink:0;}
+.tname{font-size:.87rem;font-weight:800;color:var(--ink);}
+.trole{font-size:.74rem;color:var(--muted);font-weight:700;}
+
+/* REGISTER */
+.reg-section{background:linear-gradient(145deg,#0d1b4b,#1a3a8f,#7c3aed);}
+.reg-section .stitle{color:white;}
+.reg-section .ssub{color:rgba(255,255,255,.7);}
+.regwrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem;}
+.regform{background:white;border-radius:24px;padding:38px;box-shadow:0 20px 60px rgba(0,0,0,.3);}
+.formtitle{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--ink);margin-bottom:1.6rem;}
+.fg{margin-bottom:1.1rem;}
+.fg label{display:block;font-size:.78rem;font-weight:800;color:var(--slate);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.fg input,.fg select{width:100%;padding:12px 16px;border-radius:12px;border:2.5px solid var(--border);font-size:.9rem;font-family:'Quicksand',sans-serif;color:var(--ink);background:var(--bg);transition:border-color .2s;outline:none;font-weight:600;}
+.fg input:focus,.fg select:focus{border-color:var(--blue);background:white;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fsub{width:100%;padding:16px;border-radius:50px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;font-size:1rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;margin-top:.5rem;box-shadow:0 6px 24px rgba(139,92,246,.4);transition:transform .15s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.fsub:hover{transform:translateY(-2px);}
+.fnote{font-size:.74rem;color:var(--muted);text-align:center;margin-top:.8rem;font-weight:600;}
+
+.reginfo{color:white;}
+.reginfo h3{font-family:'Fredoka One',cursive;font-size:1.5rem;margin-bottom:1.5rem;}
+.aftersteps{display:flex;flex-direction:column;gap:1.1rem;}
+.arstep{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px;}
+.arnum{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--yellow),var(--orange));display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1rem;color:var(--ink);}
+.artitle{font-size:.9rem;font-weight:800;margin-bottom:.2rem;}
+.ardesc{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.5;font-weight:600;}
+.guarbox{margin-top:1.8rem;padding:18px;background:rgba(245,158,11,.15);border:2px solid rgba(245,158,11,.35);border-radius:16px;display:flex;gap:12px;}
+.guarbox p{font-size:.83rem;color:rgba(255,255,255,.85);line-height:1.6;font-weight:600;}
+.guarbox strong{color:var(--yellow2);}
+
+/* FAQ */
+.faq-section{background:linear-gradient(135deg,#f0f7ff,#fdf4ff);}
+.faqlist{max-width:740px;margin-top:3rem;}
+.faqitem{border-radius:14px;margin-bottom:10px;overflow:hidden;border:2.5px solid var(--border);background:white;}
+.faqq{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;font-size:.9rem;font-weight:800;color:var(--ink);gap:1rem;transition:background .2s;}
+.faqq:hover{background:var(--bg);}
+.faqitem.open .faqq{background:var(--blue-light);color:var(--blue);}
+.faqtog{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:transform .3s,background .2s;color:var(--blue);font-weight:800;}
+.faqitem.open .faqtog{transform:rotate(45deg);background:var(--blue);color:white;}
+.faqa{font-size:.86rem;color:var(--slate);line-height:1.7;max-height:0;overflow:hidden;padding:0 22px;transition:max-height .35s ease,padding .3s;font-weight:600;}
+.faqitem.open .faqa{max-height:220px;padding:14px 22px 18px;}
+
+/* FINAL CTA */
+.finalcta{background:linear-gradient(145deg,#0d1b4b,#7c3aed,#ec4899);padding:80px 4%;text-align:center;position:relative;overflow:hidden;}
+.finalcta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px;}
+.finmeds{font-size:2.5rem;margin-bottom:1rem;position:relative;z-index:1;}
+.finalcta h2{font-family:'Fredoka One',cursive;font-size:clamp(2rem,4.5vw,3.2rem);color:white;margin-bottom:.8rem;position:relative;z-index:1;}
+.finalcta p{font-size:1rem;color:rgba(255,255,255,.8);margin-bottom:2.5rem;position:relative;z-index:1;font-weight:700;}
+.finalbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btnfinal{background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--ink);padding:16px 38px;border-radius:50px;font-size:1rem;font-weight:800;text-decoration:none;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;box-shadow:0 6px 24px rgba(245,158,11,.5);transition:transform .2s;}
+.btnfinal:hover{transform:translateY(-3px);}
+.btnwa{background:rgba(255,255,255,.15);color:white;padding:16px 32px;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.4);font-family:'Quicksand',sans-serif;transition:background .2s;display:inline-flex;align-items:center;gap:8px;}
+.btnwa:hover{background:rgba(255,255,255,.25);}
+
+/* FOOTER */
+footer{background:#0d1b4b;padding:50px 4% 24px;}
+.ftop{display:flex;justify-content:space-between;gap:2.5rem;flex-wrap:wrap;padding-bottom:2rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.08);}
+.flogo{font-family:'Fredoka One',cursive;font-size:1.6rem;color:white;margin-bottom:.5rem;display:flex;align-items:center;gap:8px;}
+.flogo .fe{color:var(--yellow2);}
+.ftagline{font-size:.8rem;color:rgba(255,255,255,.4);max-width:200px;line-height:1.6;font-weight:600;}
+.fcol h4{color:white;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;margin-bottom:1rem;}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.flinks a{color:rgba(255,255,255,.4);font-size:.82rem;text-decoration:none;transition:color .2s;font-weight:600;}
+.flinks a:hover{color:var(--yellow2);}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.25);font-weight:600;}
+
+/* MODAL */
+.modal-ov{position:fixed;inset:0;z-index:1000;background:rgba(13,27,75,.75);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-ov.open{display:flex;}
+.modal-box{background:white;border-radius:24px;padding:40px;max-width:460px;width:100%;text-align:center;animation:popIn .3s ease;}
+.micon{font-size:3.5rem;margin-bottom:.5rem;}
+.mtitle{font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--ink);margin-bottom:.5rem;}
+.msub{font-size:.9rem;color:var(--slate);margin-bottom:2rem;line-height:1.7;font-weight:600;}
+.mclose{width:100%;padding:14px;border-radius:50px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;border:none;font-size:.95rem;font-weight:800;cursor:pointer;font-family:'Quicksand',sans-serif;}
+
+/* REVEAL */
+.reveal{opacity:1;transform:translateY(0);}
+
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes popIn{from{opacity:0;transform:scale(.88);}to{opacity:1;transform:scale(1);}}
+
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .instr-wrap,.regwrap{grid-template-columns:1fr;}
+  .frow{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .section{padding:60px 4%;}
+  .adiv{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="emoji-bg" id="emojiBg"></div>
+
+<nav>
+  <a class="nav-logo" href="#"><span class="ls">🏆</span>Olympiad<span class="ne">Edge</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#subjects">Subjects</a></li>
+    <li><a href="#pricing">Fee</a></li>
+    <li><a href="#register">Register</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <button class="nav-enroll" onclick="scrollToReg()">🚀 Enroll Now</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hblob1"></div><div class="hblob2"></div>
+  <div class="hdots"></div>
+  <div class="hmedal hm1">🥇</div><div class="hmedal hm2">🏅</div>
+  <div class="hmedal hm3">🥈</div><div class="hmedal hm4">🏆</div><div class="hmedal hm5">⭐</div>
+  <div class="hero-inner">
+    <div>
+      <div class="urgent"><span class="udot"></span>Only 5 Seats Per Batch — Enroll Fast! 🔥</div>
+      <h1>Win Olympiad Medals.<br><span class="hl">Champion Your Future! 🏆</span></h1>
+      <p class="hero-sub">Expert live Olympiad coaching for Class 3, 4 & 5 in English, Maths & Science. 8 years of experience. 30+ Gold Medals. Personal attention for every child.</p>
+      <div class="hero-btns">
+        <button class="btn-main" onclick="scrollToReg()">🎯 Secure My Seat</button>
+        <a href="#about" class="btn-sec">✨ Meet Your Mentor</a>
+      </div>
+      <div class="hero-pills">
+        <div class="hero-pill">📹 Live Google Meet</div>
+        <div class="hero-pill">💬 WhatsApp Updates</div>
+        <div class="hero-pill">👥 Max 5 Students Only</div>
+        <div class="hero-pill">📝 Free Worksheets</div>
+        <div class="hero-pill">🧪 Mock Tests</div>
+        <div class="hero-pill">🤝 1-on-1 Mentorship</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="fmed1">🥇</div>
+      <div class="fmed2">🏆</div>
+      <div class="hcard">
+        <div class="hct">Choose Your Class</div>
+        <div class="hcs">1 batch per class · Only 5 seats · Fills up fast!</div>
+        <div class="ccards">
+          <div class="cc c3">
+            <div class="ccl"><div class="ccicon">📘</div><div><div class="ccname">Class 3</div><div class="ccsub">English · Maths · Science</div></div></div>
+            <div><div class="ccprice">₹3,500</div><div class="ccseats">🔥 5 seats only</div></div>
+          </div>
+          <div class="cc c4">
+            <div class="ccl"><div class="ccicon">📐</div><div><div class="ccname">Class 4</div><div class="ccsub">English · Maths · Science</div></div></div>
+            <div><div class="ccprice">₹4,000</div><div class="ccseats">🔥 5 seats only</div></div>
+          </div>
+          <div class="cc c5">
+            <div class="ccl"><div class="ccicon">🔬</div><div><div class="ccname">Class 5</div><div class="ccsub">English · Maths · Science</div></div></div>
+            <div><div class="ccprice">₹4,500</div><div class="ccseats">🔥 5 seats only</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENT STRIP -->
+<div class="ach-strip">
+  <div class="ai"><div class="ai-icon">🥇</div><div><div class="ai-num">30+</div><div class="ai-lbl">Gold Medals<br>Won by Students</div></div></div>
+  <div class="adiv"></div>
+  <div class="ai"><div class="ai-icon">⭐</div><div><div class="ai-num">8 Yrs</div><div class="ai-lbl">Olympiad Teaching<br>Experience</div></div></div>
+  <div class="adiv"></div>
+  <div class="ai"><div class="ai-icon">👥</div><div><div class="ai-num">5 Only</div><div class="ai-lbl">Students Per Batch<br>(Limited!)</div></div></div>
+  <div class="adiv"></div>
+  <div class="ai"><div class="ai-icon">🌍</div><div><div class="ai-num">Intl.</div><div class="ai-lbl">Zonal, State &<br>International Ranks</div></div></div>
+  <div class="adiv"></div>
+  <div class="ai"><div class="ai-icon">🤝</div><div><div class="ai-num">1-on-1</div><div class="ai-lbl">Personal<br>Mentorship</div></div></div>
+</div>
+
+<!-- WHY -->
+<section class="section why-section" id="why">
+  <div class="reveal">
+    <div class="stag blue">✨ Why It Matters</div>
+    <h2 class="stitle">Why Olympiad Prep<br>Changes Everything</h2>
+    <p class="ssub">Beyond the textbook — Olympiad preparation builds skills and confidence that last a lifetime.</p>
+  </div>
+  <div class="why-grid">
+    <div class="wcard w1 reveal"><span class="wicon">🧠</span><div class="wtitle">Sharper Logical Thinking</div><div class="wdesc">Children learn to reason, spot patterns, and solve problems they've never seen — a skill that stays for life.</div><div class="wbg">🧠</div></div>
+    <div class="wcard w2 reveal"><span class="wicon">📈</span><div class="wtitle">Better School Grades</div><div class="wdesc">Olympiad depth makes regular exams easy. Strong conceptual understanding directly boosts marks.</div><div class="wbg">📈</div></div>
+    <div class="wcard w3 reveal"><span class="wicon">🏅</span><div class="wtitle">National Recognition</div><div class="wdesc">Gold medals, state ranks & international rankings — your child's academic profile becomes extraordinary.</div><div class="wbg">🏅</div></div>
+    <div class="wcard w4 reveal"><span class="wicon">💪</span><div class="wtitle">Unshakeable Confidence</div><div class="wdesc">Tackling hard problems and winning gives children belief in themselves that no classroom can replicate.</div><div class="wbg">💪</div></div>
+  </div>
+</section>
+
+<!-- SUBJECTS -->
+<section class="section sub-section" id="subjects">
+  <div class="wsbg"></div>
+  <div class="reveal" style="position:relative;z-index:1;">
+    <div class="stag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);">📚 What We Teach</div>
+    <h2 class="stitle">3 Subjects. 1 Expert.<br>Unlimited Potential.</h2>
+    <p class="ssub">Each subject is taught with Olympiad-specific strategies, past paper patterns, and concept clarity that goes far beyond school.</p>
+  </div>
+  <div class="sub-grid" style="position:relative;z-index:1;">
+    <div class="scard eng reveal">
+      <div class="sbg">📘</div>
+      <span class="sicon">📘</span>
+      <div class="sname">English Olympiad</div>
+      <div class="sexams"><span class="sexam">SOF IEO</span><span class="sexam">SilverZone iEO</span><span class="sexam">ASSET English</span></div>
+      <ul class="slist">
+        <li>Vocabulary, word meanings & usage</li>
+        <li>Reading comprehension & inference</li>
+        <li>Grammar mastery & error spotting</li>
+        <li>Sentence formation & higher-order questions</li>
+        <li>Olympiad-pattern MCQ practice</li>
+      </ul>
+    </div>
+    <div class="scard mat reveal">
+      <div class="sbg">📐</div>
+      <span class="sicon">📐</span>
+      <div class="sname">Maths Olympiad</div>
+      <div class="sexams"><span class="sexam">SOF IMO</span><span class="sexam">Maths Olympiad Foundation</span><span class="sexam">SilverZone iOM</span></div>
+      <ul class="slist">
+        <li>Logical reasoning & number patterns</li>
+        <li>Arithmetic, fractions & word problems</li>
+        <li>Geometry, shapes & spatial thinking</li>
+        <li>Speed maths & mental calculation</li>
+        <li>Tricky MCQs from past Olympiad papers</li>
+      </ul>
+    </div>
+    <div class="scard sci reveal">
+      <div class="sbg">🔬</div>
+      <span class="sicon">🔬</span>
+      <div class="sname">Science Olympiad</div>
+      <div class="sexams"><span class="sexam">SOF NSO</span><span class="sexam">SilverZone iSO</span><span class="sexam">Govt. Olympiads</span></div>
+      <ul class="slist">
+        <li>Physics, Chemistry & Biology concepts</li>
+        <li>NCERT + beyond-syllabus depth</li>
+        <li>Concept-based (never rote) learning</li>
+        <li>Experiment reasoning & application</li>
+        <li>Real-world observation questions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="section instr-section" id="about">
+  <div class="instr-wrap">
+    <div class="reveal">
+      <div class="instr-vis">
+        <div class="gbubble"><div class="gnum">30+</div><div class="glbl">Gold<br>Medals</div></div>
+        <span class="instr-emoji">👨‍🏫</span>
+        <div class="instr-name">Your Mentor</div>
+        <div class="instr-exp">8 Years · Olympiad Specialist</div>
+        <div class="medal-row">🥇🥈🥉🏅🏆</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="stag blue">🌟 Your Instructor</div>
+      <h2 class="stitle">8 Years. 30+ Gold Medals.<br>Proven Results.</h2>
+      <p class="bpara">For <strong>8 years</strong>, I have been exclusively dedicated to Olympiad preparation. This is my specialisation, not a side activity. Under my guidance, students have <strong>won 30+ Gold Medals</strong> and achieved top ranks at Zonal, State, and International levels across multiple platforms.</p>
+      <p class="bpara">My philosophy is <strong>one-on-one mentorship</strong> — every child gets personal attention, customised feedback, and a strategy built around their strengths. I cap each batch at just <strong>5 students</strong> so no child ever gets left behind.</p>
+      <div class="orgs">
+        <div class="org sof">🏅 SOF Olympiads</div>
+        <div class="org sz">⭐ SilverZone</div>
+        <div class="org gov">🏛️ Govt. Olympiads</div>
+        <div class="org mof">📐 Maths Olympiad Foundation</div>
+      </div>
+      <div class="achgrid">
+        <div class="ach a1"><div class="achicon">🥇</div><div><div class="achnum">30+ Gold</div><div class="achlbl">Medals Won by Students</div></div></div>
+        <div class="ach a2"><div class="achicon">🌍</div><div><div class="achnum">Intl. Ranks</div><div class="achlbl">International Level Achievers</div></div></div>
+        <div class="ach a3"><div class="achicon">🏛️</div><div><div class="achnum">State Ranks</div><div class="achlbl">Zonal & State Level Toppers</div></div></div>
+        <div class="ach a4"><div class="achicon">🤝</div><div><div class="achnum">1-on-1</div><div class="achlbl">Personal Mentorship Style</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section" id="how">
+  <div class="reveal">
+    <div class="stag green">⚙️ How It Works</div>
+    <h2 class="stitle">Simple. Structured.<br>Seriously Effective.</h2>
+    <p class="ssub">From registration to winning medals — here's exactly how the journey looks.</p>
+  </div>
+  <div class="steps">
+    <div class="stepcard reveal"><div class="stepnum">1</div><div class="steptitle">Enroll & Pay</div><div class="stepdesc">Register online and complete secure payment via Razorpay. Instant confirmation on email.</div></div>
+    <div class="stepcard reveal"><div class="stepnum">2</div><div class="steptitle">Join WhatsApp Group</div><div class="stepdesc">Get added to your class WhatsApp group. Worksheets, notes & all updates shared here.</div></div>
+    <div class="stepcard reveal"><div class="stepnum">3</div><div class="steptitle">Attend Live Classes</div><div class="stepdesc">Live sessions on Google Meet — 2 per week, 2–3 hours each. Interactive, fun & focused.</div></div>
+    <div class="stepcard reveal"><div class="stepnum">4</div><div class="steptitle">Practice & Win! 🏆</div><div class="stepdesc">Worksheets, mock tests, and expert coaching prepare your child to compete and win!</div></div>
+  </div>
+  <div class="cdbox reveal">
+    <div class="cditem"><div class="cdicon">💻</div><div><div class="cdlbl">Platform</div><div class="cdval">Google Meet</div></div></div>
+    <div class="cditem"><div class="cdicon">💬</div><div><div class="cdlbl">Communication</div><div class="cdval">WhatsApp Groups</div></div></div>
+    <div class="cditem"><div class="cdicon">📅</div><div><div class="cdlbl">Sessions Per Week</div><div class="cdval">2 Sessions / Week</div></div></div>
+    <div class="cditem"><div class="cdicon">⏱️</div><div><div class="cdlbl">Duration Per Session</div><div class="cdval">2 – 3 Hours</div></div></div>
+    <div class="cditem"><div class="cdicon">👥</div><div><div class="cdlbl">Batch Size</div><div class="cdval">Max 5 Students Only</div></div></div>
+    <div class="cditem"><div class="cdicon">🎓</div><div><div class="cdlbl">Classes Available</div><div class="cdval">Class 3, 4 & 5</div></div></div>
+    <div class="cditem"><div class="cdicon">📝</div><div><div class="cdlbl">Materials</div><div class="cdval">Worksheets + Mock Tests (Free)</div></div></div>
+    <div class="cditem"><div class="cdicon">🤝</div><div><div class="cdlbl">Mentorship Style</div><div class="cdval">One-on-One Attention</div></div></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section price-section" id="pricing">
+  <div class="reveal">
+    <div class="stag purple">💰 Course Fee</div>
+    <h2 class="stitle">Simple Pricing.<br>No Hidden Charges.</h2>
+    <p class="ssub">All 3 subjects (English + Maths + Science) included in one single fee per class. Worksheets and mock tests are completely free.</p>
+  </div>
+  <div class="fee-grid">
+    <div class="fcard fc3 reveal">
+      <span class="femoji">📘</span>
+      <div class="fcname">Class 3</div>
+      <div class="fcwho">Build strong foundations early</div>
+      <div class="fcprice">₹3,500</div>
+      <div class="fcper">all 3 subjects · full program</div>
+      <div class="fcseats">🔥 Only 5 seats — 1 batch only!</div>
+      <div class="fcdiv"></div>
+      <ul class="fcinc">
+        <li><span class="ck">✅</span>English + Maths + Science Olympiad</li>
+        <li><span class="ck">✅</span>Live classes on Google Meet</li>
+        <li><span class="ck">✅</span>2 sessions/week (2–3 hrs each)</li>
+        <li><span class="ck">✅</span>Free worksheets after every session</li>
+        <li><span class="ck">✅</span>Mock Olympiad tests included</li>
+        <li><span class="ck">✅</span>WhatsApp parent group access</li>
+        <li><span class="ck">✅</span>One-on-one mentorship attention</li>
+      </ul>
+      <button class="fcbtn" onclick="scrollToReg()">Enroll in Class 3 →</button>
+    </div>
+    <div class="fcard fc4 reveal">
+      <span class="femoji">📐</span>
+      <div class="fcname">Class 4</div>
+      <div class="fcwho">Advance your Olympiad journey</div>
+      <div class="fcprice">₹4,000</div>
+      <div class="fcper">all 3 subjects · full program</div>
+      <div class="fcseats">🔥 Only 5 seats — 1 batch only!</div>
+      <div class="fcdiv"></div>
+      <ul class="fcinc">
+        <li><span class="ck">✅</span>English + Maths + Science Olympiad</li>
+        <li><span class="ck">✅</span>Live classes on Google Meet</li>
+        <li><span class="ck">✅</span>2 sessions/week (2–3 hrs each)</li>
+        <li><span class="ck">✅</span>Free worksheets after every session</li>
+        <li><span class="ck">✅</span>Mock Olympiad tests included</li>
+        <li><span class="ck">✅</span>WhatsApp parent group access</li>
+        <li><span class="ck">✅</span>One-on-one mentorship attention</li>
+      </ul>
+      <button class="fcbtn" onclick="scrollToReg()">Enroll in Class 4 →</button>
+    </div>
+    <div class="fcard fc5 reveal">
+      <span class="femoji">🔬</span>
+      <div class="fcname">Class 5</div>
+      <div class="fcwho">Senior Olympiad excellence</div>
+      <div class="fcprice">₹4,500</div>
+      <div class="fcper">all 3 subjects · full program</div>
+      <div class="fcseats">🔥 Only 5 seats — 1 batch only!</div>
+      <div class="fcdiv"></div>
+      <ul class="fcinc">
+        <li><span class="ck">✅</span>English + Maths + Science Olympiad</li>
+        <li><span class="ck">✅</span>Live classes on Google Meet</li>
+        <li><span class="ck">✅</span>2 sessions/week (2–3 hrs each)</li>
+        <li><span class="ck">✅</span>Free worksheets after every session</li>
+        <li><span class="ck">✅</span>Mock Olympiad tests included</li>
+        <li><span class="ck">✅</span>WhatsApp parent group access</li>
+        <li><span class="ck">✅</span>One-on-one mentorship attention</li>
+      </ul>
+      <button class="fcbtn" onclick="scrollToReg()">Enroll in Class 5 →</button>
+    </div>
+  </div>
+  <div class="payrow reveal">
+    <span class="paylbl">💳 Pay securely via Razorpay:</span>
+    <div class="paychip">📱 UPI</div>
+    <div class="paychip">💳 Debit Card</div>
+    <div class="paychip">💳 Credit Card</div>
+    <div class="paychip">🏦 Net Banking</div>
+    <div class="paychip">📲 Wallets</div>
+    <div class="sectag">🔒 100% Secure</div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section vid-section" id="video">
+  <div class="reveal">
+    <div class="stag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);">🎥 See It Live</div>
+    <h2 class="stitle">Watch a Demo Class</h2>
+    <p class="ssub">See the teaching style, the energy, and how kids engage — live, interactive, and genuinely fun.</p>
+  </div>
+  <div class="vidwrap reveal" onclick="alert('Paste your YouTube embed URL here!')">
+    <div class="playbtn">▶</div>
+    <div class="vidlbl">🎬 OlympiadEdge — Demo Class Preview</div>
+  </div>
+  <p class="vidnote reveal">* Replace with your YouTube or Google Drive video embed link.</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section test-section" id="reviews">
+  <div class="reveal">
+    <div class="stag pink">🌟 Parent Reviews</div>
+    <h2 class="stitle">Gold Medals Don't Lie.</h2>
+    <p class="ssub">Real words from parents of our medal-winning students.</p>
+  </div>
+  <div class="tgrid">
+    <div class="tcard t1 reveal">
+      <span class="tmedal">🥇</span>
+      <div class="tstars">★★★★★</div>
+      <div class="tquote">"My son won a Gold Medal at SOF IMO! The small batch of just 5 students means the teacher knows exactly where each child needs help. Best decision we made."</div>
+      <div class="tauth"><div class="tav" style="background:var(--blue);">S</div><div><div class="tname">Sunita Kapoor</div><div class="trole">Parent of Aryan · Class 4 · Gold Medalist 🥇</div></div></div>
+    </div>
+    <div class="tcard t2 reveal">
+      <span class="tmedal">🏛️</span>
+      <div class="tstars">★★★★★</div>
+      <div class="tquote">"My daughter got a State Rank in NSO Science Olympiad. The mock tests were exactly like the real exam — she felt so prepared and confident. Truly amazing teaching."</div>
+      <div class="tauth"><div class="tav" style="background:var(--green);">P</div><div><div class="tname">Pooja Nair</div><div class="trole">Parent of Riya · Class 5 · State Rank Holder 🏛️</div></div></div>
+    </div>
+    <div class="tcard t3 reveal">
+      <span class="tmedal">🌍</span>
+      <div class="tstars">★★★★★</div>
+      <div class="tquote">"My son received an International Rank in SilverZone Olympiad! The one-on-one attention in a batch of 5 is unlike anything else. 8 years of experience clearly shows."</div>
+      <div class="tauth"><div class="tav" style="background:var(--orange);">R</div><div><div class="tname">Rajesh Menon</div><div class="trole">Parent of Aarav · Class 3 · International Rank 🌍</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="section reg-section" id="register">
+  <div class="reveal">
+    <div class="stag" style="background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);">📋 Register Now</div>
+    <h2 class="stitle">Secure Your Child's<br>Seat Before It's Gone! 🚀</h2>
+    <p class="ssub">Only 5 seats per class. 1 batch per class. Once full, enrolment closes. Don't wait!</p>
+  </div>
+  <div class="regwrap">
+    <div class="regform reveal">
+      <div class="formtitle">📝 Student Registration Form</div>
+      <div class="frow">
+        <div class="fg"><label>Parent's Full Name</label><input type="text" placeholder="e.g. Sunita Sharma" id="parentName"/></div>
+        <div class="fg"><label>Student's Name</label><input type="text" placeholder="e.g. Aryan Sharma" id="studentName"/></div>
+      </div>
+      <div class="fg">
+        <label>Student's Class</label>
+        <select id="studentClass">
+          <option value="">— Select Class —</option>
+          <option>Class 3 – ₹3,500</option>
+          <option>Class 4 – ₹4,000</option>
+          <option>Class 5 – ₹4,500</option>
+        </select>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210" id="phone"/></div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="parent@email.com" id="email"/></div>
+      </div>
+      <button class="fsub" onclick="handleEnroll()">🔒 Proceed to Secure Payment</button>
+      <p class="fnote">After payment, WhatsApp group + Google Meet class schedule sent within 24 hours.</p>
+    </div>
+    <div class="reginfo reveal">
+      <h3>🎉 What Happens After?</h3>
+      <div class="aftersteps">
+        <div class="arstep"><div class="arnum">1</div><div><div class="artitle">Complete Secure Payment</div><div class="ardesc">Pay via UPI, debit/credit card or net banking via Razorpay. Instant confirmation on email.</div></div></div>
+        <div class="arstep"><div class="arnum">2</div><div><div class="artitle">Receive Confirmation</div><div class="ardesc">Payment receipt on email + SMS confirmation immediately after successful payment.</div></div></div>
+        <div class="arstep"><div class="arnum">3</div><div><div class="artitle">Join WhatsApp Group</div><div class="ardesc">Added to your class WhatsApp group within 24 hrs. All worksheets & updates shared here.</div></div></div>
+        <div class="arstep"><div class="arnum">4</div><div><div class="artitle">Attend First Class! 🚀</div><div class="ardesc">Google Meet link shared in WhatsApp. Join live and start your child's Olympiad journey!</div></div></div>
+      </div>
+      <div class="guarbox">
+        <div style="font-size:1.8rem;flex-shrink:0;">🛡️</div>
+        <p><strong>Satisfaction Promise:</strong> Attend the first 2 classes. If you feel the program isn't the right fit, we'll give you a full refund — no questions asked. That's our confidence in what we deliver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="reveal">
+    <div class="stag blue">❓ FAQs</div>
+    <h2 class="stitle">Questions Parents<br>Always Ask</h2>
+  </div>
+  <div class="faqlist">
+    <div class="faqitem reveal"><div class="faqq">Which classes can join this program? <span class="faqtog">+</span></div><div class="faqa">This program is for students in Class 3, Class 4, and Class 5 only. We offer 1 dedicated batch per class, with a maximum of 5 students each for quality mentorship.</div></div>
+    <div class="faqitem reveal"><div class="faqq">Why only 5 students per batch? <span class="faqtog">+</span></div><div class="faqa">With only 5 students, every child receives genuine personal attention — almost like one-on-one tutoring in a group setting. This is what has produced 30+ Gold Medals and International ranks among our students.</div></div>
+    <div class="faqitem reveal"><div class="faqq">Does my child need prior Olympiad experience? <span class="faqtog">+</span></div><div class="faqa">No experience needed at all! We build from the foundation upward. Both first-time students and those who have previously appeared for Olympiads are welcome.</div></div>
+    <div class="faqitem reveal"><div class="faqq">How are the classes conducted? <span class="faqtog">+</span></div><div class="faqa">All sessions are live on Google Meet — 2 sessions per week, each lasting 2 to 3 hours. Classes are interactive, not pre-recorded. Students can ask questions in real time. Google Meet links are shared via the WhatsApp group.</div></div>
+    <div class="faqitem reveal"><div class="faqq">Which Olympiad exams does this cover? <span class="faqtog">+</span></div><div class="faqa">We prepare for SOF (IMO, NSO, IEO), SilverZone Olympiads, Maths Olympiad Foundation, and Government-organised Olympiads. Our students have won medals and achieved ranks across all these platforms over 8 years.</div></div>
+    <div class="faqitem reveal"><div class="faqq">Are worksheets and mock tests really free? <span class="faqtog">+</span></div><div class="faqa">Yes — completely free and included in the program fee. Worksheets are shared after every session via WhatsApp. Full-length mock Olympiad tests are also provided at no extra charge.</div></div>
+    <div class="faqitem reveal"><div class="faqq">Is the payment secure? <span class="faqtog">+</span></div><div class="faqa">Payments are processed via Razorpay — India's most trusted payment gateway. You can pay via UPI, debit card, credit card, or net banking. All transactions are 100% encrypted and secure.</div></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finalcta">
+  <div class="finmeds">🥇🏆🥈🏅⭐</div>
+  <h2>Your Child's Medal Moment<br>Starts with One Click.</h2>
+  <p>Only 5 seats per class · 1 batch only · New batch starting soon — don't miss it!</p>
+  <div class="finalbtns">
+    <button class="btnfinal" onclick="scrollToReg()">🎯 Secure My Child's Seat</button>
+    <a href="https://wa.me/919999999999?text=Hi!%20I%20want%20to%20enroll%20in%20OlympiadEdge." class="btnwa" target="_blank">💬 WhatsApp Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div><div class="flogo">🏆 Olympiad<span class="fe">Edge</span></div><div class="ftagline">Expert Olympiad coaching for Class 3, 4 & 5. Limited seats. Unlimited potential.</div></div>
+    <div class="fcol"><h4>Program</h4><ul class="flinks"><li><a href="#subjects">Subjects</a></li><li><a href="#how">How It Works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About Mentor</a></li></ul></div>
+    <div class="fcol"><h4>Support</h4><ul class="flinks"><li><a href="#faq">FAQ</a></li><li><a href="https://wa.me/919999999999">WhatsApp Us</a></li><li><a href="/cdn-cgi/l/email-protection#5c34393030331c333025312c353d3839383b39723532">Email Us</a></li></ul></div>
+    <div class="fcol"><h4>Contact</h4><ul class="flinks"><li><a href="/cdn-cgi/l/email-protection#b8d0ddd4d4d7f8d7d4c1d5c8d1d9dcdddcdfdd96d1d6"><span class="__cf_email__" data-cfemail="4c24292020230c232035213c252d2829282b29622522">[email&#160;protected]</span></a></li><li><a href="#">+91 99999 99999</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Refund Policy</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2025 OlympiadEdge. All rights reserved.</span><span>🔒 Payments secured by Razorpay · Made with ❤️ for future champions</span></div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-ov" id="successModal">
+  <div class="modal-box">
+    <div class="micon">🎉🥇🎊</div>
+    <div class="mtitle">You're Almost In!</div>
+    <div class="msub">Registration received! In production, <strong>Razorpay</strong> payment opens here.<br><br>After payment, you'll be added to the <strong>WhatsApp group</strong> and receive the <strong>Google Meet class link</strong> within 24 hours.<br><br>Your child's Olympiad journey begins now! 🚀</div>
+    <button class="mclose" onclick="closeModal()">🏆 Awesome, Got It!</button>
+  </div>
+</div>
+
+
+<script>
+// ── Floating emoji background ──
+const emojis=['🥇','🏅','⭐','🏆','🥈','📝','📐','🔬','📘','✏️','🎯','💡','🌟'];
+const bg=document.getElementById('emojiBg');
+for(let i=0;i<20;i++){
+  const el=document.createElement('div');
+  el.classList.add('eb');
+  el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+  el.style.left=Math.random()*100+'vw';
+  el.style.animationDuration=(12+Math.random()*18)+'s';
+  el.style.animationDelay=(Math.random()*15)+'s';
+  el.style.fontSize=(1.2+Math.random()*1.8)+'rem';
+  bg.appendChild(el);
+}
+
+// ── FAQ accordion ──
+document.querySelectorAll('.faqitem').forEach(item=>{
+  item.querySelector('.faqq').addEventListener('click',()=>{
+    const was=item.classList.contains('open');
+    document.querySelectorAll('.faqitem').forEach(i=>i.classList.remove('open'));
+    if(!was) item.classList.add('open');
+  });
+});
+
+// ── Smooth scroll helpers ──
+function scrollToReg(){
+  document.getElementById('register').scrollIntoView({behavior:'smooth'});
+}
+function scrollTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+// ── Nav link smooth scroll ──
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const target=document.querySelector(this.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
+  });
+});
+
+// ── Enroll buttons pre-fill class ──
+document.querySelectorAll('.fcbtn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const card=this.closest('.fcard');
+    const cls = card.classList.contains('fc3') ? 'Class 3 – ₹3,500'
+               : card.classList.contains('fc4') ? 'Class 4 – ₹4,000'
+               : 'Class 5 – ₹4,500';
+    const sel=document.getElementById('studentClass');
+    for(let i=0;i<sel.options.length;i++){
+      if(sel.options[i].value===cls){sel.selectedIndex=i;break;}
+    }
+    document.getElementById('register').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// ── Video click ──
+document.querySelector('.vidwrap').addEventListener('click',function(){
+  const url=prompt('🎥 Paste your YouTube video URL here:','https://www.youtube.com/watch?v=');
+  if(url && url.includes('youtube.com/watch?v=')){
+    const id=url.split('v=')[1].split('&')[0];
+    const iframe=document.createElement('iframe');
+    iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1';
+    iframe.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none;z-index:5;';
+    iframe.allow='autoplay;fullscreen';
+    this.appendChild(iframe);
+  } else if(url){
+    // Non-YouTube: open directly
+    window.open(url,'_blank');
+  }
+});
+
+// ── Phone number click ──
+document.querySelectorAll('a[href="#"]').forEach(a=>{
+  if(a.textContent.includes('+91')){
+    a.href='tel:+919999999999';
+    a.removeAttribute('href');
+    a.style.cursor='pointer';
+    a.addEventListener('click',()=>window.location.href='tel:+919999999999');
+  }
+});
+
+// ── Privacy Policy modal ──
+function showPolicy(title, content){
+  document.getElementById('policyTitle').textContent=title;
+  document.getElementById('policyContent').innerHTML=content;
+  document.getElementById('policyModal').classList.add('open');
+}
+document.querySelectorAll('a[href="#"]').forEach(a=>{
+  if(a.textContent.trim()==='Privacy Policy'){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      showPolicy('Privacy Policy',
+        '<p>At OlympiadEdge, we are committed to protecting your privacy.</p><br>'+
+        '<p><strong>Data We Collect:</strong> Name, email, phone number, and your child\'s class during registration.</p><br>'+
+        '<p><strong>How We Use It:</strong> Only to add you to the correct WhatsApp group and share Google Meet class links. We never sell or share your data with third parties.</p><br>'+
+        '<p><strong>Payments:</strong> All payments are processed by Razorpay. We do not store card details.</p><br>'+
+        '<p><strong>Contact:</strong> For any privacy concerns, WhatsApp us or email hello@olympiadedge.in</p>'
+      );
+    });
+  }
+  if(a.textContent.trim()==='Refund Policy'){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      showPolicy('Refund Policy',
+        '<p><strong>Satisfaction Guarantee:</strong> We are confident in the quality of our program.</p><br>'+
+        '<p>If your child attends the <strong>first 2 classes</strong> and you feel the program is not the right fit, simply WhatsApp us and we will process a <strong>full refund — no questions asked.</strong></p><br>'+
+        '<p><strong>After 2 Classes:</strong> No refunds after the second session has been attended, as worksheets and materials have been shared.</p><br>'+
+        '<p><strong>Missed Classes:</strong> Recordings are shared in the WhatsApp group. No refunds for missed sessions.</p><br>'+
+        '<p>For refund requests: WhatsApp us at +91 99999 99999</p>'
+      );
+    });
+  }
+});
+
+// ── Registration form submission ──
+function handleEnroll(){
+  const pn=document.getElementById('parentName').value.trim();
+  const sn=document.getElementById('studentName').value.trim();
+  const sc=document.getElementById('studentClass').value;
+  const ph=document.getElementById('phone').value.trim();
+  const em=document.getElementById('email').value.trim();
+
+  // Validation
+  if(!pn){showFormError('parentName','Please enter parent name');return;}
+  if(!sn){showFormError('studentName','Please enter student name');return;}
+  if(!sc){showFormError('studentClass','Please select your child\'s class');return;}
+  if(!ph||ph.length<10){showFormError('phone','Please enter a valid phone number');return;}
+  if(!em||!em.includes('@')){showFormError('email','Please enter a valid email address');return;}
+
+  clearFormErrors();
+
+  // Show payment modal
+  const amount = sc.includes('3') ? '3,500' : sc.includes('4') ? '4,000' : '4,500';
+  document.getElementById('payAmount').textContent='₹'+amount;
+  document.getElementById('payStudentName').textContent=sn;
+  document.getElementById('payClass').textContent=sc.split('–')[0].trim();
+  document.getElementById('paymentModal').classList.add('open');
+}
+
+function showFormError(id, msg){
+  const el=document.getElementById(id);
+  el.style.borderColor='#ef4444';
+  let err=el.parentNode.querySelector('.ferr');
+  if(!err){err=document.createElement('div');err.className='ferr';err.style.cssText='color:#ef4444;font-size:.75rem;margin-top:4px;font-weight:700;';el.parentNode.appendChild(err);}
+  err.textContent='⚠ '+msg;
+  el.focus();
+}
+function clearFormErrors(){
+  document.querySelectorAll('.ferr').forEach(e=>e.remove());
+  document.querySelectorAll('.fg input, .fg select').forEach(e=>e.style.borderColor='');
+}
+
+// ── Payment modal actions ──
+function payViaRazorpay(){
+  // In production: initialise Razorpay here with your key and amount
+  document.getElementById('paymentModal').classList.remove('open');
+  document.getElementById('successModal').classList.add('open');
+}
+function closeModal(id){
+  document.getElementById(id||'successModal').classList.remove('open');
+}
+
+// ── Nav scroll shadow ──
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow=window.scrollY>60
+    ?'0 6px 30px rgba(26,111,212,.18)':'0 4px 20px rgba(26,111,212,.1)';
+});
+
+// ── Active nav link highlight ──
+const sections=document.querySelectorAll('section[id], div[id]');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    if(window.scrollY>=s.offsetTop-120) current=s.id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.style.color=a.getAttribute('href')==='#'+current?'var(--blue)':'';
+  });
+});
+</script>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-ov" id="paymentModal">
+  <div class="modal-box">
+    <div style="font-size:2.5rem;margin-bottom:.5rem;">💳</div>
+    <div class="mtitle">Complete Payment</div>
+    <div style="background:#f0f7ff;border-radius:14px;padding:16px;margin:1rem 0;text-align:left;">
+      <div style="font-size:.78rem;color:#94a3b8;font-weight:700;text-transform:uppercase;margin-bottom:.4rem;">Order Summary</div>
+      <div style="font-size:.92rem;font-weight:700;color:#1e1b4b;margin-bottom:.2rem;">👦 Student: <span id="payStudentName"></span></div>
+      <div style="font-size:.92rem;font-weight:700;color:#1e1b4b;margin-bottom:.2rem;">🎓 Class: <span id="payClass"></span></div>
+      <div style="font-size:.92rem;font-weight:700;color:#1e1b4b;">📚 English + Maths + Science Olympiad</div>
+      <div style="margin-top:.8rem;padding-top:.8rem;border-top:2px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-size:.85rem;color:#475569;font-weight:700;">Total Amount</span>
+        <span id="payAmount" style="font-family:'Fredoka One',cursive;font-size:1.6rem;color:#1a6fd4;"></span>
+      </div>
+    </div>
+    <div style="font-size:.8rem;color:#94a3b8;margin-bottom:1.2rem;font-weight:600;">🔒 Secure payment via Razorpay — UPI · Debit · Credit · Net Banking</div>
+    <button onclick="payViaRazorpay()" style="width:100%;padding:14px;border-radius:50px;background:linear-gradient(135deg,#1a6fd4,#8b5cf6);color:white;font-size:1rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;margin-bottom:.8rem;">🔒 Pay Now with Razorpay</button>
+    <button onclick="closeModal('paymentModal')" style="width:100%;padding:12px;border-radius:50px;background:transparent;color:#94a3b8;font-size:.88rem;font-weight:700;border:2px solid #e2e8f0;cursor:pointer;font-family:'Quicksand',sans-serif;">← Go Back</button>
+  </div>
+</div>
+
+<!-- POLICY MODAL -->
+<div class="modal-ov" id="policyModal">
+  <div class="modal-box" style="max-width:520px;text-align:left;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;">
+      <div id="policyTitle" style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#1e1b4b;"></div>
+      <button onclick="closeModal('policyModal')" style="background:#f0f7ff;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;color:#475569;">✕</button>
+    </div>
+    <div id="policyContent" style="font-size:.88rem;color:#475569;line-height:1.8;font-weight:600;max-height:60vh;overflow-y:auto;"></div>
+    <button onclick="closeModal('policyModal')" style="width:100%;margin-top:1.4rem;padding:13px;border-radius:50px;background:linear-gradient(135deg,#1a6fd4,#8b5cf6);color:white;font-size:.92rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;">Got it 👍</button>
+  </div>
+</div>
+
+</body>
+</html>
