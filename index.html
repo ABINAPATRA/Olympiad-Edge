@@ -318,8 +318,6 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
   .adiv{display:none;}
   .nav-char{display:none !important;}
   .wa-float-tooltip{display:none;}
-  .gform-desktop{display:none !important;}
-  .gform-mobile{display:block !important;}
   #scroll-progress-bar{display:none;}
 }
 
@@ -714,6 +712,8 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
   <div class="ai"><div class="ai-icon">🔄</div><div><div class="ai-num">Revisit</div><div class="ai-lbl">Concepts Until Fully<br>Understood</div></div></div>
   <div class="adiv"></div>
   <div class="ai"><div class="ai-icon">🌍</div><div><div class="ai-num">Intl.</div><div class="ai-lbl">Zonal, State &amp;<br>International Ranks</div></div></div>
+  <div class="adiv"></div>
+  <div class="ai"><div class="ai-icon">🥇</div><div><div class="ai-num">30+</div><div class="ai-lbl">Gold Medals Won<br>by Students</div></div></div>
 </div>
 
 <!-- WHY -->
@@ -1044,29 +1044,44 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
   <h2 class="stitle">Register Your Interest<br>&amp; We'll Call You! 📞</h2>
   <p class="ssub">Fill in your details below. Abina will personally call you to confirm your child's seat, answer all your questions, and guide you through the next steps — no payment needed right now.</p>
   <div class="regwrap">
-    <div class="regform" style="padding:0;overflow:hidden;background:transparent;box-shadow:none;">
-      <!-- Desktop: embedded iframe -->
-      <div class="gform-desktop" style="border-radius:20px;overflow:hidden;height:900px;position:relative;">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdCoXks3HfBm6lHp3ZZDnb0pTWBh6dziBVliu_6aSrNpRAh2g/viewform?embedded=true"
-          width="100%"
-          height="948"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          style="display:block;background:white;border:none;"
-        >Loading form…</iframe>
+    <div class="regform" id="customRegForm">
+      <div class="formtitle">📝 Register Your Interest</div>
+      <div class="frow">
+        <div class="fg"><label>Parent's Full Name</label><input type="text" id="rf_parentName" placeholder="e.g. Sunita Sharma"/></div>
+        <div class="fg"><label>Student's Name</label><input type="text" id="rf_studentName" placeholder="e.g. Aryan Sharma"/></div>
       </div>
-      <!-- Mobile: open in tab button -->
-      <div class="gform-mobile" style="display:none;background:white;border-radius:24px;padding:36px 28px;text-align:center;box-shadow:0 6px 28px rgba(26,111,212,0.13);">
-        <div style="font-size:3rem;margin-bottom:1rem;">📝</div>
-        <div style="font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--ink);margin-bottom:.6rem;">Register Your Interest</div>
-        <p style="font-size:.9rem;color:var(--slate);font-weight:600;line-height:1.7;margin-bottom:1.8rem;">Tap the button below to open the registration form. It takes less than a minute to fill in — just your name, your child's name, class, and phone number.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCoXks3HfBm6lHp3ZZDnb0pTWBh6dziBVliu_6aSrNpRAh2g/viewform" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;padding:16px 32px;border-radius:50px;font-size:1rem;font-weight:800;text-decoration:none;box-shadow:0 6px 24px rgba(139,92,246,0.4);">
-          📋 Open Registration Form
-        </a>
-        <p style="font-size:.75rem;color:var(--muted);margin-top:1rem;font-weight:600;">Opens in Google Forms · No login required</p>
+      <div class="fg">
+        <label>Student's Class</label>
+        <select id="rf_studentClass">
+          <option value="">— Select Class —</option>
+          <option value="Class 3">Class 3 – ₹3,500/month</option>
+          <option value="Class 4">Class 4 – ₹4,000/month</option>
+          <option value="Class 5">Class 5 – ₹4,500/month</option>
+        </select>
       </div>
+      <div class="fg"><label>School Name</label><input type="text" id="rf_schoolName" placeholder="e.g. Delhi Public School"/></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" id="rf_phone" placeholder="+91 98765 43210"/></div>
+      <button class="fsub" id="rf_submitBtn" onclick="submitRegForm()">📞 Register My Interest</button>
+      <p class="fnote">No payment needed now. Abina will call you within 24 hours to confirm your child's seat.</p>
+    </div>
+    <!-- Mobile-only: same form, simplified single-column layout (shown via CSS) -->
+    <div class="regform gform-mobile" id="mobileFormWrap" style="display:none;">
+      <div class="formtitle">📝 Register Your Interest</div>
+      <div class="fg"><label>Parent Name</label><input type="text" id="mf_parent" placeholder="e.g. Sunita Sharma"/></div>
+      <div class="fg"><label>Student Name</label><input type="text" id="mf_student" placeholder="e.g. Aryan Sharma"/></div>
+      <div class="fg">
+        <label>Student Class</label>
+        <select id="mf_class">
+          <option value="">— Select Class —</option>
+          <option value="Class 3">Class 3 – ₹3,500/month</option>
+          <option value="Class 4">Class 4 – ₹4,000/month</option>
+          <option value="Class 5">Class 5 – ₹4,500/month</option>
+        </select>
+      </div>
+      <div class="fg"><label>School Name</label><input type="text" id="mf_school" placeholder="e.g. DAV Public School"/></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" id="mf_phone" placeholder="+91 98765 43210"/></div>
+      <button class="fsub" id="mf_submitBtn" onclick="submitMobileForm()">📞 Register My Interest</button>
+      <p class="fnote">No payment needed · Abina calls within 24 hours.</p>
     </div>
     <div class="reginfo">
       <h3>🎉 What Happens After?</h3>
@@ -1564,6 +1579,136 @@ document.getElementById('refundLink').addEventListener('click', function(e){
   window.addEventListener("DOMContentLoaded", updateChar);
   setStage(0);
 })();
+
+// ── Custom Registration Form ──
+function submitRegForm(){
+  var parentName  = document.getElementById("rf_parentName").value.trim();
+  var studentName = document.getElementById("rf_studentName").value.trim();
+  var studentClass= document.getElementById("rf_studentClass").value;
+  var schoolName  = document.getElementById("rf_schoolName").value.trim();
+  var phone       = document.getElementById("rf_phone").value.trim();
+
+  if(!parentName)   { rfError("rf_parentName",  "Please enter parent name"); return; }
+  if(!studentName)  { rfError("rf_studentName", "Please enter student name"); return; }
+  if(!studentClass) { rfError("rf_studentClass","Please select a class"); return; }
+  if(!schoolName)   { rfError("rf_schoolName",  "Please enter school name"); return; }
+  if(!phone || phone.length < 10) { rfError("rf_phone", "Please enter a valid phone number"); return; }
+
+  rfClearErrors();
+  var btn = document.getElementById("rf_submitBtn");
+  btn.textContent = "Sending...";
+  btn.disabled = true;
+
+  var payload = {
+    parentName:   parentName,
+    studentName:  studentName,
+    studentClass: studentClass,
+    schoolName:   schoolName,
+    phone:        phone
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbwlAAMlf4qNoM9UJmoOV8cLn_lfIna6P3ANeX-qBr8J52YfB_G4ce6eAMqkQ2q8GZ2r/exec", {
+    method: "POST",
+    mode:   "no-cors",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(payload)
+  })
+  .then(function(){
+    btn.textContent = "Registered!";
+    rfPlayChime();
+    rfConfetti();
+    document.getElementById("interestModal").classList.add("open");
+    document.getElementById("customRegForm").reset
+      && document.getElementById("customRegForm").querySelectorAll("input,select")
+         .forEach(function(el){ el.value = ""; });
+    setTimeout(function(){ btn.textContent = "Register My Interest"; btn.disabled = false; }, 4000);
+  })
+  .catch(function(){
+    btn.textContent = "Register My Interest";
+    btn.disabled = false;
+    alert("Something went wrong. Please try again.");
+  });
+}
+
+function rfError(id, msg){
+  var el = document.getElementById(id);
+  if(!el) return;
+  el.style.borderColor = "#ef4444";
+  var err = el.parentNode.querySelector(".ferr");
+  if(!err){ err = document.createElement("div"); err.className = "ferr"; err.style.cssText = "color:#ef4444;font-size:.75rem;margin-top:4px;font-weight:700;"; el.parentNode.appendChild(err); }
+  err.textContent = "⚠ " + msg;
+  el.focus();
+}
+
+function rfClearErrors(){
+  document.querySelectorAll(".ferr").forEach(function(e){ e.remove(); });
+  ["rf_parentName","rf_studentName","rf_studentClass","rf_schoolName","rf_phone"]
+    .forEach(function(id){ var el=document.getElementById(id); if(el) el.style.borderColor=""; });
+}
+
+function rfPlayChime(){
+  try{
+    var ctx = new (window.AudioContext||window.webkitAudioContext)();
+    [523,659,784,1047].forEach(function(freq,i){
+      var osc = ctx.createOscillator();
+      var gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.frequency.value = freq; osc.type = "sine";
+      var t = ctx.currentTime + i * 0.13;
+      gain.gain.setValueAtTime(0, t);
+      gain.gain.linearRampToValueAtTime(0.18, t + 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.4);
+      osc.start(t); osc.stop(t + 0.42);
+    });
+  } catch(e){}
+}
+
+function rfConfetti(){
+  var conf = document.getElementById("ncConfetti");
+  if(!conf) return;
+  conf.innerHTML = "";
+  conf.classList.add("show");
+  var colors = ["#f59e0b","#ec4899","#8b5cf6","#1a6fd4","#16a34a","#f97316"];
+  for(var i=0;i<40;i++){
+    var c = document.createElement("div");
+    c.className = "conf";
+    var w = (5 + Math.random()*7).toFixed(0);
+    c.style.cssText = "left:"+Math.random()*100+"%;background:"+colors[i%colors.length]+";border-radius:"+(Math.random()>.5?"50%":"2px")+";animation-delay:"+(Math.random()*.8).toFixed(2)+"s;width:"+w+"px;height:"+w+"px;";
+    conf.appendChild(c);
+  }
+  setTimeout(function(){ conf.classList.remove("show"); }, 2800);
+}
+
+
+// ── Mobile Form Submit ──
+function submitMobileForm(){
+  var parentName   = document.getElementById("mf_parent").value.trim();
+  var studentName  = document.getElementById("mf_student").value.trim();
+  var studentClass = document.getElementById("mf_class").value;
+  var schoolName   = document.getElementById("mf_school").value.trim();
+  var phone        = document.getElementById("mf_phone").value.trim();
+  if(!parentName)  {rfError("mf_parent","Please enter parent name");return;}
+  if(!studentName) {rfError("mf_student","Please enter student name");return;}
+  if(!studentClass){rfError("mf_class","Please select a class");return;}
+  if(!schoolName)  {rfError("mf_school","Please enter school name");return;}
+  if(!phone||phone.length<10){rfError("mf_phone","Please enter a valid phone number");return;}
+  var btn=document.getElementById("mf_submitBtn");
+  btn.textContent="Sending...";btn.disabled=true;
+  fetch("https://script.google.com/macros/s/AKfycbwlAAMlf4qNoM9UJmoOV8cLn_lfIna6P3ANeX-qBr8J52YfB_G4ce6eAMqkQ2q8GZ2r/exec",{
+    method:"POST",mode:"no-cors",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({parentName:parentName,studentName:studentName,studentClass:studentClass,schoolName:schoolName,phone:phone})
+  })
+  .then(function(){
+    btn.textContent="Registered!";
+    rfPlayChime();rfConfetti();
+    document.getElementById("interestModal").classList.add("open");
+    document.querySelectorAll("#mobileFormWrap input,#mobileFormWrap select").forEach(function(e){e.value="";});
+    setTimeout(function(){btn.textContent="Register My Interest";btn.disabled=false;},4000);
+  })
+  .catch(function(){btn.textContent="Register My Interest";btn.disabled=false;});
+}
+
 </script>
 
 <!-- FLOATING WHATSAPP BUTTON -->
