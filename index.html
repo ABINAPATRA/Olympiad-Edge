@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>OlympiadEdge – Olympiad Prep for Class 3, 4 & 5</title>
+<title>OlympiadEdge – Olympiad Coaching for Class 3, 4 &amp; 5 | Abina Patra</title>
+<meta name="description" content="Expert live Olympiad coaching for Class 3, 4 and 5 in Mathematics, English and Science. 8 years of experience. Max 5 students per batch. Free trial class. Register your interest today."/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Fredoka+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -19,7 +20,7 @@
   --sh2:0 14px 50px rgba(26,111,212,0.18);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;scroll-padding-top:76px;}
 body{font-family:'Quicksand',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
 ::-webkit-scrollbar{width:7px;}
 ::-webkit-scrollbar-thumb{background:linear-gradient(var(--blue),var(--purple));border-radius:10px;}
@@ -32,38 +33,18 @@ footer{position:relative;z-index:1;}
 .eb{position:absolute;font-size:2rem;opacity:0.06;animation:floatUp linear infinite;}
 @keyframes floatUp{0%{transform:translateY(110vh) rotate(0deg);}100%{transform:translateY(-10vh) rotate(360deg);}}
 
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:300;
-  background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);
-  border-bottom:3px solid;
-  border-image:linear-gradient(90deg,var(--blue),var(--purple),var(--pink),var(--orange)) 1;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 4%;height:68px;box-shadow:0 4px 20px rgba(26,111,212,0.1);
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:space-between;padding:0 4%;height:68px;box-shadow:0 4px 20px rgba(26,111,212,0.1);}
 .nav-logo{font-family:'Fredoka One',cursive;font-size:1.6rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px;}
-.nav-logo .ls{display:inline-block;}
-@keyframes spin{to{transform:rotate(360deg);}}
 .nav-logo .ne{color:var(--orange);}
-.nav-links{display:flex;gap:1.6rem;list-style:none;}
+.nav-links{display:flex;gap:1.6rem;list-style:none;transition:opacity .25s,visibility .25s;}
+.nav-links.hidden{opacity:0;visibility:hidden;pointer-events:none;}
 .nav-links a{text-decoration:none;color:var(--slate);font-size:0.88rem;font-weight:700;transition:color .2s;}
 .nav-links a:hover{color:var(--blue);}
-.nav-enroll{
-  background:linear-gradient(135deg,var(--orange),var(--pink));color:white;
-  padding:10px 22px;border-radius:50px;font-size:0.88rem;font-weight:800;
-  border:none;cursor:pointer;font-family:'Quicksand',sans-serif;
-  box-shadow:0 4px 18px rgba(236,72,153,0.35);transition:transform .15s;
-  animation:navpulse 2.5s infinite;
-}
+.nav-enroll{background:linear-gradient(135deg,var(--orange),var(--pink));color:white;padding:10px 22px;border-radius:50px;font-size:0.88rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;box-shadow:0 4px 18px rgba(236,72,153,0.35);transition:transform .15s;animation:navpulse 2.5s infinite;}
 @keyframes navpulse{0%,100%{box-shadow:0 4px 18px rgba(236,72,153,0.35);}50%{box-shadow:0 6px 28px rgba(236,72,153,0.6);}}
 .nav-enroll:hover{transform:translateY(-2px);}
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  background:linear-gradient(145deg,#0d1b4b 0%,#1a3a8f 40%,#2563eb 70%,#7c3aed 100%);
-  display:flex;align-items:center;padding:90px 4% 60px;
-  position:relative;overflow:hidden;
-}
+.hero{min-height:100vh;background:linear-gradient(145deg,#0d1b4b 0%,#1a3a8f 40%,#2563eb 70%,#7c3aed 100%);display:flex;align-items:center;padding:90px 4% 60px;position:relative;overflow:hidden;}
 .hblob1{position:absolute;top:-120px;right:-80px;width:480px;height:480px;border-radius:50%;background:rgba(139,92,246,0.18);filter:blur(40px);}
 .hblob2{position:absolute;bottom:-100px;left:-60px;width:380px;height:380px;border-radius:50%;background:rgba(249,115,22,0.15);filter:blur(36px);}
 .hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.09) 1px,transparent 1px);background-size:30px 30px;}
@@ -75,19 +56,10 @@ nav{
 .hm5{top:52%;left:2%;opacity:.1;font-size:2rem;animation:fl1 8s ease-in-out infinite;}
 @keyframes fl1{0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-18px) rotate(5deg);}}
 @keyframes fl2{0%,100%{transform:translateY(0) rotate(5deg);}50%{transform:translateY(-14px) rotate(-5deg);}}
-
 .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1200px;margin:0 auto;width:100%;}
-
-.urgent{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(239,68,68,0.92);color:white;
-  padding:7px 18px;border-radius:50px;font-size:0.82rem;font-weight:800;
-  border:2px solid rgba(255,255,255,0.3);margin-bottom:1rem;
-  animation:fadeUp .4s ease both;
-}
+.urgent{display:inline-flex;align-items:center;gap:8px;background:rgba(239,68,68,0.92);color:white;padding:7px 18px;border-radius:50px;font-size:0.82rem;font-weight:800;border:2px solid rgba(255,255,255,0.3);margin-bottom:1rem;animation:fadeUp .4s ease both;}
 .udot{width:8px;height:8px;background:white;border-radius:50%;animation:blink 1s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
-
 .hero h1{font-family:'Fredoka One',cursive;font-size:clamp(2.4rem,5vw,3.8rem);color:white;line-height:1.1;margin-bottom:1.2rem;animation:fadeUp .5s .1s ease both;}
 .hero h1 .hl{background:linear-gradient(90deg,var(--yellow2),var(--orange),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
 .hero-sub{font-size:1rem;color:rgba(255,255,255,0.85);line-height:1.7;max-width:480px;margin-bottom:2rem;animation:fadeUp .5s .2s ease both;font-weight:600;}
@@ -98,8 +70,6 @@ nav{
 .btn-sec:hover{background:rgba(255,255,255,0.25);}
 .hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:2rem;animation:fadeUp .5s .4s ease both;}
 .hero-pill{background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.22);color:white;padding:6px 16px;border-radius:50px;font-size:0.8rem;font-weight:700;display:flex;align-items:center;gap:6px;}
-
-/* Hero right card */
 .hero-right{animation:fadeUp .5s .25s ease both;position:relative;}
 .hcard{background:white;border-radius:24px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.3);}
 .hct{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--ink);margin-bottom:.3rem;}
@@ -123,18 +93,13 @@ nav{
 .fmed1{position:absolute;top:-20px;right:-16px;font-size:2.8rem;animation:fl2 4s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));}
 .fmed2{position:absolute;bottom:-20px;left:-16px;font-size:2.4rem;animation:fl1 5s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));}
 
-/* ACHIEVEMENT STRIP */
-.ach-strip{
-  background:linear-gradient(135deg,var(--yellow),var(--orange),var(--pink));
-  padding:26px 4%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:2rem;position:relative;z-index:1;
-}
+.ach-strip{background:linear-gradient(135deg,var(--yellow),var(--orange),var(--pink));padding:26px 4%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:2rem;position:relative;z-index:1;}
 .ai{display:flex;align-items:center;gap:12px;color:white;}
 .ai-icon{font-size:2.2rem;}
 .ai-num{font-family:'Fredoka One',cursive;font-size:2rem;line-height:1;}
 .ai-lbl{font-size:.78rem;font-weight:700;opacity:.9;line-height:1.3;}
 .adiv{width:2px;height:50px;background:rgba(255,255,255,.3);}
 
-/* SECTIONS */
 .section{padding:80px 4%;position:relative;}
 .stag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:50px;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.8rem;}
 .stag.blue{background:var(--blue-light);color:var(--blue);}
@@ -145,7 +110,6 @@ nav{
 .stitle{font-family:'Fredoka One',cursive;font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--ink);line-height:1.15;margin-bottom:.7rem;}
 .ssub{font-size:.96rem;color:var(--slate);line-height:1.7;max-width:560px;font-weight:600;}
 
-/* WHY */
 .why-section{background:white;}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.4rem;margin-top:3rem;}
 .wcard{border-radius:20px;padding:28px 22px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden;cursor:default;}
@@ -159,7 +123,6 @@ nav{
 .wdesc{font-size:.83rem;color:var(--slate);line-height:1.6;font-weight:600;}
 .wbg{position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.07;}
 
-/* SUBJECTS */
 .sub-section{background:linear-gradient(145deg,#0d1b4b,#1e1b4b);overflow:hidden;position:relative;}
 .wsbg{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 28px),repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 1px,transparent 28px);}
 .sub-section .stitle{color:white;}
@@ -179,15 +142,14 @@ nav{
 .slist li::before{content:'⭐';font-size:.7rem;margin-top:2px;flex-shrink:0;}
 .sbg{position:absolute;bottom:-20px;right:-10px;font-size:9rem;opacity:.07;}
 
-/* INSTRUCTOR */
 .instr-section{background:linear-gradient(135deg,#fdf4ff,#f0f7ff);}
 .instr-wrap{display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:start;}
-.instr-vis{background:linear-gradient(145deg,var(--blue),var(--purple));border-radius:24px;padding:36px;text-align:center;box-shadow:var(--sh2);position:relative;}
-.instr-emoji{font-size:6rem;display:block;margin-bottom:.5rem;animation:fl1 5s ease-in-out infinite;}
-.instr-name{font-family:'Fredoka One',cursive;font-size:1.4rem;color:white;margin-bottom:.3rem;}
+.instr-vis{background:linear-gradient(145deg,var(--blue),var(--purple));border-radius:24px;padding:0;box-shadow:var(--sh2);position:relative;overflow:hidden;}
+.instr-vis-inner{padding:0 24px 24px;}
+.instr-name{font-family:'Fredoka One',cursive;font-size:1.4rem;color:white;margin-bottom:.3rem;margin-top:.8rem;}
 .instr-exp{font-size:.85rem;color:rgba(255,255,255,.8);font-weight:700;}
 .medal-row{display:flex;justify-content:center;gap:6px;margin-top:1rem;font-size:1.8rem;}
-.gbubble{position:absolute;top:-14px;right:-14px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--yellow),var(--orange));display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 4px 18px rgba(245,158,11,.5);border:3px solid white;}
+.gbubble{position:absolute;top:14px;right:14px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--yellow),var(--orange));display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 4px 18px rgba(245,158,11,.5);border:3px solid white;z-index:2;}
 .gnum{font-family:'Fredoka One',cursive;font-size:1rem;color:white;line-height:1;}
 .glbl{font-size:.45rem;color:white;font-weight:800;text-align:center;line-height:1.3;}
 .bpara{font-size:.93rem;color:var(--slate);line-height:1.8;margin-bottom:1rem;font-weight:600;}
@@ -202,7 +164,6 @@ nav{
 .achnum{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--ink);}
 .achlbl{font-size:.72rem;color:var(--slate);font-weight:700;}
 
-/* HOW */
 .how-section{background:white;}
 .steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.5rem;margin-top:3rem;}
 .stepcard{border-radius:20px;padding:28px 20px;text-align:center;border:3px dashed var(--border);transition:transform .25s,border-color .25s,background .25s;}
@@ -214,7 +175,6 @@ nav{
 .stepcard:nth-child(4) .stepnum{background:linear-gradient(135deg,var(--pink),var(--purple));}
 .steptitle{font-family:'Fredoka One',cursive;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;}
 .stepdesc{font-size:.82rem;color:var(--slate);line-height:1.6;font-weight:600;}
-
 .cdbox{background:linear-gradient(145deg,#0d1b4b,#1a3a8f);border-radius:24px;padding:36px;color:white;margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;position:relative;overflow:hidden;}
 .cdbox::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px;}
 .cditem{position:relative;z-index:1;display:flex;align-items:flex-start;gap:14px;}
@@ -222,7 +182,6 @@ nav{
 .cdlbl{font-size:.7rem;font-weight:800;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;}
 .cdval{font-family:'Fredoka One',cursive;font-size:1.05rem;color:white;margin-top:2px;}
 
-/* PRICING */
 .price-section{background:linear-gradient(135deg,#fdf4ff,#f0fff4,#fffbeb);}
 .fee-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.6rem;margin-top:3rem;}
 .fcard{border-radius:24px;padding:36px 28px;border:3px solid transparent;transition:transform .25s,box-shadow .25s;position:relative;background:white;}
@@ -257,22 +216,10 @@ nav{
 .fcard.fc4 .fcbtn{background:linear-gradient(135deg,#d97706,var(--yellow));color:var(--ink);}
 .fcard.fc5 .fcbtn{background:linear-gradient(135deg,var(--pink),var(--purple));}
 .fcbtn:hover{transform:translateY(-2px);}
-.payrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:2.5rem;padding:20px 24px;background:white;border-radius:16px;border:2px solid var(--border);box-shadow:var(--sh);}
-.paylbl{font-size:.85rem;font-weight:800;color:var(--ink);white-space:nowrap;}
-.paychip{background:var(--bg);border:2px solid var(--border);border-radius:8px;padding:7px 14px;font-size:.78rem;font-weight:700;color:var(--slate);display:flex;align-items:center;gap:5px;}
+
+
 .sectag{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;color:var(--green);}
 
-/* VIDEO */
-.vid-section{background:linear-gradient(145deg,#0d1b4b,#1e1b4b);}
-.vid-section .stitle{color:white;}
-.vid-section .ssub{color:rgba(255,255,255,.65);}
-.vidwrap{max-width:800px;margin-top:2.5rem;border-radius:22px;overflow:hidden;border:4px solid rgba(255,255,255,.15);box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:16/9;position:relative;cursor:pointer;background:linear-gradient(135deg,rgba(26,111,212,.3),rgba(139,92,246,.3));}
-.vidwrap:hover .playbtn{transform:translate(-50%,-50%) scale(1.1);}
-.playbtn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 8px 32px rgba(0,0,0,.3);transition:transform .2s;z-index:2;}
-.vidlbl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:30px 24px 18px;color:white;font-size:.9rem;font-weight:800;z-index:2;}
-.vidnote{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:.8rem;font-style:italic;}
-
-/* TESTIMONIALS */
 .test-section{background:white;}
 .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;margin-top:3rem;}
 .tcard{border-radius:20px;padding:26px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden;}
@@ -288,7 +235,6 @@ nav{
 .tname{font-size:.87rem;font-weight:800;color:var(--ink);}
 .trole{font-size:.74rem;color:var(--muted);font-weight:700;}
 
-/* REGISTER */
 .reg-section{background:linear-gradient(145deg,#0d1b4b,#1a3a8f,#7c3aed);}
 .reg-section .stitle{color:white;}
 .reg-section .ssub{color:rgba(255,255,255,.7);}
@@ -303,7 +249,6 @@ nav{
 .fsub{width:100%;padding:16px;border-radius:50px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;font-size:1rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;margin-top:.5rem;box-shadow:0 6px 24px rgba(139,92,246,.4);transition:transform .15s;display:flex;align-items:center;justify-content:center;gap:8px;}
 .fsub:hover{transform:translateY(-2px);}
 .fnote{font-size:.74rem;color:var(--muted);text-align:center;margin-top:.8rem;font-weight:600;}
-
 .reginfo{color:white;}
 .reginfo h3{font-family:'Fredoka One',cursive;font-size:1.5rem;margin-bottom:1.5rem;}
 .aftersteps{display:flex;flex-direction:column;gap:1.1rem;}
@@ -315,7 +260,6 @@ nav{
 .guarbox p{font-size:.83rem;color:rgba(255,255,255,.85);line-height:1.6;font-weight:600;}
 .guarbox strong{color:var(--yellow2);}
 
-/* FAQ */
 .faq-section{background:linear-gradient(135deg,#f0f7ff,#fdf4ff);}
 .faqlist{max-width:740px;margin-top:3rem;}
 .faqitem{border-radius:14px;margin-bottom:10px;overflow:hidden;border:2.5px solid var(--border);background:white;}
@@ -327,7 +271,6 @@ nav{
 .faqa{font-size:.86rem;color:var(--slate);line-height:1.7;max-height:0;overflow:hidden;padding:0 22px;transition:max-height .35s ease,padding .3s;font-weight:600;}
 .faqitem.open .faqa{max-height:220px;padding:14px 22px 18px;}
 
-/* FINAL CTA */
 .finalcta{background:linear-gradient(145deg,#0d1b4b,#7c3aed,#ec4899);padding:80px 4%;text-align:center;position:relative;overflow:hidden;}
 .finalcta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px;}
 .finmeds{font-size:2.5rem;margin-bottom:1rem;position:relative;z-index:1;}
@@ -339,7 +282,6 @@ nav{
 .btnwa{background:rgba(255,255,255,.15);color:white;padding:16px 32px;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.4);font-family:'Quicksand',sans-serif;transition:background .2s;display:inline-flex;align-items:center;gap:8px;}
 .btnwa:hover{background:rgba(255,255,255,.25);}
 
-/* FOOTER */
 footer{background:#0d1b4b;padding:50px 4% 24px;}
 .ftop{display:flex;justify-content:space-between;gap:2.5rem;flex-wrap:wrap;padding-bottom:2rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.08);}
 .flogo{font-family:'Fredoka One',cursive;font-size:1.6rem;color:white;margin-bottom:.5rem;display:flex;align-items:center;gap:8px;}
@@ -351,17 +293,14 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
 .flinks a:hover{color:var(--yellow2);}
 .fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.25);font-weight:600;}
 
-/* MODAL */
-.modal-ov{position:fixed;inset:0;z-index:1000;background:rgba(13,27,75,.75);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-ov{position:fixed;inset:0;z-index:1000;background:rgba(13,27,75,.75);backdrop-filter:blur(8px);display:none;align-items:flex-start;justify-content:center;padding:20px;overflow-y:auto;}
 .modal-ov.open{display:flex;}
-.modal-box{background:white;border-radius:24px;padding:40px;max-width:460px;width:100%;text-align:center;animation:popIn .3s ease;}
+.modal-box{background:white;border-radius:24px;padding:28px;max-width:460px;width:100%;text-align:center;animation:popIn .3s ease;margin:auto;}
 .micon{font-size:3.5rem;margin-bottom:.5rem;}
 .mtitle{font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--ink);margin-bottom:.5rem;}
 .msub{font-size:.9rem;color:var(--slate);margin-bottom:2rem;line-height:1.7;font-weight:600;}
 .mclose{width:100%;padding:14px;border-radius:50px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;border:none;font-size:.95rem;font-weight:800;cursor:pointer;font-family:'Quicksand',sans-serif;}
 
-/* REVEAL */
-.reveal{opacity:1;transform:translateY(0);}
 
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
@@ -377,7 +316,206 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
   .nav-links{display:none;}
   .section{padding:60px 4%;}
   .adiv{display:none;}
+  .nav-char{display:none !important;}
+  .wa-float-tooltip{display:none;}
+  .gform-desktop{display:none !important;}
+  .gform-mobile{display:block !important;}
+  #scroll-progress-bar{display:none;}
 }
+
+/* ── SCROLL PROGRESS BAR ── */
+#scroll-progress-bar{position:fixed;top:68px;left:0;right:0;z-index:299;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);height:42px;display:flex;align-items:center;padding:0 4%;transform:translateY(-110%);transition:transform .3s ease;box-shadow:0 2px 12px rgba(26,111,212,0.07);overflow:hidden;}
+#scroll-progress-bar.visible{transform:translateY(0);}
+#scroll-progress-bar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--border);}
+.spb-track{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));width:0%;z-index:1;}
+.spb-steps{display:flex;align-items:center;width:100%;justify-content:space-between;position:relative;z-index:1;}
+.spb-step{display:flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;color:var(--muted);cursor:pointer;padding:4px 8px;border-radius:20px;transition:color .2s,background .2s;white-space:nowrap;}
+.spb-step:hover{color:var(--blue);background:var(--blue-light);}
+.spb-step.active{color:var(--blue);}
+.spb-step.done{color:var(--green);}
+.spb-dot{width:7px;height:7px;border-radius:50%;background:var(--border);flex-shrink:0;transition:background .2s,transform .2s;}
+.spb-step.active .spb-dot{background:var(--blue);transform:scale(1.4);}
+.spb-step.done .spb-dot{background:var(--green);}
+@media(max-width:640px){#scroll-progress-bar{height:32px;padding:0 2%;}.spb-step{font-size:.62rem;padding:2px 4px;gap:4px;}.spb-label{display:none;}.spb-step.active .spb-label{display:inline;}.spb-dot{width:8px;height:8px;}}
+
+/* ── PARENT DECISION FLOW ── */
+.decision-section{background:linear-gradient(135deg,#fffbeb,#fdf4ff);padding:70px 4%;}
+.decision-wrap{max-width:680px;margin:0 auto;}
+.decision-card{background:white;border-radius:24px;padding:40px;box-shadow:0 8px 40px rgba(139,92,246,0.12);border:2px solid var(--purple-light);}
+.dq-progress{display:flex;gap:6px;margin-bottom:1.6rem;}
+.dq-prog-dot{height:4px;flex:1;border-radius:2px;background:var(--border);transition:background .3s;}
+.dq-prog-dot.done{background:linear-gradient(90deg,var(--purple),var(--pink));}
+.dq-header{display:flex;align-items:center;gap:10px;margin-bottom:1.4rem;}
+.dq-step-badge{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--pink));color:white;font-family:'Fredoka One',cursive;font-size:.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dq-title{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--ink);}
+.dq-options{display:flex;flex-direction:column;gap:10px;}
+.dq-option{padding:13px 18px;border-radius:14px;border:2.5px solid var(--border);font-size:.88rem;font-weight:700;color:var(--slate);cursor:pointer;text-align:left;background:white;font-family:'Quicksand',sans-serif;transition:border-color .2s,background .2s,color .2s,transform .15s;display:flex;align-items:center;gap:10px;}
+.dq-option:hover{border-color:var(--purple);background:var(--purple-light);color:var(--ink);transform:translateX(4px);}
+.dq-panel{display:none;animation:fadeUp .3s ease both;}
+.dq-panel.active{display:block;}
+.decision-result{display:none;background:linear-gradient(135deg,#0d1b4b,#1a3a8f,#7c3aed);border-radius:20px;padding:32px;color:white;text-align:center;animation:fadeUp .4s ease both;}
+.decision-result.show{display:block;}
+.dr-emoji{font-size:3rem;margin-bottom:.5rem;}
+.dr-title{font-family:'Fredoka One',cursive;font-size:1.45rem;margin-bottom:.5rem;}
+.dr-desc{font-size:.87rem;opacity:.85;line-height:1.7;margin-bottom:1.4rem;font-weight:600;}
+.dr-class-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:50px;padding:7px 18px;font-size:.88rem;font-weight:800;margin-bottom:1.4rem;}
+.dr-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.dr-btn-main{background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--ink);padding:13px 26px;border-radius:50px;font-size:.9rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;transition:transform .15s;}
+.dr-btn-main:hover{transform:translateY(-2px);}
+.dr-btn-wa{background:linear-gradient(135deg,#25d366,#128c7e);color:white;padding:13px 22px;border-radius:50px;font-size:.9rem;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:transform .15s;}
+.dr-btn-wa:hover{transform:translateY(-2px);}
+.dr-restart{background:none;border:none;color:rgba(255,255,255,.45);font-size:.78rem;font-weight:700;cursor:pointer;font-family:'Quicksand',sans-serif;margin-top:1rem;display:block;margin-left:auto;margin-right:auto;transition:color .2s;}
+.dr-restart:hover{color:rgba(255,255,255,.8);}
+
+/* ── WHATSAPP STRIP ── */
+.wa-strip{background:linear-gradient(135deg,#075e54,#128c7e,#25d366);padding:36px 4%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;position:relative;overflow:hidden;z-index:1;}
+.wa-strip::before{content:'💬';position:absolute;right:3%;font-size:8rem;opacity:.08;top:50%;transform:translateY(-50%);pointer-events:none;}
+.wa-strip-left{flex:1;min-width:220px;}
+.wa-strip-tag{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7);margin-bottom:.4rem;}
+.wa-strip-title{font-family:'Fredoka One',cursive;font-size:1.45rem;color:white;line-height:1.2;margin-bottom:.3rem;}
+.wa-strip-sub{font-size:.83rem;color:rgba(255,255,255,.8);font-weight:600;}
+.wa-strip-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;}
+.wa-strip-btn{background:white;color:#075e54;padding:13px 26px;border-radius:50px;font-size:.92rem;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(0,0,0,.2);transition:transform .15s;white-space:nowrap;}
+.wa-strip-btn:hover{transform:translateY(-2px);}
+.wa-strip-hint{font-size:.74rem;color:rgba(255,255,255,.6);font-weight:700;text-align:right;}
+
+/* ── FLOATING WHATSAPP ── */
+#wa-float{position:fixed;bottom:28px;right:24px;z-index:400;display:flex;flex-direction:row;align-items:center;gap:10px;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;}
+#wa-float.visible{opacity:1;transform:translateY(0);}
+.wa-float-tooltip{background:#1e1b4b;color:white;padding:8px 14px;border-radius:10px;font-size:.78rem;font-weight:700;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;transform:translateX(8px);transition:opacity .2s,transform .2s;pointer-events:none;position:relative;}
+.wa-float-tooltip::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:#1e1b4b;border-right:none;}
+#wa-float:hover .wa-float-tooltip{opacity:1;transform:translateX(0);}
+.wa-float-btn{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--pink));color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(236,72,153,.45);transition:transform .2s;animation:wapulse 3s ease-in-out infinite;text-decoration:none;flex-shrink:0;}
+.wa-float-btn:hover{transform:scale(1.1);}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(236,72,153,.45);}50%{box-shadow:0 4px 28px rgba(236,72,153,.7),0 0 0 9px rgba(236,72,153,.1);}}
+
+/* ══ NAV CENTER CHARACTER — FULL UPGRADE ══ */
+.nav-char{position:fixed;top:0;left:0;height:68px;display:flex;align-items:center;gap:0;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility .3s;z-index:301;}
+.nav-char.visible{opacity:1;visibility:visible;pointer-events:auto;}
+
+/* Frame + stages */
+.nc-wrap{position:relative;display:flex;flex-direction:row;align-items:center;gap:6px;cursor:pointer;user-select:none;}
+.nc-frame{position:relative;width:52px;height:52px;flex-shrink:0;overflow:visible;}
+.nc-stage{position:absolute;inset:0;opacity:0;transition:opacity .28s ease;}
+.nc-stage.active{opacity:1;}
+.nc-stage svg{width:100%;height:100%;overflow:visible;}
+
+/* Limb animations per stage */
+.nc-stage.active #arm-l{animation:swing-l 0.7s ease-in-out infinite alternate;}
+.nc-stage.active #arm-r{animation:swing-r 0.7s ease-in-out infinite alternate;}
+.nc-stage.active #leg-l{animation:stride-l 0.6s ease-in-out infinite alternate;}
+.nc-stage.active #leg-r{animation:stride-r 0.6s ease-in-out infinite alternate;}
+.nc-stage.active .hair{animation:hair-bounce .9s ease-in-out infinite alternate;}
+@keyframes swing-l{from{transform:rotate(-18deg);}to{transform:rotate(18deg);}}
+@keyframes swing-r{from{transform:rotate(18deg);}to{transform:rotate(-18deg);}}
+@keyframes stride-l{from{transform:rotate(-22deg);}to{transform:rotate(22deg);}}
+@keyframes stride-r{from{transform:rotate(22deg);}to{transform:rotate(-22deg);}}
+@keyframes hair-bounce{from{transform:translateY(0);}to{transform:translateY(-2px) rotate(4deg);}}
+
+/* Bob on active */
+.nc-frame.bobbing{animation:nc-bob 2.2s ease-in-out infinite;}
+@keyframes nc-bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
+
+/* Click reaction */
+.nc-frame.clicked{animation:nc-jump .45s cubic-bezier(.36,.07,.19,.97) both;}
+@keyframes nc-jump{0%{transform:translateY(0);}30%{transform:translateY(-10px) scale(1.1);}70%{transform:translateY(2px) scale(.95);}100%{transform:translateY(0) scale(1);}}
+
+
+/* Speech bubble */
+.nc-bubble{
+  position:absolute;
+  left:calc(100% + 10px);
+  top:50%;
+  transform:translateY(-50%) scale(.88);
+  background:white;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:5px 11px;
+  font-size:.7rem;
+  font-weight:800;
+  color:var(--ink);
+  white-space:nowrap;
+  box-shadow:0 3px 14px rgba(0,0,0,.1);
+  opacity:0;
+  transition:opacity .22s,transform .22s;
+  pointer-events:none;
+  z-index:10;
+}
+.nc-bubble.show{opacity:1;transform:translateY(-50%) scale(1);}
+.nc-bubble::before{
+  content:'';
+  position:absolute;
+  right:100%;
+  top:50%;
+  transform:translateY(-50%);
+  border:5px solid transparent;
+  border-right-color:var(--border);
+}
+.nc-bubble::after{
+  content:'';
+  position:absolute;
+  right:calc(100% - 1px);
+  top:50%;
+  transform:translateY(-50%);
+  border:5px solid transparent;
+  border-right-color:white;
+  z-index:1;
+}
+
+
+/* Progress % badge */
+.nc-pct{display:none;}
+
+
+/* Particle burst container */
+.nc-particles{position:absolute;inset:-20px;pointer-events:none;overflow:visible;z-index:10;}
+.nc-p{position:absolute;width:5px;height:5px;border-radius:50%;opacity:0;}
+.nc-p.burst{animation:p-burst .6s ease-out forwards;}
+@keyframes p-burst{0%{transform:translate(0,0) scale(1);opacity:1;}100%{transform:translate(var(--tx),var(--ty)) scale(0);opacity:0;}}
+
+/* Confetti (stage 5 victory) */
+.nc-confetti{position:fixed;top:0;left:0;width:100%;height:80px;pointer-events:none;overflow:hidden;z-index:310;opacity:0;transition:opacity .3s;}
+.nc-confetti.show{opacity:1;}
+.conf{position:absolute;width:7px;height:7px;top:-10px;animation:conf-fall 1.4s ease-in forwards;}
+@keyframes conf-fall{0%{transform:translateY(0) rotate(0);opacity:1;}100%{transform:translateY(90px) rotate(720deg);opacity:0;}}
+
+/* Trophy glow (stage 5) */
+.nc-stage.active .trophy-star{animation:trophy-glow .8s ease-in-out infinite alternate;}
+@keyframes trophy-glow{from{opacity:.7;transform:scale(.95);}to{opacity:1;transform:scale(1.1);}}
+
+/* Dark mode — chalk style */
+@media(prefers-color-scheme:dark){
+  .nc-stage svg g{stroke:#e2e8f0;}
+  .nc-stage svg circle{fill:#1e293b;}
+  .nc-bubble{background:#1e293b;border-color:#334155;color:#e2e8f0;}
+  .nc-bubble::after{border-right-color:#334155;}
+  .nc-bubble::before{border-right-color:#1e293b;}
+}
+
+
+/* ── CROWD CHEER ANIMATION ── */
+@keyframes cheer-l{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@keyframes cheer-r{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+@keyframes arms-up{0%,100%{transform:rotate(0deg);}50%{transform:rotate(-15deg);}}
+@keyframes arms-up-r{0%,100%{transform:rotate(0deg);}50%{transform:rotate(15deg);}}
+#nc5.active .crowd-l{animation:cheer-l .6s ease-in-out infinite;}
+#nc5.active .crowd-r{animation:cheer-r .6s ease-in-out infinite .15s;}
+#nc5.active .crowd-l2{animation:cheer-r .7s ease-in-out infinite .3s;}
+#nc5.active .crowd-r2{animation:cheer-l .7s ease-in-out infinite .45s;}
+#nc5.active .crowd-arm-ll{animation:arms-up .6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-lr{animation:arms-up-r .6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-rl{animation:arms-up .6s ease-in-out infinite .15s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-rr{animation:arms-up-r .6s ease-in-out infinite .15s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-fl{animation:cheer-l .7s ease-in-out infinite .3s;}
+#nc5.active .crowd-fr{animation:cheer-r .7s ease-in-out infinite .45s;}
+#nc5.active .crowd-arm-fll{animation:arms-up .7s ease-in-out infinite .3s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-flr{animation:arms-up-r .7s ease-in-out infinite .3s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-frl{animation:arms-up .7s ease-in-out infinite .45s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-frr{animation:arms-up-r .7s ease-in-out infinite .45s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-l2l{animation:arms-up-r .7s ease-in-out infinite .3s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-l2r{animation:arms-up .7s ease-in-out infinite .3s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-r2l{animation:arms-up-r .7s ease-in-out infinite .45s;transform-box:fill-box;transform-origin:bottom center;}
+#nc5.active .crowd-arm-r2r{animation:arms-up .7s ease-in-out infinite .45s;transform-box:fill-box;transform-origin:bottom center;}
 </style>
 </head>
 <body>
@@ -385,7 +523,7 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
 <div class="emoji-bg" id="emojiBg"></div>
 
 <nav>
-  <a class="nav-logo" href="#"><span class="ls">🏆</span>Olympiad<span class="ne">Edge</span></a>
+  <a class="nav-logo" href="#"><span>🏆</span>Olympiad<span class="ne">Edge</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#subjects">Subjects</a></li>
@@ -393,8 +531,128 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
     <li><a href="#register">Register</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <button class="nav-enroll" onclick="scrollToReg()">🚀 Enroll Now</button>
+    <button class="nav-enroll" onclick="scrollToReg()">🚀 Enroll Now</button>
 </nav>
+
+<!-- NAV CHARACTER (fixed, walks left-to-right in the 68px nav band) -->
+<div class="nav-char" id="navChar">
+  <div class="nc-confetti" id="ncConfetti"></div>
+  <div class="nc-wrap" id="ncWrap">
+    <div class="nc-bubble" id="ncBubble">Focus mode!</div>
+    <div class="nc-frame" id="ncFrame">
+      <div class="nc-particles" id="ncParticles"></div>
+            <!-- STAGE 1: READING -->
+      <div class="nc-stage" id="nc1"><svg viewBox="0 0 56 64" overflow="visible" xmlns="http://www.w3.org/2000/svg"><g class="ink" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="28" cy="11" r="9" fill="white" stroke-width="2"/><path d="M22,8 Q25,6.5 28,8" stroke-width="2"/><path d="M28,8 Q31,6.5 34,8" stroke-width="2"/><circle cx="24.5" cy="10.5" r="1.6" fill="#1e1b4b" stroke="none"/><circle cx="31.5" cy="10.5" r="1.6" fill="#1e1b4b" stroke="none"/><line x1="25" y1="14" x2="31" y2="14" stroke-width="1.8"/><line x1="28" y1="20" x2="28" y2="36" stroke-width="2.2"/><g class="limb arm-l"><path d="M28,26 C20,30 14,34 10,40" stroke-width="2.2"/></g><g class="limb arm-r"><path d="M28,26 C36,30 42,34 46,40" stroke-width="2.2"/></g><path d="M10,40 L10,52 L28,50 L46,52 L46,40 Z" fill="white" stroke-width="2"/><line x1="28" y1="40" x2="28" y2="50" stroke-width="1.5"/><line x1="14" y1="44" x2="25" y2="43.5" stroke-width="1.2"/><line x1="31" y1="43.5" x2="42" y2="44" stroke-width="1.2"/><path d="M28,36 Q20,40 16,46 Q14,50 18,52" stroke-width="2.2"/><path d="M28,36 Q36,40 40,46 Q42,50 38,52" stroke-width="2.2"/></g></svg></div>
+      <!-- STAGE 2: WRITING -->
+      <div class="nc-stage" id="nc2"><svg viewBox="0 0 56 64" overflow="visible" xmlns="http://www.w3.org/2000/svg"><g class="ink" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="28" cy="11" r="9" fill="white" stroke-width="2"/><path d="M22,7.5 Q25,5.5 28,7.5" stroke-width="1.8"/><path d="M28,7.5 Q31,5.5 34,7.5" stroke-width="1.8"/><circle cx="24.5" cy="10.5" r="2" fill="#1e1b4b" stroke="none"/><circle cx="31.5" cy="10.5" r="2" fill="#1e1b4b" stroke="none"/><circle cx="25.5" cy="9.5" r=".6" fill="white" stroke="none"/><circle cx="32.5" cy="9.5" r=".6" fill="white" stroke="none"/><path d="M23,14 Q28,18 33,14" stroke-width="2"/><path d="M27,20 L25,36" stroke-width="2.2"/><g class="limb arm-l"><path d="M27,26 C18,30 10,33 6,36" stroke-width="2.2"/></g><g class="limb arm-r"><path d="M27,26 C36,30 44,35 48,40" stroke-width="2.2"/><path d="M48,40 L52,44 L50,46 L46,42 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="1.5"/></g><line x1="2" y1="36" x2="54" y2="36" stroke-width="2.5"/><rect x="8" y="36" width="38" height="18" rx="1.5" fill="white" stroke-width="1.8"/><line x1="12" y1="42" x2="42" y2="42" stroke-width="1.2"/><line x1="12" y1="46" x2="38" y2="46" stroke-width="1.2"/><path d="M25,36 L21,52" stroke-width="2.2"/><path d="M25,36 L29,52" stroke-width="2.2"/></g></svg></div>
+      <!-- STAGE 3: RUNNING -->
+      <div class="nc-stage" id="nc3"><svg viewBox="0 0 56 64" overflow="visible" xmlns="http://www.w3.org/2000/svg"><g class="ink" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="32" cy="10" r="9" fill="white" stroke-width="2"/><g class="limb hair" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M25,4 Q30,0 36,2 Q40,4 38,7" stroke-width="2" fill="none"/></g><circle cx="28.5" cy="9.5" r="1.8" fill="#1e1b4b" stroke="none"/><circle cx="35.5" cy="9.5" r="1.8" fill="#1e1b4b" stroke="none"/><circle cx="29.5" cy="8.6" r=".55" fill="white" stroke="none"/><circle cx="36.5" cy="8.6" r=".55" fill="white" stroke="none"/><path d="M27,13.5 Q32,17.5 37,13.5" stroke-width="2"/><path d="M27,13.5 Q32,16 37,13.5" fill="white" stroke="none"/><path d="M30,19 L26,38" stroke-width="2.2"/><g class="limb arm-l" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M29,25 C20,28 12,30 6,29" stroke-width="2.2"/></g><g class="limb arm-r" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M29,25 C36,20 44,16 50,13" stroke-width="2.2"/></g><g class="limb leg-l" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M26,38 L18,50 L12,58" stroke-width="2.2"/></g><g class="limb leg-r" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M26,38 L34,46 L38,58" stroke-width="2.2"/></g><line x1="2" y1="26" x2="10" y2="26" stroke-width="1.6"/><line x1="0" y1="32" x2="8" y2="32" stroke-width="1.6"/><line x1="2" y1="38" x2="10" y2="38" stroke-width="1.6"/></g></svg></div>
+      <!-- STAGE 4: LEAPING -->
+      <div class="nc-stage" id="nc4"><svg viewBox="0 0 56 64" overflow="visible" xmlns="http://www.w3.org/2000/svg"><g class="ink" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="28" cy="11" r="9" fill="white" stroke-width="2"/><path d="M20,6.5 Q24,4 28,6.5" stroke-width="2"/><path d="M28,6.5 Q32,4 36,6.5" stroke-width="2"/><circle cx="23.5" cy="10" r="2.4" fill="#1e1b4b" stroke="none"/><circle cx="32.5" cy="10" r="2.4" fill="#1e1b4b" stroke="none"/><circle cx="24.5" cy="8.9" r=".7" fill="white" stroke="none"/><circle cx="33.5" cy="8.9" r=".7" fill="white" stroke="none"/><circle cx="28" cy="14.5" r="2.2" stroke-width="1.8"/><path d="M28,20 L26,38" stroke-width="2.2"/><g class="limb arm-l" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M28,24 C18,16 10,9 4,5" stroke-width="2.2"/></g><g class="limb arm-r" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M28,24 C38,16 46,9 52,5" stroke-width="2.2"/></g><g class="limb leg-l" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M26,38 L16,48 L10,58" stroke-width="2.2"/></g><g class="limb leg-r" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M26,38 L36,46 L42,56" stroke-width="2.2"/></g><line x1="54" y1="3" x2="57" y2="0" stroke-width="1.5"/><line x1="1" y1="3" x2="-2" y2="0" stroke-width="1.5"/></g></svg></div>
+      <!-- STAGE 5: VICTORY — crescent eyes, huge grin, arms up, trophy -->
+      <div class="nc-stage" id="nc5"><svg viewBox="0 0 56 64" overflow="visible" xmlns="http://www.w3.org/2000/svg"><g class="ink" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <!-- TROPHY — proper cup shape with handles, stem, base -->
+  <!-- Cup body: wide top, curves inward at bottom -->
+  <path d="M18,0 L38,0 L37,4 Q34,9 28,10 Q22,9 19,4 Z" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+  <!-- Left handle: curls out from cup side -->
+  <path d="M19,2 Q13,2 13,5 Q13,8 19,7" fill="none" stroke="#d97706" stroke-width="1.5"/>
+  <!-- Right handle -->
+  <path d="M37,2 Q43,2 43,5 Q43,8 37,7" fill="none" stroke="#d97706" stroke-width="1.5"/>
+  <!-- Stem -->
+  <rect x="25.5" y="10" width="5" height="3" rx="0.5" fill="#d97706" stroke="none"/>
+  <!-- Base platform -->
+  <rect x="22" y="13" width="12" height="2.5" rx="1" fill="#d97706" stroke="none"/>
+  <!-- Shine line inside cup -->
+  <path d="M21,2 Q22,5 22,7" stroke="#fef3c7" stroke-width="1.2" fill="none" opacity=".7"/>
+  <!-- Star in cup -->
+  <path class="trophy-star" d="M28,2 L29,4.5 L31.8,4.5 L29.6,6.2 L30.4,8.8 L28,7.2 L25.6,8.8 L26.4,6.2 L24.2,4.5 L27,4.5 Z" fill="#f59e0b" stroke="none"/>
+  <!-- HEAD (was cy=16, shifted → cy=22) -->
+  <circle cx="28" cy="22" r="9" fill="white" stroke-width="2"/>
+  <!-- stage-4 face shifted +6: brows, eyes, glints, O-mouth -->
+  <path d="M20,17.5 Q24,15 28,17.5" stroke-width="2"/>
+  <path d="M28,17.5 Q32,15 36,17.5" stroke-width="2"/>
+  <circle cx="23.5" cy="21" r="2.4" fill="#1e1b4b" stroke="none"/>
+  <circle cx="32.5" cy="21" r="2.4" fill="#1e1b4b" stroke="none"/>
+  <circle cx="24.5" cy="19.9" r=".7" fill="white" stroke="none"/>
+  <circle cx="33.5" cy="19.9" r=".7" fill="white" stroke="none"/>
+  <circle cx="28" cy="25.5" r="2.2" stroke-width="1.8"/>
+  <!-- BODY -->
+  <line x1="28" y1="31" x2="28" y2="48" stroke-width="2.2"/>
+  <!-- ARMS in V toward trophy -->
+  <g class="limb arm-l" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M28,38 C20,28 18,20 20,14" stroke-width="2.2"/></g>
+  <g class="limb arm-r" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M28,38 C36,28 38,20 36,14" stroke-width="2.2"/></g>
+  <!-- LEGS -->
+  <g class="limb leg-l" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M28,48 L22,60" stroke-width="2.2"/></g>
+  <g class="limb leg-r" style="transform-origin:50% 0%;transform-box:fill-box"><path d="M28,48 L34,60" stroke-width="2.2"/></g>
+  <!-- GOLD MEDAL (was y:25..37, shifted → y:31..43) -->
+  <line x1="28" y1="31" x2="28" y2="36" stroke="#d97706" stroke-width="1.4"/>
+  <circle cx="28" cy="39" r="4" fill="#fbbf24" stroke="#d97706" stroke-width="1.4"/>
+  <circle cx="28" cy="39" r="2.2" fill="#f59e0b" stroke="none"/>
+  <path d="M27,39 L27.7,40.8 L29.6,40.8 L28.2,41.9 L28.7,43.7 L27,42.6 L25.3,43.7 L25.8,41.9 L24.4,40.8 L26.3,40.8 Z" fill="#fef3c7" stroke="none"/>
+  <!-- CROWD LEFT INNER (was cy=36, shifted → cy=42) -->
+  <g class="crowd-l" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="42" r="3.5" fill="white" stroke-width="1.5"/>
+    <circle cx="5.8" cy="42" r=".6" fill="#1e1b4b" stroke="none"/>
+    <circle cx="8.2" cy="42" r=".6" fill="#1e1b4b" stroke="none"/>
+    <path d="M5.5,43.8 Q7,45.2 8.5,43.8" stroke-width="1.2" fill="none"/>
+    <line x1="7" y1="45.5" x2="7" y2="56" stroke-width="1.6"/>
+    <path class="crowd-arm-ll" d="M7,49 C4,46 2,43 1,40" stroke-width="1.6" fill="none"/>
+    <path class="crowd-arm-lr" d="M7,49 C10,46 12,43 13,40" stroke-width="1.6" fill="none"/>
+    <line x1="7" y1="56" x2="4" y2="63" stroke-width="1.6"/>
+    <line x1="7" y1="56" x2="10" y2="63" stroke-width="1.6"/>
+  </g>
+  <!-- CROWD RIGHT INNER (was cy=34, shifted → cy=40) -->
+  <g class="crowd-r" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="49" cy="40" r="3.5" fill="white" stroke-width="1.5"/>
+    <circle cx="47.8" cy="40" r=".6" fill="#1e1b4b" stroke="none"/>
+    <circle cx="50.2" cy="40" r=".6" fill="#1e1b4b" stroke="none"/>
+    <path d="M47.5,41.8 Q49,43.2 50.5,41.8" stroke-width="1.2" fill="none"/>
+    <line x1="49" y1="43.5" x2="49" y2="54" stroke-width="1.6"/>
+    <path class="crowd-arm-rl" d="M49,47 C46,44 44,41 43,38" stroke-width="1.6" fill="none"/>
+    <path class="crowd-arm-rr" d="M49,47 C52,44 54,41 55,38" stroke-width="1.6" fill="none"/>
+    <line x1="49" y1="54" x2="46" y2="61" stroke-width="1.6"/>
+    <line x1="49" y1="54" x2="52" y2="61" stroke-width="1.6"/>
+  </g>
+  <!-- CROWD FAR LEFT -->
+  <g class="crowd-fl" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" opacity=".75">
+    <circle cx="-12" cy="44" r="3" fill="white" stroke-width="1.4"/>
+    <circle cx="-13" cy="44" r=".5" fill="#1e1b4b" stroke="none"/>
+    <circle cx="-11" cy="44" r=".5" fill="#1e1b4b" stroke="none"/>
+    <path d="M-13.5,45.6 Q-12,46.8 -10.5,45.6" stroke-width="1.1" fill="none"/>
+    <line x1="-12" y1="47" x2="-12" y2="57" stroke-width="1.4"/>
+    <path class="crowd-arm-fll" d="M-12,51 C-15,48 -17,45 -18,42" stroke-width="1.4" fill="none"/>
+    <path class="crowd-arm-flr" d="M-12,51 C-9,48 -7,45 -6,42" stroke-width="1.4" fill="none"/>
+    <line x1="-12" y1="57" x2="-15" y2="63" stroke-width="1.4"/>
+    <line x1="-12" y1="57" x2="-9" y2="63" stroke-width="1.4"/>
+  </g>
+  <!-- CROWD FAR RIGHT -->
+  <g class="crowd-fr" stroke="#1e1b4b" stroke-linecap="round" stroke-linejoin="round" opacity=".75">
+    <circle cx="68" cy="42" r="3" fill="white" stroke-width="1.4"/>
+    <circle cx="67" cy="42" r=".5" fill="#1e1b4b" stroke="none"/>
+    <circle cx="69" cy="42" r=".5" fill="#1e1b4b" stroke="none"/>
+    <path d="M66.5,43.6 Q68,44.8 69.5,43.6" stroke-width="1.1" fill="none"/>
+    <line x1="68" y1="45" x2="68" y2="55" stroke-width="1.4"/>
+    <path class="crowd-arm-frl" d="M68,49 C65,46 63,43 62,40" stroke-width="1.4" fill="none"/>
+    <path class="crowd-arm-frr" d="M68,49 C71,46 73,43 74,40" stroke-width="1.4" fill="none"/>
+    <line x1="68" y1="55" x2="65" y2="61" stroke-width="1.4"/>
+    <line x1="68" y1="55" x2="71" y2="61" stroke-width="1.4"/>
+  </g>
+</g></svg></div>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="scroll-progress-bar">
+  <div class="spb-track" id="spbTrack"></div>
+  <div class="spb-steps">
+    <div class="spb-step" data-target="why" onclick="document.getElementById('why').scrollIntoView({behavior:'smooth'})"><span class="spb-dot"></span><span class="spb-label">Why Olympiad</span></div>
+    <div class="spb-step" data-target="subjects" onclick="document.getElementById('subjects').scrollIntoView({behavior:'smooth'})"><span class="spb-dot"></span><span class="spb-label">Subjects</span></div>
+    <div class="spb-step" data-target="about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})"><span class="spb-dot"></span><span class="spb-label">Mentor</span></div>
+    <div class="spb-step" data-target="pricing" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})"><span class="spb-dot"></span><span class="spb-label">Pricing</span></div>
+    <div class="spb-step" data-target="register" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})"><span class="spb-dot"></span><span class="spb-label">Register</span></div>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -406,7 +664,7 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
     <div>
       <div class="urgent"><span class="udot"></span>Only 5 Seats Per Batch — Enroll Fast! 🔥</div>
       <h1>Win Olympiad Medals.<br><span class="hl">Champion Your Future! 🏆</span></h1>
-      <p class="hero-sub">Expert live Olympiad coaching for Class 3, 4 & 5 in English, Maths & Science. 8 years of experience. 30+ Gold Medals. Personal attention for every child.</p>
+      <p class="hero-sub">Expert live Olympiad coaching for Class 3, 4 &amp; 5 in Mathematics, English &amp; Science. 8 years of experience. Concepts explained patiently until fully understood — with personal attention for every child.</p>
       <div class="hero-btns">
         <button class="btn-main" onclick="scrollToReg()">🎯 Secure My Seat</button>
         <a href="#about" class="btn-sec">✨ Meet Your Mentor</a>
@@ -447,77 +705,127 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
 
 <!-- ACHIEVEMENT STRIP -->
 <div class="ach-strip">
-  <div class="ai"><div class="ai-icon">🥇</div><div><div class="ai-num">30+</div><div class="ai-lbl">Gold Medals<br>Won by Students</div></div></div>
+  <div class="ai"><div class="ai-icon">🎯</div><div><div class="ai-num">Free</div><div class="ai-lbl">Trial Class<br>Before Enrolment</div></div></div>
   <div class="adiv"></div>
   <div class="ai"><div class="ai-icon">⭐</div><div><div class="ai-num">8 Yrs</div><div class="ai-lbl">Olympiad Teaching<br>Experience</div></div></div>
   <div class="adiv"></div>
-  <div class="ai"><div class="ai-icon">👥</div><div><div class="ai-num">5 Only</div><div class="ai-lbl">Students Per Batch<br>(Limited!)</div></div></div>
+  <div class="ai"><div class="ai-icon">👥</div><div><div class="ai-num">5 Only</div><div class="ai-lbl">Students Per Batch<br>(Max!)</div></div></div>
   <div class="adiv"></div>
-  <div class="ai"><div class="ai-icon">🌍</div><div><div class="ai-num">Intl.</div><div class="ai-lbl">Zonal, State &<br>International Ranks</div></div></div>
+  <div class="ai"><div class="ai-icon">🔄</div><div><div class="ai-num">Revisit</div><div class="ai-lbl">Concepts Until Fully<br>Understood</div></div></div>
   <div class="adiv"></div>
-  <div class="ai"><div class="ai-icon">🤝</div><div><div class="ai-num">1-on-1</div><div class="ai-lbl">Personal<br>Mentorship</div></div></div>
+  <div class="ai"><div class="ai-icon">🌍</div><div><div class="ai-num">Intl.</div><div class="ai-lbl">Zonal, State &amp;<br>International Ranks</div></div></div>
 </div>
 
 <!-- WHY -->
 <section class="section why-section" id="why">
-  <div class="reveal">
-    <div class="stag blue">✨ Why It Matters</div>
-    <h2 class="stitle">Why Olympiad Prep<br>Changes Everything</h2>
-    <p class="ssub">Beyond the textbook — Olympiad preparation builds skills and confidence that last a lifetime.</p>
-  </div>
+  <div class="stag blue">✨ Why It Matters</div>
+  <h2 class="stitle">Why Olympiad Prep<br>Changes Everything</h2>
+  <p class="ssub">Beyond the textbook — Olympiad preparation builds skills and confidence that last a lifetime.</p>
   <div class="why-grid">
-    <div class="wcard w1 reveal"><span class="wicon">🧠</span><div class="wtitle">Sharper Logical Thinking</div><div class="wdesc">Children learn to reason, spot patterns, and solve problems they've never seen — a skill that stays for life.</div><div class="wbg">🧠</div></div>
-    <div class="wcard w2 reveal"><span class="wicon">📈</span><div class="wtitle">Better School Grades</div><div class="wdesc">Olympiad depth makes regular exams easy. Strong conceptual understanding directly boosts marks.</div><div class="wbg">📈</div></div>
-    <div class="wcard w3 reveal"><span class="wicon">🏅</span><div class="wtitle">National Recognition</div><div class="wdesc">Gold medals, state ranks & international rankings — your child's academic profile becomes extraordinary.</div><div class="wbg">🏅</div></div>
-    <div class="wcard w4 reveal"><span class="wicon">💪</span><div class="wtitle">Unshakeable Confidence</div><div class="wdesc">Tackling hard problems and winning gives children belief in themselves that no classroom can replicate.</div><div class="wbg">💪</div></div>
+    <div class="wcard w1"><span class="wicon">🧠</span><div class="wtitle">Sharper Logical Thinking</div><div class="wdesc">Children learn to reason, spot patterns, and solve problems they've never seen — a skill that stays for life.</div><div class="wbg">🧠</div></div>
+    <div class="wcard w2"><span class="wicon">📈</span><div class="wtitle">Better School Grades</div><div class="wdesc">Olympiad depth makes regular exams easy. Strong conceptual understanding directly boosts marks.</div><div class="wbg">📈</div></div>
+    <div class="wcard w3"><span class="wicon">🏅</span><div class="wtitle">National Recognition</div><div class="wdesc">Gold medals, state ranks &amp; international rankings — your child's academic profile becomes extraordinary.</div><div class="wbg">🏅</div></div>
+    <div class="wcard w4"><span class="wicon">💪</span><div class="wtitle">Unshakeable Confidence</div><div class="wdesc">Tackling hard problems and winning gives children belief in themselves that no classroom can replicate.</div><div class="wbg">💪</div></div>
+  </div>
+</section>
+
+<!-- PARENT DECISION FLOW -->
+<section class="section decision-section" id="decision">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="stag purple">🤔 Is This Right for Us?</div>
+    <h2 class="stitle">Answer 3 Quick Questions.<br>Get Your Recommendation.</h2>
+    <p class="ssub" style="margin:0 auto;">Not sure if OlympiadEdge is the right fit? Let us help you decide in under 30 seconds.</p>
+  </div>
+  <div class="decision-wrap">
+    <div class="decision-card">
+      <div class="dq-progress">
+        <div class="dq-prog-dot" id="dp1"></div>
+        <div class="dq-prog-dot" id="dp2"></div>
+        <div class="dq-prog-dot" id="dp3"></div>
+      </div>
+      <div class="dq-panel active" id="dqp1">
+        <div class="dq-header"><div class="dq-step-badge">1</div><div class="dq-title">Which class is your child in?</div></div>
+        <div class="dq-options">
+          <button class="dq-option" onclick="dqAnswer(1,'Class 3')">📘 Class 3 <span style="margin-left:auto;font-size:.78rem;opacity:.6;">Age 8–9</span></button>
+          <button class="dq-option" onclick="dqAnswer(1,'Class 4')">📐 Class 4 <span style="margin-left:auto;font-size:.78rem;opacity:.6;">Age 9–10</span></button>
+          <button class="dq-option" onclick="dqAnswer(1,'Class 5')">🔬 Class 5 <span style="margin-left:auto;font-size:.78rem;opacity:.6;">Age 10–11</span></button>
+          <button class="dq-option" onclick="dqAnswer(1,'other')">🤷 Not in Class 3, 4 or 5</button>
+        </div>
+      </div>
+      <div class="dq-panel" id="dqp2">
+        <div class="dq-header"><div class="dq-step-badge">2</div><div class="dq-title">What is your primary goal?</div></div>
+        <div class="dq-options">
+          <button class="dq-option" onclick="dqAnswer(2,'medals')">🏅 Win Olympiad medals &amp; national ranks</button>
+          <button class="dq-option" onclick="dqAnswer(2,'grades')">📈 Improve school grades &amp; concept clarity</button>
+          <button class="dq-option" onclick="dqAnswer(2,'both')">🎯 Both — medals AND better grades</button>
+          <button class="dq-option" onclick="dqAnswer(2,'explore')">🔍 Just exploring Olympiads</button>
+        </div>
+      </div>
+      <div class="dq-panel" id="dqp3">
+        <div class="dq-header"><div class="dq-step-badge">3</div><div class="dq-title">How soon are you looking to start?</div></div>
+        <div class="dq-options">
+          <button class="dq-option" onclick="dqAnswer(3,'asap')">🔥 As soon as possible!</button>
+          <button class="dq-option" onclick="dqAnswer(3,'month')">📅 Next month</button>
+          <button class="dq-option" onclick="dqAnswer(3,'explore')">🧐 Just researching for now</button>
+        </div>
+      </div>
+      <div class="decision-result" id="dqResult">
+        <div class="dr-emoji" id="drEmoji">🎯</div>
+        <div class="dr-title" id="drTitle"></div>
+        <div class="dr-class-badge" id="drBadge"></div>
+        <div class="dr-desc" id="drDesc"></div>
+        <div class="dr-btns">
+          <button class="dr-btn-main" onclick="scrollToReg()" id="drMainBtn">🎯 Secure My Seat</button>
+          <a class="dr-btn-wa" href="#register" onclick="scrollToReg();return false;" style="background:linear-gradient(135deg,var(--blue),var(--purple));">📝 Register Interest</a>
+        </div>
+        <button class="dr-restart" onclick="dqRestart()">↩ Start over</button>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- SUBJECTS -->
 <section class="section sub-section" id="subjects">
   <div class="wsbg"></div>
-  <div class="reveal" style="position:relative;z-index:1;">
+  <div style="position:relative;z-index:1;">
     <div class="stag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);">📚 What We Teach</div>
     <h2 class="stitle">3 Subjects. 1 Expert.<br>Unlimited Potential.</h2>
     <p class="ssub">Each subject is taught with Olympiad-specific strategies, past paper patterns, and concept clarity that goes far beyond school.</p>
   </div>
   <div class="sub-grid" style="position:relative;z-index:1;">
-    <div class="scard eng reveal">
-      <div class="sbg">📘</div>
-      <span class="sicon">📘</span>
+    <div class="scard eng">
+      <div class="sbg">📘</div><span class="sicon">📘</span>
       <div class="sname">English Olympiad</div>
       <div class="sexams"><span class="sexam">SOF IEO</span><span class="sexam">SilverZone iEO</span><span class="sexam">ASSET English</span></div>
       <ul class="slist">
-        <li>Vocabulary, word meanings & usage</li>
-        <li>Reading comprehension & inference</li>
-        <li>Grammar mastery & error spotting</li>
-        <li>Sentence formation & higher-order questions</li>
+        <li>Vocabulary, word meanings &amp; usage</li>
+        <li>Reading comprehension &amp; inference</li>
+        <li>Grammar mastery &amp; error spotting</li>
+        <li>Sentence formation &amp; higher-order questions</li>
         <li>Olympiad-pattern MCQ practice</li>
       </ul>
     </div>
-    <div class="scard mat reveal">
-      <div class="sbg">📐</div>
-      <span class="sicon">📐</span>
+    <div class="scard mat">
+      <div class="sbg">📐</div><span class="sicon">📐</span>
       <div class="sname">Maths Olympiad</div>
       <div class="sexams"><span class="sexam">SOF IMO</span><span class="sexam">Maths Olympiad Foundation</span><span class="sexam">SilverZone iOM</span></div>
       <ul class="slist">
-        <li>Logical reasoning & number patterns</li>
-        <li>Arithmetic, fractions & word problems</li>
-        <li>Geometry, shapes & spatial thinking</li>
-        <li>Speed maths & mental calculation</li>
+        <li>Logical reasoning &amp; number patterns</li>
+        <li>Arithmetic, fractions &amp; word problems</li>
+        <li>Geometry, shapes &amp; spatial thinking</li>
+        <li>Speed maths &amp; mental calculation</li>
         <li>Tricky MCQs from past Olympiad papers</li>
       </ul>
     </div>
-    <div class="scard sci reveal">
-      <div class="sbg">🔬</div>
-      <span class="sicon">🔬</span>
+    <div class="scard sci">
+      <div class="sbg">🔬</div><span class="sicon">🔬</span>
       <div class="sname">Science Olympiad</div>
       <div class="sexams"><span class="sexam">SOF NSO</span><span class="sexam">SilverZone iSO</span><span class="sexam">Govt. Olympiads</span></div>
       <ul class="slist">
-        <li>Physics, Chemistry & Biology concepts</li>
+        <li>Physics, Chemistry &amp; Biology concepts</li>
         <li>NCERT + beyond-syllabus depth</li>
         <li>Concept-based (never rote) learning</li>
-        <li>Experiment reasoning & application</li>
+        <li>Experiment reasoning &amp; application</li>
         <li>Real-world observation questions</li>
       </ul>
     </div>
@@ -527,20 +835,27 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
 <!-- INSTRUCTOR -->
 <section class="section instr-section" id="about">
   <div class="instr-wrap">
-    <div class="reveal">
+    <div>
       <div class="instr-vis">
-        <div class="gbubble"><div class="gnum">30+</div><div class="glbl">Gold<br>Medals</div></div>
-        <span class="instr-emoji">👨‍🏫</span>
-        <div class="instr-name">Your Mentor</div>
-        <div class="instr-exp">8 Years · Olympiad Specialist</div>
-        <div class="medal-row">🥇🥈🥉🏅🏆</div>
+        <div class="gbubble"><div class="gnum">8</div><div class="glbl">YRS EXP</div></div>
+        <img src="data:image/jpeg;base64,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" alt="Your Mentor" style="width:100%;height:auto;max-height:320px;object-fit:contain;object-position:center center;display:block;background:#1a3a8f;" />
+        <div class="instr-vis-inner">
+          <div class="instr-name">Abina Patra</div>
+          <div class="instr-exp">Software Engineer · Accenture</div>
+          <div style="margin-top:1rem;background:rgba(255,255,255,.12);border-radius:14px;padding:12px 16px;display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:.78rem;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:.06em;">Teaching Experience</div>
+            <div style="font-family:'Fredoka One',cursive;font-size:1.8rem;color:white;">8 Years</div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.7);font-weight:700;">Exclusively Olympiad Coaching</div>
+          </div>
+          <div class="medal-row">🥇🥈🥉🏅🏆</div>
+        </div>
       </div>
     </div>
-    <div class="reveal">
+    <div>
       <div class="stag blue">🌟 Your Instructor</div>
-      <h2 class="stitle">8 Years. 30+ Gold Medals.<br>Proven Results.</h2>
-      <p class="bpara">For <strong>8 years</strong>, I have been exclusively dedicated to Olympiad preparation. This is my specialisation, not a side activity. Under my guidance, students have <strong>won 30+ Gold Medals</strong> and achieved top ranks at Zonal, State, and International levels across multiple platforms.</p>
-      <p class="bpara">My philosophy is <strong>one-on-one mentorship</strong> — every child gets personal attention, customised feedback, and a strategy built around their strengths. I cap each batch at just <strong>5 students</strong> so no child ever gets left behind.</p>
+      <h2 class="stitle">8 Years of Teaching.<br>Concepts First, Always.</h2>
+      <p class="bpara">For <strong>8 years</strong>, I have been exclusively dedicated to Olympiad preparation. This is my specialisation, not a side activity. Under my guidance, students have achieved top ranks at Zonal, State, and International levels in SOF, SilverZone, Government Olympiads, and Maths Olympiad Foundation.</p>
+      <p class="bpara">My teaching philosophy is simple: <strong>no child moves on until they truly understand.</strong> Every concept is explained patiently and revisited as many times as needed — without frustration, without skipping. Because I keep every batch to just <strong>5 students</strong>, each child receives the personal focus they deserve. No one is left behind.</p>
       <div class="orgs">
         <div class="org sof">🏅 SOF Olympiads</div>
         <div class="org sz">⭐ SilverZone</div>
@@ -548,10 +863,10 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
         <div class="org mof">📐 Maths Olympiad Foundation</div>
       </div>
       <div class="achgrid">
-        <div class="ach a1"><div class="achicon">🥇</div><div><div class="achnum">30+ Gold</div><div class="achlbl">Medals Won by Students</div></div></div>
+        <div class="ach a1"><div class="achicon">🎯</div><div><div class="achnum">1 Trial</div><div class="achlbl">Free Class Before Enrolment</div></div></div>
         <div class="ach a2"><div class="achicon">🌍</div><div><div class="achnum">Intl. Ranks</div><div class="achlbl">International Level Achievers</div></div></div>
-        <div class="ach a3"><div class="achicon">🏛️</div><div><div class="achnum">State Ranks</div><div class="achlbl">Zonal & State Level Toppers</div></div></div>
-        <div class="ach a4"><div class="achicon">🤝</div><div><div class="achnum">1-on-1</div><div class="achlbl">Personal Mentorship Style</div></div></div>
+        <div class="ach a3"><div class="achicon">🏛️</div><div><div class="achnum">State Ranks</div><div class="achlbl">Zonal &amp; State Level Toppers</div></div></div>
+        <div class="ach a4"><div class="achicon">🤝</div><div><div class="achnum">1-on-1</div><div class="achlbl">Personal Attention — 5 Students Max</div></div></div>
       </div>
     </div>
   </div>
@@ -559,190 +874,211 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
 
 <!-- HOW IT WORKS -->
 <section class="section how-section" id="how">
-  <div class="reveal">
-    <div class="stag green">⚙️ How It Works</div>
-    <h2 class="stitle">Simple. Structured.<br>Seriously Effective.</h2>
-    <p class="ssub">From registration to winning medals — here's exactly how the journey looks.</p>
-  </div>
+  <div class="stag green">⚙️ How It Works</div>
+  <h2 class="stitle">Simple. Structured.<br>Seriously Effective.</h2>
+  <p class="ssub">From registration to winning medals — here's exactly how the journey looks.</p>
   <div class="steps">
-    <div class="stepcard reveal"><div class="stepnum">1</div><div class="steptitle">Enroll & Pay</div><div class="stepdesc">Register online and complete secure payment via Razorpay. Instant confirmation on email.</div></div>
-    <div class="stepcard reveal"><div class="stepnum">2</div><div class="steptitle">Join WhatsApp Group</div><div class="stepdesc">Get added to your class WhatsApp group. Worksheets, notes & all updates shared here.</div></div>
-    <div class="stepcard reveal"><div class="stepnum">3</div><div class="steptitle">Attend Live Classes</div><div class="stepdesc">Live sessions on Google Meet — 2 per week, 2–3 hours each. Interactive, fun & focused.</div></div>
-    <div class="stepcard reveal"><div class="stepnum">4</div><div class="steptitle">Practice & Win! 🏆</div><div class="stepdesc">Worksheets, mock tests, and expert coaching prepare your child to compete and win!</div></div>
+    <div class="stepcard"><div class="stepnum">1</div><div class="steptitle">Register Your Interest</div><div class="stepdesc">Fill in the form below. Just your name, your child's name, class, and phone number. Done!</div></div>
+    <div class="stepcard"><div class="stepnum">2</div><div class="steptitle">Join WhatsApp Group</div><div class="stepdesc">Get added to your class WhatsApp group. Worksheets, notes &amp; all updates shared here.</div></div>
+    <div class="stepcard"><div class="stepnum">3</div><div class="steptitle">Attend Live Classes</div><div class="stepdesc">Live sessions on Google Meet — 2 per week, 2–3 hours each. Interactive, fun &amp; focused.</div></div>
+    <div class="stepcard"><div class="stepnum">4</div><div class="steptitle">Practice &amp; Win! 🏆</div><div class="stepdesc">Worksheets, mock tests, and expert coaching prepare your child to compete and win!</div></div>
   </div>
-  <div class="cdbox reveal">
+  <div class="cdbox">
     <div class="cditem"><div class="cdicon">💻</div><div><div class="cdlbl">Platform</div><div class="cdval">Google Meet</div></div></div>
     <div class="cditem"><div class="cdicon">💬</div><div><div class="cdlbl">Communication</div><div class="cdval">WhatsApp Groups</div></div></div>
     <div class="cditem"><div class="cdicon">📅</div><div><div class="cdlbl">Sessions Per Week</div><div class="cdval">2 Sessions / Week</div></div></div>
     <div class="cditem"><div class="cdicon">⏱️</div><div><div class="cdlbl">Duration Per Session</div><div class="cdval">2 – 3 Hours</div></div></div>
     <div class="cditem"><div class="cdicon">👥</div><div><div class="cdlbl">Batch Size</div><div class="cdval">Max 5 Students Only</div></div></div>
-    <div class="cditem"><div class="cdicon">🎓</div><div><div class="cdlbl">Classes Available</div><div class="cdval">Class 3, 4 & 5</div></div></div>
+    <div class="cditem"><div class="cdicon">🎓</div><div><div class="cdlbl">Classes Available</div><div class="cdval">Class 3, 4 &amp; 5</div></div></div>
     <div class="cditem"><div class="cdicon">📝</div><div><div class="cdlbl">Materials</div><div class="cdval">Worksheets + Mock Tests (Free)</div></div></div>
-    <div class="cditem"><div class="cdicon">🤝</div><div><div class="cdlbl">Mentorship Style</div><div class="cdval">One-on-One Attention</div></div></div>
+    <div class="cditem"><div class="cdicon">📞</div><div><div class="cdlbl">Enrollment</div><div class="cdval">Call + Free Trial First</div></div></div>
   </div>
 </section>
 
 <!-- PRICING -->
 <section class="section price-section" id="pricing">
-  <div class="reveal">
-    <div class="stag purple">💰 Course Fee</div>
-    <h2 class="stitle">Simple Pricing.<br>No Hidden Charges.</h2>
-    <p class="ssub">All 3 subjects (English + Maths + Science) included in one single fee per class. Worksheets and mock tests are completely free.</p>
-  </div>
+  <div class="stag purple">💰 Course Fee</div>
+  <h2 class="stitle">Simple Pricing.<br>No Hidden Charges.</h2>
+  <p class="ssub">Mathematics + English + Science all included. Fees are charged monthly in advance. First trial class is completely free.</p>
   <div class="fee-grid">
-    <div class="fcard fc3 reveal">
+    <div class="fcard fc3">
       <span class="femoji">📘</span>
       <div class="fcname">Class 3</div>
       <div class="fcwho">Build strong foundations early</div>
       <div class="fcprice">₹3,500</div>
-      <div class="fcper">all 3 subjects · full program</div>
+      <div class="fcper">all 3 subjects · per month</div>
       <div class="fcseats">🔥 Only 5 seats — 1 batch only!</div>
       <div class="fcdiv"></div>
       <ul class="fcinc">
-        <li><span class="ck">✅</span>English + Maths + Science Olympiad</li>
+        <li><span class="ck">✅</span>Mathematics + English + Science</li>
         <li><span class="ck">✅</span>Live classes on Google Meet</li>
-        <li><span class="ck">✅</span>2 sessions/week (2–3 hrs each)</li>
-        <li><span class="ck">✅</span>Free worksheets after every session</li>
-        <li><span class="ck">✅</span>Mock Olympiad tests included</li>
+        <li><span class="ck">✅</span>2 sessions per week</li>
+        <li><span class="ck">✅</span>Worksheets after every session</li>
+        <li><span class="ck">✅</span>Concepts revisited until fully understood</li>
+        <li><span class="ck">✅</span>1 free trial class before joining</li>
         <li><span class="ck">✅</span>WhatsApp parent group access</li>
-        <li><span class="ck">✅</span>One-on-one mentorship attention</li>
       </ul>
-      <button class="fcbtn" onclick="scrollToReg()">Enroll in Class 3 →</button>
+      <button class="fcbtn" onclick="scrollToReg()">Register Interest →</button>
     </div>
-    <div class="fcard fc4 reveal">
+    <div class="fcard fc4">
       <span class="femoji">📐</span>
       <div class="fcname">Class 4</div>
-      <div class="fcwho">Advance your Olympiad journey</div>
+      <div class="fcwho">Build speed &amp; problem-solving depth</div>
       <div class="fcprice">₹4,000</div>
-      <div class="fcper">all 3 subjects · full program</div>
+      <div class="fcper">all 3 subjects · per month</div>
       <div class="fcseats">🔥 Only 5 seats — 1 batch only!</div>
       <div class="fcdiv"></div>
       <ul class="fcinc">
-        <li><span class="ck">✅</span>English + Maths + Science Olympiad</li>
+        <li><span class="ck">✅</span>Mathematics + English + Science</li>
         <li><span class="ck">✅</span>Live classes on Google Meet</li>
-        <li><span class="ck">✅</span>2 sessions/week (2–3 hrs each)</li>
-        <li><span class="ck">✅</span>Free worksheets after every session</li>
-        <li><span class="ck">✅</span>Mock Olympiad tests included</li>
+        <li><span class="ck">✅</span>2 sessions per week</li>
+        <li><span class="ck">✅</span>Worksheets after every session</li>
+        <li><span class="ck">✅</span>Concepts revisited until fully understood</li>
+        <li><span class="ck">✅</span>1 free trial class before joining</li>
         <li><span class="ck">✅</span>WhatsApp parent group access</li>
-        <li><span class="ck">✅</span>One-on-one mentorship attention</li>
       </ul>
-      <button class="fcbtn" onclick="scrollToReg()">Enroll in Class 4 →</button>
+      <button class="fcbtn" onclick="scrollToReg()">Register Interest →</button>
     </div>
-    <div class="fcard fc5 reveal">
+    <div class="fcard fc5">
       <span class="femoji">🔬</span>
       <div class="fcname">Class 5</div>
-      <div class="fcwho">Senior Olympiad excellence</div>
+      <div class="fcwho">Compete at the highest level</div>
       <div class="fcprice">₹4,500</div>
-      <div class="fcper">all 3 subjects · full program</div>
+      <div class="fcper">all 3 subjects · per month</div>
       <div class="fcseats">🔥 Only 5 seats — 1 batch only!</div>
       <div class="fcdiv"></div>
       <ul class="fcinc">
-        <li><span class="ck">✅</span>English + Maths + Science Olympiad</li>
+        <li><span class="ck">✅</span>Mathematics + English + Science</li>
         <li><span class="ck">✅</span>Live classes on Google Meet</li>
-        <li><span class="ck">✅</span>2 sessions/week (2–3 hrs each)</li>
-        <li><span class="ck">✅</span>Free worksheets after every session</li>
-        <li><span class="ck">✅</span>Mock Olympiad tests included</li>
+        <li><span class="ck">✅</span>2 sessions per week</li>
+        <li><span class="ck">✅</span>Worksheets after every session</li>
+        <li><span class="ck">✅</span>Concepts revisited until fully understood</li>
+        <li><span class="ck">✅</span>1 free trial class before joining</li>
         <li><span class="ck">✅</span>WhatsApp parent group access</li>
-        <li><span class="ck">✅</span>One-on-one mentorship attention</li>
       </ul>
-      <button class="fcbtn" onclick="scrollToReg()">Enroll in Class 5 →</button>
+      <button class="fcbtn" onclick="scrollToReg()">Register Interest →</button>
     </div>
-  </div>
-  <div class="payrow reveal">
-    <span class="paylbl">💳 Pay securely via Razorpay:</span>
-    <div class="paychip">📱 UPI</div>
-    <div class="paychip">💳 Debit Card</div>
-    <div class="paychip">💳 Credit Card</div>
-    <div class="paychip">🏦 Net Banking</div>
-    <div class="paychip">📲 Wallets</div>
-    <div class="sectag">🔒 100% Secure</div>
   </div>
 </section>
 
-<!-- VIDEO -->
-<section class="section vid-section" id="video">
-  <div class="reveal">
-    <div class="stag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);">🎥 See It Live</div>
-    <h2 class="stitle">Watch a Demo Class</h2>
-    <p class="ssub">See the teaching style, the energy, and how kids engage — live, interactive, and genuinely fun.</p>
+<!-- POLICIES -->
+<section class="section" id="policies" style="background:white;">
+  <div class="stag blue">📋 How We Work</div>
+  <h2 class="stitle">Our Approach, Policies<br>&amp; What to Expect</h2>
+  <p class="ssub">Transparency builds trust. Here is everything you need to know about how this program works before you enrol.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:3rem;">
+    <div style="border-radius:20px;padding:30px;background:linear-gradient(135deg,#dbeafe,#ede9fe);position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.08;">🧠</div>
+      <div style="font-size:2.4rem;margin-bottom:.8rem;">🧠</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--ink);margin-bottom:.6rem;">Teaching Approach</div>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;">Concepts are explained <strong>clearly, patiently, and revisited</strong> as many times as needed until every student fully understands. No child is rushed through a topic.</p>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;margin-top:.7rem;">With only <strong>5 students per batch</strong>, every session feels personalised. The teacher knows exactly where each child is and adjusts accordingly.</p>
+      <div style="margin-top:1.2rem;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border-radius:10px;padding:10px 14px;">
+        <span style="font-size:1.2rem;">✅</span>
+        <span style="font-size:.82rem;font-weight:800;color:var(--blue);">Concept clarity over rote learning — always.</span>
+      </div>
+    </div>
+    <div style="border-radius:20px;padding:30px;background:linear-gradient(135deg,#d1fae5,#fef9c3);position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.08;">🎯</div>
+      <div style="font-size:2.4rem;margin-bottom:.8rem;">🎯</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--ink);margin-bottom:.6rem;">Trial Class Policy</div>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;">Before any payment, your child can attend <strong>1 free trial class.</strong></p>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;margin-top:.7rem;">This gives you a real, firsthand look at the teaching style, the class structure, and the learning environment — with <strong>zero commitment and no payment required.</strong></p>
+      <div style="margin-top:1.2rem;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border-radius:10px;padding:10px 14px;">
+        <span style="font-size:1.2rem;">✅</span>
+        <span style="font-size:.82rem;font-weight:800;color:var(--green);">Try first. Decide confidently. Enrol only when ready.</span>
+      </div>
+    </div>
+    <div style="border-radius:20px;padding:30px;background:linear-gradient(135deg,#ffedd5,#fce7f3);position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.08;">💳</div>
+      <div style="font-size:2.4rem;margin-bottom:.8rem;">📲</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--ink);margin-bottom:.6rem;">Payment Policy</div>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;">Fees are charged <strong>monthly in advance.</strong> Your child's seat for the upcoming month is confirmed only after the monthly fee has been received.</p>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;margin-top:.7rem;">Once you're happy after the free trial, Abina will guide you through payment privately. Simple and secure.</p>
+      <div style="margin-top:1.2rem;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border-radius:10px;padding:10px 14px;">
+        <span style="font-size:1.2rem;">✅</span>
+        <span style="font-size:.82rem;font-weight:800;color:var(--orange);">Monthly · In advance · Details shared privately.</span>
+      </div>
+    </div>
+    <div style="border-radius:20px;padding:30px;background:linear-gradient(135deg,#fce7f3,#ede9fe);position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.08;">📝</div>
+      <div style="font-size:2.4rem;margin-bottom:.8rem;">📝</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--ink);margin-bottom:.6rem;">Homework &amp; Discipline Policy</div>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;">Students are expected to complete <strong>all assigned homework and worksheets</strong> on time. Regular practice outside class is essential to Olympiad success.</p>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;margin-top:.7rem;">Every student is allowed up to <strong>3 instances of incomplete homework per year.</strong> If homework remains incomplete on more than 3 occasions, the student may be discontinued from the program.</p>
+      <div style="margin-top:1.2rem;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border-radius:10px;padding:10px 14px;">
+        <span style="font-size:1.2rem;">⚠️</span>
+        <span style="font-size:.82rem;font-weight:800;color:var(--purple);">Max 3 missed homework instances per year allowed.</span>
+      </div>
+    </div>
+    <div style="border-radius:20px;padding:30px;background:linear-gradient(135deg,#dbeafe,#d1fae5);position:relative;overflow:hidden;">
+      <div style="position:absolute;bottom:-10px;right:-10px;font-size:5rem;opacity:.08;">👥</div>
+      <div style="font-size:2.4rem;margin-bottom:.8rem;">👥</div>
+      <div style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--ink);margin-bottom:.6rem;">Small Batch, Big Impact</div>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;">Each batch has a <strong>strict maximum of 5 students.</strong> There is only <strong>1 batch per class</strong> — meaning once all 5 seats are filled, enrollment for that class closes.</p>
+      <p style="font-size:.87rem;color:var(--slate);line-height:1.75;font-weight:600;margin-top:.7rem;">This ensures every student gets <strong>focused, personal attention</strong> — not a classroom number.</p>
+      <div style="margin-top:1.2rem;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.5);border-radius:10px;padding:10px 14px;">
+        <span style="font-size:1.2rem;">🔥</span>
+        <span style="font-size:.82rem;font-weight:800;color:var(--blue);">Seats are limited — enrol early to secure yours.</span>
+      </div>
+    </div>
   </div>
-  <div class="vidwrap reveal" onclick="alert('Paste your YouTube embed URL here!')">
-    <div class="playbtn">▶</div>
-    <div class="vidlbl">🎬 OlympiadEdge — Demo Class Preview</div>
-  </div>
-  <p class="vidnote reveal">* Replace with your YouTube or Google Drive video embed link.</p>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section test-section" id="reviews">
-  <div class="reveal">
-    <div class="stag pink">🌟 Parent Reviews</div>
-    <h2 class="stitle">Gold Medals Don't Lie.</h2>
-    <p class="ssub">Real words from parents of our medal-winning students.</p>
+<!-- WHATSAPP MID-PAGE CTA STRIP -->
+<div class="wa-strip" style="background:linear-gradient(135deg,#1a6fd4,#7c3aed);">
+  <div class="wa-strip-left">
+    <div class="wa-strip-tag">📞 What Happens Next?</div>
+    <div class="wa-strip-title">Register Below — Abina Will Call You!</div>
+    <div class="wa-strip-sub">Fill the form and Abina will personally call you within 24 hours to confirm your child's seat, answer every question, and schedule the free trial class.</div>
   </div>
-  <div class="tgrid">
-    <div class="tcard t1 reveal">
-      <span class="tmedal">🥇</span>
-      <div class="tstars">★★★★★</div>
-      <div class="tquote">"My son won a Gold Medal at SOF IMO! The small batch of just 5 students means the teacher knows exactly where each child needs help. Best decision we made."</div>
-      <div class="tauth"><div class="tav" style="background:var(--blue);">S</div><div><div class="tname">Sunita Kapoor</div><div class="trole">Parent of Aryan · Class 4 · Gold Medalist 🥇</div></div></div>
-    </div>
-    <div class="tcard t2 reveal">
-      <span class="tmedal">🏛️</span>
-      <div class="tstars">★★★★★</div>
-      <div class="tquote">"My daughter got a State Rank in NSO Science Olympiad. The mock tests were exactly like the real exam — she felt so prepared and confident. Truly amazing teaching."</div>
-      <div class="tauth"><div class="tav" style="background:var(--green);">P</div><div><div class="tname">Pooja Nair</div><div class="trole">Parent of Riya · Class 5 · State Rank Holder 🏛️</div></div></div>
-    </div>
-    <div class="tcard t3 reveal">
-      <span class="tmedal">🌍</span>
-      <div class="tstars">★★★★★</div>
-      <div class="tquote">"My son received an International Rank in SilverZone Olympiad! The one-on-one attention in a batch of 5 is unlike anything else. 8 years of experience clearly shows."</div>
-      <div class="tauth"><div class="tav" style="background:var(--orange);">R</div><div><div class="tname">Rajesh Menon</div><div class="trole">Parent of Aarav · Class 3 · International Rank 🌍</div></div></div>
-    </div>
+  <div class="wa-strip-right">
+    <a class="wa-strip-btn" href="#register" onclick="scrollToReg();return false;" style="color:#1a6fd4;">📝 Register Interest</a>
+    <div class="wa-strip-hint">No payment needed · Free trial first</div>
   </div>
-</section>
+</div>
 
 <!-- REGISTER -->
 <section class="section reg-section" id="register">
-  <div class="reveal">
-    <div class="stag" style="background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);">📋 Register Now</div>
-    <h2 class="stitle">Secure Your Child's<br>Seat Before It's Gone! 🚀</h2>
-    <p class="ssub">Only 5 seats per class. 1 batch per class. Once full, enrolment closes. Don't wait!</p>
-  </div>
+  <div class="stag" style="background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);">📋 Register Now</div>
+  <h2 class="stitle">Register Your Interest<br>&amp; We'll Call You! 📞</h2>
+  <p class="ssub">Fill in your details below. Abina will personally call you to confirm your child's seat, answer all your questions, and guide you through the next steps — no payment needed right now.</p>
   <div class="regwrap">
-    <div class="regform reveal">
-      <div class="formtitle">📝 Student Registration Form</div>
-      <div class="frow">
-        <div class="fg"><label>Parent's Full Name</label><input type="text" placeholder="e.g. Sunita Sharma" id="parentName"/></div>
-        <div class="fg"><label>Student's Name</label><input type="text" placeholder="e.g. Aryan Sharma" id="studentName"/></div>
+    <div class="regform" style="padding:0;overflow:hidden;background:transparent;box-shadow:none;">
+      <!-- Desktop: embedded iframe -->
+      <div class="gform-desktop" style="border-radius:20px;overflow:hidden;height:900px;position:relative;">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdCoXks3HfBm6lHp3ZZDnb0pTWBh6dziBVliu_6aSrNpRAh2g/viewform?embedded=true"
+          width="100%"
+          height="948"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          style="display:block;background:white;border:none;"
+        >Loading form…</iframe>
       </div>
-      <div class="fg">
-        <label>Student's Class</label>
-        <select id="studentClass">
-          <option value="">— Select Class —</option>
-          <option>Class 3 – ₹3,500</option>
-          <option>Class 4 – ₹4,000</option>
-          <option>Class 5 – ₹4,500</option>
-        </select>
+      <!-- Mobile: open in tab button -->
+      <div class="gform-mobile" style="display:none;background:white;border-radius:24px;padding:36px 28px;text-align:center;box-shadow:0 6px 28px rgba(26,111,212,0.13);">
+        <div style="font-size:3rem;margin-bottom:1rem;">📝</div>
+        <div style="font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--ink);margin-bottom:.6rem;">Register Your Interest</div>
+        <p style="font-size:.9rem;color:var(--slate);font-weight:600;line-height:1.7;margin-bottom:1.8rem;">Tap the button below to open the registration form. It takes less than a minute to fill in — just your name, your child's name, class, and phone number.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCoXks3HfBm6lHp3ZZDnb0pTWBh6dziBVliu_6aSrNpRAh2g/viewform" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;padding:16px 32px;border-radius:50px;font-size:1rem;font-weight:800;text-decoration:none;box-shadow:0 6px 24px rgba(139,92,246,0.4);">
+          📋 Open Registration Form
+        </a>
+        <p style="font-size:.75rem;color:var(--muted);margin-top:1rem;font-weight:600;">Opens in Google Forms · No login required</p>
       </div>
-      <div class="frow">
-        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210" id="phone"/></div>
-        <div class="fg"><label>Email Address</label><input type="email" placeholder="parent@email.com" id="email"/></div>
-      </div>
-      <button class="fsub" onclick="handleEnroll()">🔒 Proceed to Secure Payment</button>
-      <p class="fnote">After payment, WhatsApp group + Google Meet class schedule sent within 24 hours.</p>
     </div>
-    <div class="reginfo reveal">
+    <div class="reginfo">
       <h3>🎉 What Happens After?</h3>
       <div class="aftersteps">
-        <div class="arstep"><div class="arnum">1</div><div><div class="artitle">Complete Secure Payment</div><div class="ardesc">Pay via UPI, debit/credit card or net banking via Razorpay. Instant confirmation on email.</div></div></div>
-        <div class="arstep"><div class="arnum">2</div><div><div class="artitle">Receive Confirmation</div><div class="ardesc">Payment receipt on email + SMS confirmation immediately after successful payment.</div></div></div>
-        <div class="arstep"><div class="arnum">3</div><div><div class="artitle">Join WhatsApp Group</div><div class="ardesc">Added to your class WhatsApp group within 24 hrs. All worksheets & updates shared here.</div></div></div>
-        <div class="arstep"><div class="arnum">4</div><div><div class="artitle">Attend First Class! 🚀</div><div class="ardesc">Google Meet link shared in WhatsApp. Join live and start your child's Olympiad journey!</div></div></div>
+        <div class="arstep"><div class="arnum">1</div><div><div class="artitle">You Fill the Form</div><div class="ardesc">Just your name, child's name, class, and a contact number. Takes 30 seconds.</div></div></div>
+        <div class="arstep"><div class="arnum">2</div><div><div class="artitle">Abina Calls You Within 24 Hours</div><div class="ardesc">A personal call to answer your questions, explain the program, and confirm if a seat is available for your child's class.</div></div></div>
+        <div class="arstep"><div class="arnum">3</div><div><div class="artitle">Free Trial Class First</div><div class="ardesc">Your child attends 1 free trial class — no payment, no commitment. Experience the teaching firsthand.</div></div></div>
+        <div class="arstep"><div class="arnum">4</div><div><div class="artitle">Confirm &amp; Join 🚀</div><div class="ardesc">Happy with the trial? Abina will guide you through the payment privately. Your child's journey begins!</div></div></div>
       </div>
       <div class="guarbox">
         <div style="font-size:1.8rem;flex-shrink:0;">🛡️</div>
-        <p><strong>Satisfaction Promise:</strong> Attend the first 2 classes. If you feel the program isn't the right fit, we'll give you a full refund — no questions asked. That's our confidence in what we deliver.</p>
+        <p><strong>Free Trial Class:</strong> Your child can attend 1 trial class before any payment is made. This lets you experience the teaching style, batch environment, and program quality firsthand — completely free, with zero commitment.</p>
       </div>
     </div>
   </div>
@@ -750,18 +1086,17 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
 
 <!-- FAQ -->
 <section class="section faq-section" id="faq">
-  <div class="reveal">
-    <div class="stag blue">❓ FAQs</div>
-    <h2 class="stitle">Questions Parents<br>Always Ask</h2>
-  </div>
+  <div class="stag blue">❓ FAQs</div>
+  <h2 class="stitle">Questions Parents<br>Always Ask</h2>
   <div class="faqlist">
-    <div class="faqitem reveal"><div class="faqq">Which classes can join this program? <span class="faqtog">+</span></div><div class="faqa">This program is for students in Class 3, Class 4, and Class 5 only. We offer 1 dedicated batch per class, with a maximum of 5 students each for quality mentorship.</div></div>
-    <div class="faqitem reveal"><div class="faqq">Why only 5 students per batch? <span class="faqtog">+</span></div><div class="faqa">With only 5 students, every child receives genuine personal attention — almost like one-on-one tutoring in a group setting. This is what has produced 30+ Gold Medals and International ranks among our students.</div></div>
-    <div class="faqitem reveal"><div class="faqq">Does my child need prior Olympiad experience? <span class="faqtog">+</span></div><div class="faqa">No experience needed at all! We build from the foundation upward. Both first-time students and those who have previously appeared for Olympiads are welcome.</div></div>
-    <div class="faqitem reveal"><div class="faqq">How are the classes conducted? <span class="faqtog">+</span></div><div class="faqa">All sessions are live on Google Meet — 2 sessions per week, each lasting 2 to 3 hours. Classes are interactive, not pre-recorded. Students can ask questions in real time. Google Meet links are shared via the WhatsApp group.</div></div>
-    <div class="faqitem reveal"><div class="faqq">Which Olympiad exams does this cover? <span class="faqtog">+</span></div><div class="faqa">We prepare for SOF (IMO, NSO, IEO), SilverZone Olympiads, Maths Olympiad Foundation, and Government-organised Olympiads. Our students have won medals and achieved ranks across all these platforms over 8 years.</div></div>
-    <div class="faqitem reveal"><div class="faqq">Are worksheets and mock tests really free? <span class="faqtog">+</span></div><div class="faqa">Yes — completely free and included in the program fee. Worksheets are shared after every session via WhatsApp. Full-length mock Olympiad tests are also provided at no extra charge.</div></div>
-    <div class="faqitem reveal"><div class="faqq">Is the payment secure? <span class="faqtog">+</span></div><div class="faqa">Payments are processed via Razorpay — India's most trusted payment gateway. You can pay via UPI, debit card, credit card, or net banking. All transactions are 100% encrypted and secure.</div></div>
+    <div class="faqitem"><div class="faqq">Can my child attend a trial class before enrolling? <span class="faqtog">+</span></div><div class="faqa">Yes! Every student is welcome to attend <strong>1 free trial class</strong> before making any payment. This gives you and your child a chance to experience the teaching style, the class environment, and the level of attention — with absolutely no commitment or pressure to enrol.</div></div>
+    <div class="faqitem"><div class="faqq">Which classes can join this program? <span class="faqtog">+</span></div><div class="faqa">This program is exclusively for students in <strong>Class 3, Class 4, and Class 5</strong>. There is 1 batch per class, with a strict maximum of 5 students per batch.</div></div>
+    <div class="faqitem"><div class="faqq">How do I pay the fees? <span class="faqtog">+</span></div><div class="faqa">There is no payment needed when you register. Simply fill in the interest form, and Abina will personally call you within 24 hours. After your child attends the <strong>free trial class</strong>, Abina will privately share payment details with you directly. Fees are charged <strong>monthly in advance</strong>.</div></div>
+    <div class="faqitem"><div class="faqq">What is the homework and discipline policy? <span class="faqtog">+</span></div><div class="faqa">Students are expected to complete <strong>all assigned homework and worksheets</strong> on time. Students are allowed a maximum of <strong>3 instances of incomplete homework per year</strong>. If a student fails to complete homework more than 3 times, they may be discontinued from the program.</div></div>
+    <div class="faqitem"><div class="faqq">What if my child does not understand a concept? <span class="faqtog">+</span></div><div class="faqa">That is exactly what this program is built for. <strong>No concept is skipped or rushed.</strong> Every topic is explained patiently and revisited as many times as needed until the student fully understands.</div></div>
+    <div class="faqitem"><div class="faqq">Why only 5 students per batch? <span class="faqtog">+</span></div><div class="faqa">Keeping the batch to just 5 students allows for genuine personal attention for every child — closer to one-on-one tutoring than group classes.</div></div>
+    <div class="faqitem"><div class="faqq">How are the classes conducted? <span class="faqtog">+</span></div><div class="faqa">All classes are conducted <strong>live on Google Meet</strong> — 2 sessions per week. Classes are fully interactive and not pre-recorded. All updates, worksheets, and class links are shared via the <strong>WhatsApp group</strong>.</div></div>
+    <div class="faqitem"><div class="faqq">Which Olympiad exams does this prepare for? <span class="faqtog">+</span></div><div class="faqa">The program prepares for major Olympiad platforms including <strong>SOF (IMO, NSO, IEO)</strong>, <strong>SilverZone Olympiads</strong>, <strong>Maths Olympiad Foundation</strong>, and <strong>Government-organised Olympiads</strong>.</div></div>
   </div>
 </section>
 
@@ -772,33 +1107,88 @@ footer{background:#0d1b4b;padding:50px 4% 24px;}
   <p>Only 5 seats per class · 1 batch only · New batch starting soon — don't miss it!</p>
   <div class="finalbtns">
     <button class="btnfinal" onclick="scrollToReg()">🎯 Secure My Child's Seat</button>
-    <a href="https://wa.me/919999999999?text=Hi!%20I%20want%20to%20enroll%20in%20OlympiadEdge." class="btnwa" target="_blank">💬 WhatsApp Us</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="ftop">
-    <div><div class="flogo">🏆 Olympiad<span class="fe">Edge</span></div><div class="ftagline">Expert Olympiad coaching for Class 3, 4 & 5. Limited seats. Unlimited potential.</div></div>
+    <div><div class="flogo">🏆 Olympiad<span class="fe">Edge</span></div><div class="ftagline">Expert Olympiad coaching for Class 3, 4 &amp; 5. Limited seats. Unlimited potential.</div></div>
     <div class="fcol"><h4>Program</h4><ul class="flinks"><li><a href="#subjects">Subjects</a></li><li><a href="#how">How It Works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About Mentor</a></li></ul></div>
-    <div class="fcol"><h4>Support</h4><ul class="flinks"><li><a href="#faq">FAQ</a></li><li><a href="https://wa.me/919999999999">WhatsApp Us</a></li><li><a href="/cdn-cgi/l/email-protection#5c34393030331c333025312c353d3839383b39723532">Email Us</a></li></ul></div>
-    <div class="fcol"><h4>Contact</h4><ul class="flinks"><li><a href="/cdn-cgi/l/email-protection#b8d0ddd4d4d7f8d7d4c1d5c8d1d9dcdddcdfdd96d1d6"><span class="__cf_email__" data-cfemail="4c24292020230c232035213c252d2829282b29622522">[email&#160;protected]</span></a></li><li><a href="#">+91 99999 99999</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Refund Policy</a></li></ul></div>
+    <div class="fcol"><h4>Support</h4><ul class="flinks"><li><a href="#faq">FAQ</a></li><li><a href="mailto:abinapatra18@gmail.com">Email Us</a></li></ul></div>
+    <div class="fcol"><h4>Contact</h4><ul class="flinks"><li><a href="mailto:abinapatra18@gmail.com">abinapatra18@gmail.com</a></li><li><a href="#" id="privacyLink">Privacy Policy</a></li><li><a href="#" id="refundLink">Refund Policy</a></li></ul></div>
   </div>
-  <div class="fbot"><span>© 2025 OlympiadEdge. All rights reserved.</span><span>🔒 Payments secured by Razorpay · Made with ❤️ for future champions</span></div>
+  <div class="fbot"><span>© 2025 OlympiadEdge. All rights reserved.</span><span style="text-align:center;font-size:.72rem;">SOF, SilverZone, IMO, NSO, IEO &amp; other Olympiad names are trademarks of their respective organisations. OlympiadEdge is not affiliated with them.</span><span>Made with ❤️ for future champions</span></div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-ov" id="successModal">
+<!-- INTEREST REGISTERED MODAL -->
+<div class="modal-ov" id="interestModal">
   <div class="modal-box">
-    <div class="micon">🎉🥇🎊</div>
-    <div class="mtitle">You're Almost In!</div>
-    <div class="msub">Registration received! In production, <strong>Razorpay</strong> payment opens here.<br><br>After payment, you'll be added to the <strong>WhatsApp group</strong> and receive the <strong>Google Meet class link</strong> within 24 hours.<br><br>Your child's Olympiad journey begins now! 🚀</div>
-    <button class="mclose" onclick="closeModal()">🏆 Awesome, Got It!</button>
+    <div class="micon">📞🎉</div>
+    <div class="mtitle">Interest Registered!</div>
+    <div class="msub" style="text-align:left;">
+      <p style="margin-bottom:1rem;">Thank you! Your details have been received. <strong>Abina will personally call you within 24 hours</strong> to:</p>
+      <p style="margin-bottom:.5rem;">✅ Confirm seat availability for your child's class</p>
+      <p style="margin-bottom:.5rem;">✅ Answer all your questions about the program</p>
+      <p style="margin-bottom:.5rem;">✅ Schedule your child's <strong>free trial class</strong></p>
+      <p style="margin-top:1rem;font-size:.82rem;color:#94a3b8;">No payment is needed at this stage. Sit back and wait for the call! 😊</p>
+    </div>
+    <button class="mclose" onclick="closeModal('interestModal')">Got it, Thank You! 🙌</button>
   </div>
 </div>
 
+<!-- INTEREST REGISTERED MODAL -->
+<div class="modal-ov" id="interestModal">
+  <div class="modal-box">
+    <div class="micon">📞🎉</div>
+    <div class="mtitle">Interest Registered!</div>
+    <div class="msub" style="text-align:left;">
+      <p style="margin-bottom:1rem;">Thank you! Your details have been received. <strong>Abina will personally call you within 24 hours</strong> to:</p>
+      <p style="margin-bottom:.5rem;">✅ Confirm seat availability for your child's class</p>
+      <p style="margin-bottom:.5rem;">✅ Answer all your questions about the program</p>
+      <p style="margin-bottom:.5rem;">✅ Schedule your child's <strong>free trial class</strong></p>
+      <p style="margin-top:1rem;font-size:.82rem;color:#94a3b8;">No payment is needed at this stage. Sit back and wait for the call! 😊</p>
+    </div>
+    <button class="mclose" onclick="closeModal('interestModal')">Got it, Thank You! 🙌</button>
+  </div>
+</div>
+
+<!-- QR ONLY MODAL (from scan button) -->
+<div class="modal-ov" id="qrModal">
+  <div class="modal-box" style="max-width:380px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+      <div style="font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--ink);">📷 Scan &amp; Pay</div>
+      <button onclick="closeModal('qrModal')" style="background:#f0f7ff;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;color:#475569;">✕</button>
+    </div>
+    <div class="qr-wrap">
+      <img class="qr-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyMDAgMjAwJyB3aWR0aD0nMTgwJyBoZWlnaHQ9JzE4MCc+CiAgPHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbGw9J3doaXRlJy8+CiAgPCEtLSBRUiBib3JkZXIgc3F1YXJlcyAtLT4KICA8cmVjdCB4PScxMCcgeT0nMTAnIHdpZHRoPSc2MCcgaGVpZ2h0PSc2MCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjMWUxYjRiJyBzdHJva2Utd2lkdGg9JzYnLz4KICA8cmVjdCB4PScyMCcgeT0nMjAnIHdpZHRoPSc0MCcgaGVpZ2h0PSc0MCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzEzMCcgeT0nMTAnIHdpZHRoPSc2MCcgaGVpZ2h0PSc2MCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjMWUxYjRiJyBzdHJva2Utd2lkdGg9JzYnLz4KICA8cmVjdCB4PScxNDAnIHk9JzIwJyB3aWR0aD0nNDAnIGhlaWdodD0nNDAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMCcgeT0nMTMwJyB3aWR0aD0nNjAnIGhlaWdodD0nNjAnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzFlMWI0Yicgc3Ryb2tlLXdpZHRoPSc2Jy8+CiAgPHJlY3QgeD0nMjAnIHk9JzE0MCcgd2lkdGg9JzQwJyBoZWlnaHQ9JzQwJyBmaWxsPScjMWUxYjRiJy8+CiAgPCEtLSBEYXRhIG1vZHVsZXMgLS0+CiAgPHJlY3QgeD0nODAnIHk9JzEwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PScxMDAnIHk9JzEwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PSc5MCcgeT0nMjAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzExMCcgeT0nMjAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzgwJyB5PSczMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTAwJyB5PSczMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+CiAgPHJlY3QgeD0nOTAnIHk9JzQwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PSc4MCcgeT0nNTAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzExMCcgeT0nNDAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzEwMCcgeT0nNTAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzgwJyB5PSc4MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTAwJyB5PSc4MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+CiAgPHJlY3QgeD0nMTIwJyB5PSc4MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTQwJyB5PSc4MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+CiAgPHJlY3QgeD0nMTYwJyB5PSc4MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nOTAnIHk9JzkwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMTAnIHk9JzkwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PScxMzAnIHk9JzkwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxNTAnIHk9JzkwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PSc4MCcgeT0nMTAwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMDAnIHk9JzEwMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTIwJyB5PScxMDAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzE2MCcgeT0nMTAwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PSc5MCcgeT0nMTEwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMTAnIHk9JzExMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTQwJyB5PScxMTAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzgwJyB5PScxMjAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzEwMCcgeT0nMTIwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMzAnIHk9JzgwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PScxNTAnIHk9JzExMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+CiAgPHJlY3QgeD0nMTMwJyB5PScxMzAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzE1MCcgeT0nMTMwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxNDAnIHk9JzE0MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTYwJyB5PScxNDAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzEzMCcgeT0nMTUwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PScxNTAnIHk9JzE1MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+CiAgPHJlY3QgeD0nMTMwJyB5PScxNjAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzE2MCcgeT0nMTYwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxNDAnIHk9JzE3MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTYwJyB5PScxNzAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDxyZWN0IHg9JzgwJyB5PScxNDAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzEwMCcgeT0nMTQwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PSc5MCcgeT0nMTUwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz48cmVjdCB4PSc4MCcgeT0nMTYwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMDAnIHk9JzE2MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nOTAnIHk9JzE3MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+CiAgPHJlY3QgeD0nMTEwJyB5PScxMzAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPjxyZWN0IHg9JzEyMCcgeT0nMTUwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMxZTFiNGInLz4KICA8cmVjdCB4PScxMTAnIHk9JzE2MCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPScjMWUxYjRiJy8+PHJlY3QgeD0nMTIwJyB5PScxNzAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzFlMWI0YicvPgogIDwhLS0gVVBJIGxvZ28gaGludCAtLT4KICA8dGV4dCB4PScxMDAnIHk9JzE5NScgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC1zaXplPSc4JyBmaWxsPScjOTRhM2I4JyBmb250LWZhbWlseT0nc2Fucy1zZXJpZic+U0NBTiBUTyBQQVk8L3RleHQ+Cjwvc3ZnPg==" alt="UPI QR Code" style="width:200px;height:200px;" />
+      <div class="qr-note">Scan with PhonePe · GPay · Paytm · Any UPI app</div>
+      <div class="upi-display" onclick="copyUPI()">
+        <span style="font-size:1.2rem;">📱</span>
+        <span class="upi-display-id">yourname@upi</span>
+        <button class="copy-chip" onclick="copyUPI(event)">Copy</button>
+      </div>
+    </div>
+    <p style="font-size:.8rem;color:var(--muted);font-weight:600;text-align:center;margin-top:.5rem;">After payment, send screenshot on WhatsApp to confirm enrollment.</p>
+    <a href="https://wa.me/919999999999" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border-radius:50px;background:linear-gradient(135deg,#25d366,#128c7e);color:white;font-size:.9rem;font-weight:800;text-decoration:none;margin-top:.8rem;">💬 WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- POLICY MODAL -->
+<div class="modal-ov" id="policyModal">
+  <div class="modal-box" style="max-width:520px;text-align:left;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;">
+      <div id="policyTitle" style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#1e1b4b;"></div>
+      <button onclick="closeModal('policyModal')" style="background:#f0f7ff;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;color:#475569;">✕</button>
+    </div>
+    <div id="policyContent" style="font-size:.88rem;color:#475569;line-height:1.8;font-weight:600;max-height:60vh;overflow-y:auto;"></div>
+    <button onclick="closeModal('policyModal')" style="width:100%;margin-top:1.4rem;padding:13px;border-radius:50px;background:linear-gradient(135deg,#1a6fd4,#8b5cf6);color:white;font-size:.92rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;">Got it 👍</button>
+  </div>
+</div>
 
 <script>
+
+
 // ── Floating emoji background ──
 const emojis=['🥇','🏅','⭐','🏆','🥈','📝','📐','🔬','📘','✏️','🎯','💡','🌟'];
 const bg=document.getElementById('emojiBg');
@@ -822,194 +1212,364 @@ document.querySelectorAll('.faqitem').forEach(item=>{
   });
 });
 
-// ── Smooth scroll helpers ──
-function scrollToReg(){
-  document.getElementById('register').scrollIntoView({behavior:'smooth'});
-}
-function scrollTo(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
-
-// ── Nav link smooth scroll ──
+// ── Smooth scroll ──
+function scrollToReg(){ document.getElementById('register').scrollIntoView({behavior:'smooth'}); }
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',function(e){
-    const target=document.querySelector(this.getAttribute('href'));
+    const href=this.getAttribute('href');
+    if(!href||href==='#') return;
+    const target=document.querySelector(href);
     if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
   });
 });
 
-// ── Enroll buttons pre-fill class ──
-document.querySelectorAll('.fcbtn').forEach(btn=>{
-  btn.addEventListener('click',function(){
-    const card=this.closest('.fcard');
-    const cls = card.classList.contains('fc3') ? 'Class 3 – ₹3,500'
-               : card.classList.contains('fc4') ? 'Class 4 – ₹4,000'
-               : 'Class 5 – ₹4,500';
-    const sel=document.getElementById('studentClass');
-    for(let i=0;i<sel.options.length;i++){
-      if(sel.options[i].value===cls){sel.selectedIndex=i;break;}
-    }
-    document.getElementById('register').scrollIntoView({behavior:'smooth'});
-  });
-});
-
-// ── Video click ──
-document.querySelector('.vidwrap').addEventListener('click',function(){
-  const url=prompt('🎥 Paste your YouTube video URL here:','https://www.youtube.com/watch?v=');
-  if(url && url.includes('youtube.com/watch?v=')){
-    const id=url.split('v=')[1].split('&')[0];
-    const iframe=document.createElement('iframe');
-    iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1';
-    iframe.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none;z-index:5;';
-    iframe.allow='autoplay;fullscreen';
-    this.appendChild(iframe);
-  } else if(url){
-    // Non-YouTube: open directly
-    window.open(url,'_blank');
-  }
-});
-
-// ── Phone number click ──
-document.querySelectorAll('a[href="#"]').forEach(a=>{
-  if(a.textContent.includes('+91')){
-    a.href='tel:+919999999999';
-    a.removeAttribute('href');
-    a.style.cursor='pointer';
-    a.addEventListener('click',()=>window.location.href='tel:+919999999999');
-  }
-});
-
-// ── Privacy Policy modal ──
-function showPolicy(title, content){
-  document.getElementById('policyTitle').textContent=title;
-  document.getElementById('policyContent').innerHTML=content;
-  document.getElementById('policyModal').classList.add('open');
+// ── Copy UPI ──
+function copyUPI(e){
+  if(e) e.stopPropagation();
+  navigator.clipboard.writeText(UPI_ID).then(()=>{
+    document.querySelectorAll('.copy-chip, .upi-copy-btn').forEach(btn=>{
+      btn.textContent='✅ Copied!'; btn.style.background='#16a34a';
+      setTimeout(()=>{ btn.textContent='Copy'; btn.style.background=''; }, 2000);
+    });
+  }).catch(()=>{ alert('UPI ID: ' + UPI_ID); });
 }
-document.querySelectorAll('a[href="#"]').forEach(a=>{
-  if(a.textContent.trim()==='Privacy Policy'){
-    a.addEventListener('click',function(e){
-      e.preventDefault();
-      showPolicy('Privacy Policy',
-        '<p>At OlympiadEdge, we are committed to protecting your privacy.</p><br>'+
-        '<p><strong>Data We Collect:</strong> Name, email, phone number, and your child\'s class during registration.</p><br>'+
-        '<p><strong>How We Use It:</strong> Only to add you to the correct WhatsApp group and share Google Meet class links. We never sell or share your data with third parties.</p><br>'+
-        '<p><strong>Payments:</strong> All payments are processed by Razorpay. We do not store card details.</p><br>'+
-        '<p><strong>Contact:</strong> For any privacy concerns, WhatsApp us or email hello@olympiadedge.in</p>'
-      );
-    });
-  }
-  if(a.textContent.trim()==='Refund Policy'){
-    a.addEventListener('click',function(e){
-      e.preventDefault();
-      showPolicy('Refund Policy',
-        '<p><strong>Satisfaction Guarantee:</strong> We are confident in the quality of our program.</p><br>'+
-        '<p>If your child attends the <strong>first 2 classes</strong> and you feel the program is not the right fit, simply WhatsApp us and we will process a <strong>full refund — no questions asked.</strong></p><br>'+
-        '<p><strong>After 2 Classes:</strong> No refunds after the second session has been attended, as worksheets and materials have been shared.</p><br>'+
-        '<p><strong>Missed Classes:</strong> Recordings are shared in the WhatsApp group. No refunds for missed sessions.</p><br>'+
-        '<p>For refund requests: WhatsApp us at +91 99999 99999</p>'
-      );
-    });
-  }
+
+// ── Payment modals ──
+function openPayModal(cls, amount){
+  const sn = document.getElementById('studentName').value.trim() || 'Student';
+  document.getElementById('payStudentName').textContent = sn;
+  document.getElementById('payClass').textContent = cls;
+  document.getElementById('payAmount').textContent = '₹' + amount;
+  document.getElementById('paymentModal').classList.add('open');
+}
+function openQRModal(){ document.getElementById('qrModal').classList.add('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.modal-ov').forEach(ov=>{
+  ov.addEventListener('click', function(e){ if(e.target===this) this.classList.remove('open'); });
 });
 
-// ── Registration form submission ──
+// ── Form validation ──
 function handleEnroll(){
   const pn=document.getElementById('parentName').value.trim();
   const sn=document.getElementById('studentName').value.trim();
   const sc=document.getElementById('studentClass').value;
   const ph=document.getElementById('phone').value.trim();
   const em=document.getElementById('email').value.trim();
-
-  // Validation
   if(!pn){showFormError('parentName','Please enter parent name');return;}
   if(!sn){showFormError('studentName','Please enter student name');return;}
-  if(!sc){showFormError('studentClass','Please select your child\'s class');return;}
+  if(!sc){showFormError('studentClass',"Please select your child's class");return;}
   if(!ph||ph.length<10){showFormError('phone','Please enter a valid phone number');return;}
-  if(!em||!em.includes('@')){showFormError('email','Please enter a valid email address');return;}
-
   clearFormErrors();
-
-  // Show payment modal
-  const amount = sc.includes('3') ? '3,500' : sc.includes('4') ? '4,000' : '4,500';
-  document.getElementById('payAmount').textContent='₹'+amount;
-  document.getElementById('payStudentName').textContent=sn;
-  document.getElementById('payClass').textContent=sc.split('–')[0].trim();
-  document.getElementById('paymentModal').classList.add('open');
+  document.getElementById('interestModal').classList.add('open');
 }
-
 function showFormError(id, msg){
   const el=document.getElementById(id);
   el.style.borderColor='#ef4444';
   let err=el.parentNode.querySelector('.ferr');
   if(!err){err=document.createElement('div');err.className='ferr';err.style.cssText='color:#ef4444;font-size:.75rem;margin-top:4px;font-weight:700;';el.parentNode.appendChild(err);}
-  err.textContent='⚠ '+msg;
-  el.focus();
+  err.textContent='⚠ '+msg; el.focus();
 }
 function clearFormErrors(){
   document.querySelectorAll('.ferr').forEach(e=>e.remove());
   document.querySelectorAll('.fg input, .fg select').forEach(e=>e.style.borderColor='');
 }
 
-// ── Payment modal actions ──
-function payViaRazorpay(){
-  // In production: initialise Razorpay here with your key and amount
-  document.getElementById('paymentModal').classList.remove('open');
-  document.getElementById('successModal').classList.add('open');
-}
-function closeModal(id){
-  document.getElementById(id||'successModal').classList.remove('open');
-}
-
-// ── Nav scroll shadow ──
-window.addEventListener('scroll',()=>{
-  document.querySelector('nav').style.boxShadow=window.scrollY>60
-    ?'0 6px 30px rgba(26,111,212,.18)':'0 4px 20px rgba(26,111,212,.1)';
+// ── Policy modals ──
+document.getElementById('privacyLink').addEventListener('click', function(e){
+  e.preventDefault();
+  document.getElementById('policyTitle').textContent = 'Privacy Policy';
+  document.getElementById('policyContent').innerHTML =
+    '<p>At OlympiadEdge, we are committed to protecting your privacy.</p><br>'+
+    '<p><strong>Data We Collect:</strong> Parent name, student name, class, phone number, and email at registration.</p><br>'+
+    '<p><strong>How We Use It:</strong> Only to add you to the correct WhatsApp group and share Google Meet class links. We never sell or share your data.</p><br>'+
+    '<p><strong>Payments:</strong> All payments are made via UPI/QR Code. We do not store payment details.</p><br>'+
+    '<p><strong>Contact:</strong> WhatsApp us or email abinapatra18@gmail.com</p>';
+  document.getElementById('policyModal').classList.add('open');
+});
+document.getElementById('refundLink').addEventListener('click', function(e){
+  e.preventDefault();
+  document.getElementById('policyTitle').textContent = 'Refund Policy';
+  document.getElementById('policyContent').innerHTML =
+    '<p><strong>Trial Class:</strong> Every student may attend 1 free trial class before any payment.</p><br>'+
+    '<p><strong>Payment:</strong> Fees are charged monthly in advance via UPI or QR Code.</p><br>'+
+    '<p><strong>Homework Policy:</strong> Students are permitted up to 3 instances of incomplete homework per year.</p><br>'+
+    '<p>For queries: WhatsApp us at +91 99999 99999</p>';
+  document.getElementById('policyModal').classList.add('open');
 });
 
-// ── Active nav link highlight ──
-const sections=document.querySelectorAll('section[id], div[id]');
-window.addEventListener('scroll',()=>{
-  let current='';
-  sections.forEach(s=>{
-    if(window.scrollY>=s.offsetTop-120) current=s.id;
-  });
-  document.querySelectorAll('.nav-links a').forEach(a=>{
-    a.style.color=a.getAttribute('href')==='#'+current?'var(--blue)':'';
-  });
-});
+// ══════════════════════════════════════════
+// SCROLL PROGRESS BAR
+// ══════════════════════════════════════════
+(function(){
+  const sectionIds = ['why','subjects','about','pricing','register'];
+  function updateBar(){
+    const bar   = document.getElementById('scroll-progress-bar');
+    const track = document.getElementById('spbTrack');
+    const steps = document.querySelectorAll('.spb-step');
+    if(!bar || !track) return;
+    const scrollTop = window.scrollY;
+    bar.classList.toggle('visible', scrollTop > 300);
+
+    // Floating WA
+    const waFloat = document.getElementById('wa-float');
+    if(waFloat) waFloat.classList.toggle('visible', scrollTop > 400);
+
+    // Active section
+    let activeIdx = -1;
+    sectionIds.forEach((id,i)=>{
+      const el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<=120) activeIdx=i;
+    });
+    steps.forEach((step,i)=>{
+      step.classList.remove('active','done');
+      if(i===activeIdx) step.classList.add('active');
+      else if(i<activeIdx) step.classList.add('done');
+    });
+
+    // Track fill aligned to active dot centre
+    const barRect = bar.getBoundingClientRect();
+    const dotCentres = Array.from(steps).map(s=>{
+      const d=s.querySelector('.spb-dot');
+      if(!d) return 0;
+      const r=d.getBoundingClientRect();
+      return r.left - barRect.left + r.width/2;
+    });
+    if(activeIdx<0){ track.style.width='0px'; return; }
+    const nextId  = sectionIds[activeIdx+1];
+    const nextEl  = nextId ? document.getElementById(nextId) : null;
+    const currEl  = document.getElementById(sectionIds[activeIdx]);
+    if(nextEl && currEl && dotCentres[activeIdx+1]){
+      const currTop  = currEl.getBoundingClientRect().top + scrollTop;
+      const nextTop  = nextEl.getBoundingClientRect().top + scrollTop;
+      const progress = Math.min(1,Math.max(0,(scrollTop+120-currTop)/(nextTop-currTop)));
+      track.style.width = (dotCentres[activeIdx] + (dotCentres[activeIdx+1]-dotCentres[activeIdx])*progress)+'px';
+    } else if(currEl){
+      const barW     = barRect.width;
+      const from     = dotCentres[activeIdx]||0;
+      const currTop  = currEl.getBoundingClientRect().top + scrollTop;
+      const docH     = document.documentElement.scrollHeight;
+      const scrolled = Math.max(0, scrollTop-(currTop-window.innerHeight));
+      const remaining= docH-(currTop+window.innerHeight);
+      const progress = remaining>0 ? Math.min(1, scrolled/(remaining+window.innerHeight)) : 1;
+      track.style.width = (from+(barW-from)*progress)+'px';
+    } else {
+      track.style.width = (dotCentres[activeIdx]||0)+'px';
+    }
+  }
+  window.addEventListener('scroll', updateBar, {passive:true});
+  window.addEventListener('DOMContentLoaded', updateBar);
+})();
+
+// ══════════════════════════════════════════
+// PARENT DECISION FLOW
+// ══════════════════════════════════════════
+(function(){
+  const answers = {};
+  window.dqAnswer = function(qNum, val){
+    answers[qNum] = val;
+    document.getElementById('dp'+qNum).classList.add('done');
+    document.getElementById('dqp'+qNum).classList.remove('active');
+    if(qNum<3) document.getElementById('dqp'+(qNum+1)).classList.add('active');
+    else showDqResult();
+  };
+  function showDqResult(){
+    const cls=answers[1], timing=answers[3];
+    const result=document.getElementById('dqResult');
+    const emoji=document.getElementById('drEmoji');
+    const title=document.getElementById('drTitle');
+    const badge=document.getElementById('drBadge');
+    const desc=document.getElementById('drDesc');
+    if(cls==='other'){
+      emoji.textContent='😔'; title.textContent='Not Available Yet';
+      badge.textContent='Classes 3, 4 & 5 only';
+      desc.textContent='We currently only offer coaching for Class 3, 4 and 5. Join our WhatsApp to be notified when we expand.';
+      document.getElementById('drMainBtn').style.display='none';
+    } else {
+      const priceMap={'Class 3':'₹3,500/mo','Class 4':'₹4,000/mo','Class 5':'₹4,500/mo'};
+      const iconMap={'Class 3':'📘','Class 4':'📐','Class 5':'🔬'};
+      badge.textContent=iconMap[cls]+' '+cls+' · '+priceMap[cls];
+      if(timing==='asap'){
+        emoji.textContent='🔥'; title.textContent='You Are the Perfect Fit!';
+        desc.textContent="Based on your answers, "+cls+" is exactly what we offer — and with only 5 seats per batch, your timing is critical. Secure your child's spot before it's gone!";
+      } else if(timing==='month'){
+        emoji.textContent='🎯'; title.textContent='Great — Start with a Free Trial!';
+        desc.textContent='No pressure. Attend 1 free trial class for '+cls+' and decide from there. You\'ll see the teaching style firsthand — zero commitment.';
+      } else {
+        emoji.textContent='✨'; title.textContent='Here\'s What to Know';
+        desc.textContent=cls+' is covered in our program. When you\'re ready, we offer a free trial class — no payment, no commitment.';
+      }
+    }
+    result.classList.add('show');
+  }
+  window.dqRestart = function(){
+    Object.keys(answers).forEach(k=>delete answers[k]);
+    ['dp1','dp2','dp3'].forEach(id=>document.getElementById(id).classList.remove('done'));
+    document.querySelectorAll('.dq-panel').forEach(p=>p.classList.remove('active'));
+    document.getElementById('dqp1').classList.add('active');
+    document.getElementById('dqResult').classList.remove('show');
+    document.getElementById('drMainBtn').style.display='';
+  };
+})();
+
+// ══════════════════════════════════════════
+// ══ NAV CENTER CHARACTER — PRO REBUILD ══
+(function(){
+  var char     = document.getElementById("navChar");
+  var ncTxt    = document.getElementById("ncText");
+  var ncFrame  = document.getElementById("ncFrame");
+  var ncWrap   = document.getElementById("ncWrap");
+  var ncBubble = document.getElementById("ncBubble");
+  var ncConf   = document.getElementById("ncConfetti");
+  var ncParts  = document.getElementById("ncParticles");
+  if(!char) return;
+
+  var stages = [
+    {id:"nc1", text:"I joined OlympiadEdge!", bubble:"Day 1 - so excited!"},
+    {id:"nc2", text:"Concepts are so clear now", bubble:"I finally get it!"},
+    {id:"nc3", text:"I solved a hard problem!", bubble:"My teacher believed in me!"},
+    {id:"nc4", text:"I got a Zonal Rank!", bubble:"Mum is so proud!"},
+    {id:"nc5", text:"Gold Medal Winner!", bubble:"I am a Champion!"},
+  ];
+
+  var COLORS = ["#f59e0b","#ec4899","#8b5cf6","#1a6fd4","#16a34a","#f97316"];
+  var current = -1;
+  var bubbleTimer = null;
+
+  function burst(count){
+    if(!ncParts) return;
+    ncParts.innerHTML = "";
+    for(var i=0;i<count;i++){
+      var p = document.createElement("div");
+      p.className = "nc-p";
+      var angle = (i/count)*360;
+      var dist  = 16+Math.random()*16;
+      var tx = (Math.cos(angle*Math.PI/180)*dist).toFixed(1)+"px";
+      var ty = (Math.sin(angle*Math.PI/180)*dist).toFixed(1)+"px";
+      p.style.cssText = "left:"+(22+Math.random()*10)+"px;top:"+(22+Math.random()*10)+"px;background:"+COLORS[i%COLORS.length]+";--tx:"+tx+";--ty:"+ty;
+      ncParts.appendChild(p);
+      (function(el){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.classList.add("burst"); }); }); })(p);
+    }
+  }
+
+  function launchConfetti(){
+    if(!ncConf) return;
+    ncConf.innerHTML = "";
+    ncConf.classList.add("show");
+    for(var i=0;i<30;i++){
+      var c = document.createElement("div");
+      c.className = "conf";
+      var w = (5+Math.random()*6).toFixed(0);
+      c.style.cssText = "left:"+Math.random()*100+"%;background:"+COLORS[i%COLORS.length]+";border-radius:"+(Math.random()>.5?"50%":"2px")+";animation-delay:"+(Math.random()*.7).toFixed(2)+"s;width:"+w+"px;height:"+w+"px;";
+      ncConf.appendChild(c);
+    }
+    setTimeout(function(){ ncConf.classList.remove("show"); }, 2200);
+  }
+
+  function showBubble(text){
+    if(!ncBubble) return;
+    ncBubble.textContent = text;
+    ncBubble.classList.add("show");
+    clearTimeout(bubbleTimer);
+    bubbleTimer = setTimeout(function(){ ncBubble.classList.remove("show"); }, 2000);
+  }
+
+  function playChime(){
+    try{
+      var ctx = new (window.AudioContext||window.webkitAudioContext)();
+      [523,659,784,1047].forEach(function(freq,i){
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.frequency.value = freq; osc.type = "sine";
+        var t = ctx.currentTime + i*.13;
+        gain.gain.setValueAtTime(0,t);
+        gain.gain.linearRampToValueAtTime(.15,t+.05);
+        gain.gain.exponentialRampToValueAtTime(.001,t+.38);
+        osc.start(t); osc.stop(t+.4);
+      });
+    }catch(e){}
+  }
+
+  function setStage(idx){
+    var isNew = idx !== current;
+    var prev  = current;
+    current   = idx;
+    stages.forEach(function(s,i){
+      var el = document.getElementById(s.id);
+      if(!el) return;
+      el.classList.remove("active","peek");
+      if(i===idx) el.classList.add("active");
+    });
+    if(!isNew) return;
+    burst(idx===4 ? 22 : 10);
+    showBubble(stages[idx].bubble);
+    if(ncTxt){
+      ncTxt.style.opacity = "0";
+      setTimeout(function(){ ncTxt.textContent = stages[idx].text; ncTxt.style.opacity = "1"; }, 180);
+    }
+    if(idx===4 && prev!==4){ launchConfetti(); playChime(); }
+  }
+
+  if(ncFrame){
+    ncFrame.addEventListener("click", function(){
+      ncWrap.classList.remove("clicked");
+      void ncWrap.offsetWidth;
+      ncWrap.classList.add("clicked");
+      showBubble(stages[current] ? stages[current].bubble : "Go!");
+      burst(8);
+      ncWrap.addEventListener("animationend", function(){ ncWrap.classList.remove("clicked"); }, {once:true});
+    });
+  }
+
+
+
+  function updateChar(){
+    var scrolled = window.scrollY > 80;
+    char.classList.toggle("visible", scrolled);
+    var navLinks = document.querySelector(".nav-links");
+    if(navLinks) navLinks.classList.toggle("hidden", scrolled);
+    var navEl = document.querySelector("nav");
+    if(navEl) navEl.style.borderBottom = scrolled ? "none" : "1px solid var(--border)";
+
+    var docH = document.documentElement.scrollHeight - window.innerHeight;
+    var pct  = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+
+    // Move character left-to-right across the nav center space
+    // Logo occupies ~22% from left, enroll btn occupies ~80%+
+    // Character walks from 22% to 74% of nav width
+    if(scrolled && navEl){
+      var navW    = navEl.getBoundingClientRect().width;
+      var logoEl  = document.querySelector(".nav-logo");
+      var btnEl   = document.querySelector(".nav-enroll");
+      var navRect = navEl.getBoundingClientRect();
+      var fromPx  = logoEl ? (logoEl.getBoundingClientRect().right - navRect.left + 20) : navW*0.22;
+      var toPx    = btnEl  ? (btnEl.getBoundingClientRect().left  - navRect.left - 80) : navW*0.72;
+      var progress = Math.min(1, Math.max(0, pct / 100));
+      var leftPx  = fromPx + (toPx - fromPx) * progress;
+      char.style.left = leftPx + "px";
+      char.style.transform = "none";
+    }
+
+    // Stage 5 triggers when register section enters viewport
+    var regEl = document.getElementById("register");
+    var regTop = regEl ? regEl.getBoundingClientRect().top : Infinity;
+    if     (pct<20)          setStage(0);
+    else if(pct<40)          setStage(1);
+    else if(pct<60)          setStage(2);
+    else if(regTop > 120)    setStage(3);
+    else                     setStage(4);
+  }
+
+  window.addEventListener("scroll", updateChar, {passive:true});
+  window.addEventListener("DOMContentLoaded", updateChar);
+  setStage(0);
+})();
 </script>
 
-<!-- PAYMENT MODAL -->
-<div class="modal-ov" id="paymentModal">
-  <div class="modal-box">
-    <div style="font-size:2.5rem;margin-bottom:.5rem;">💳</div>
-    <div class="mtitle">Complete Payment</div>
-    <div style="background:#f0f7ff;border-radius:14px;padding:16px;margin:1rem 0;text-align:left;">
-      <div style="font-size:.78rem;color:#94a3b8;font-weight:700;text-transform:uppercase;margin-bottom:.4rem;">Order Summary</div>
-      <div style="font-size:.92rem;font-weight:700;color:#1e1b4b;margin-bottom:.2rem;">👦 Student: <span id="payStudentName"></span></div>
-      <div style="font-size:.92rem;font-weight:700;color:#1e1b4b;margin-bottom:.2rem;">🎓 Class: <span id="payClass"></span></div>
-      <div style="font-size:.92rem;font-weight:700;color:#1e1b4b;">📚 English + Maths + Science Olympiad</div>
-      <div style="margin-top:.8rem;padding-top:.8rem;border-top:2px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:.85rem;color:#475569;font-weight:700;">Total Amount</span>
-        <span id="payAmount" style="font-family:'Fredoka One',cursive;font-size:1.6rem;color:#1a6fd4;"></span>
-      </div>
-    </div>
-    <div style="font-size:.8rem;color:#94a3b8;margin-bottom:1.2rem;font-weight:600;">🔒 Secure payment via Razorpay — UPI · Debit · Credit · Net Banking</div>
-    <button onclick="payViaRazorpay()" style="width:100%;padding:14px;border-radius:50px;background:linear-gradient(135deg,#1a6fd4,#8b5cf6);color:white;font-size:1rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;margin-bottom:.8rem;">🔒 Pay Now with Razorpay</button>
-    <button onclick="closeModal('paymentModal')" style="width:100%;padding:12px;border-radius:50px;background:transparent;color:#94a3b8;font-size:.88rem;font-weight:700;border:2px solid #e2e8f0;cursor:pointer;font-family:'Quicksand',sans-serif;">← Go Back</button>
-  </div>
-</div>
-
-<!-- POLICY MODAL -->
-<div class="modal-ov" id="policyModal">
-  <div class="modal-box" style="max-width:520px;text-align:left;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;">
-      <div id="policyTitle" style="font-family:'Fredoka One',cursive;font-size:1.5rem;color:#1e1b4b;"></div>
-      <button onclick="closeModal('policyModal')" style="background:#f0f7ff;border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;color:#475569;">✕</button>
-    </div>
-    <div id="policyContent" style="font-size:.88rem;color:#475569;line-height:1.8;font-weight:600;max-height:60vh;overflow-y:auto;"></div>
-    <button onclick="closeModal('policyModal')" style="width:100%;margin-top:1.4rem;padding:13px;border-radius:50px;background:linear-gradient(135deg,#1a6fd4,#8b5cf6);color:white;font-size:.92rem;font-weight:800;border:none;cursor:pointer;font-family:'Quicksand',sans-serif;">Got it 👍</button>
-  </div>
+<!-- FLOATING WHATSAPP BUTTON -->
+<div id="wa-float">
+  <div class="wa-float-tooltip">Register your interest! 🚀</div>
+  <button class="wa-float-btn" onclick="scrollToReg()" title="Register your interest"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></button>
 </div>
 
 </body>
